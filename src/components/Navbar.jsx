@@ -49,11 +49,11 @@ export default function Navbar() {
 
   const renderLink = (link) =>
   link.type === 'link' ?
-  <Link key={link.label} to={link.to} className="hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+  <Link key={link.label} to={link.to} className="rounded-full px-3 py-2 hover:bg-solar hover:text-brand hover:-translate-y-0.5 active:scale-95 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
         {link.label}
       </Link> :
 
-  <button key={link.label} onClick={() => scrollTo(link.target)} className="hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+  <button key={link.label} onClick={() => scrollTo(link.target)} className="rounded-full px-3 py-2 hover:bg-solar hover:text-brand hover:-translate-y-0.5 active:scale-95 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
         {link.label}
       </button>;
 
@@ -63,7 +63,7 @@ export default function Navbar() {
       <header className={`fixed top-3 inset-x-3 md:inset-x-6 z-40 transition-all duration-300 rounded-full ${scrolled ? 'bg-dune/95 backdrop-blur-md shadow-lg border border-brand/10' : 'bg-dune/80 backdrop-blur-sm'}`}>
         <div className="hidden lg:grid h-24 max-w-7xl mx-auto grid-cols-3 items-center px-6 lg:px-10">
           <nav className="flex items-center justify-start gap-4 lg:gap-6 text-brand">
-            <Link to="/" className="hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+            <Link to="/" className="rounded-full px-3 py-2 hover:bg-solar hover:text-brand hover:-translate-y-0.5 active:scale-95 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
               Home
             </Link>
             <div
@@ -73,19 +73,19 @@ export default function Navbar() {
             >
               <button
                 onClick={() => scrollTo('fleet')}
-                className="flex items-center gap-1 hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap"
+                className="flex items-center gap-1 rounded-full px-3 py-2 hover:bg-solar hover:text-brand hover:-translate-y-0.5 active:scale-95 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap"
               >
                 Rentals
               </button>
               <CartDropdown open={cartDropdown} onClose={() => setCartDropdown(false)} onMouseEnter={openCart} onMouseLeave={scheduleCloseCart} />
             </div>
-            <button onClick={() => scrollTo('gallery')} className="hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+            <button onClick={() => scrollTo('gallery')} className="rounded-full px-3 py-2 hover:bg-solar hover:text-brand hover:-translate-y-0.5 active:scale-95 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
               Gallery
             </button>
-            <button onClick={() => scrollTo('delivery')} className="hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+            <button onClick={() => scrollTo('delivery')} className="rounded-full px-3 py-2 hover:bg-solar hover:text-brand hover:-translate-y-0.5 active:scale-95 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
               Delivery
             </button>
-            <button onClick={() => scrollTo('arrival-options')} className="hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+            <button onClick={() => scrollTo('arrival-options')} className="rounded-full px-3 py-2 hover:bg-solar hover:text-brand hover:-translate-y-0.5 active:scale-95 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
               Ports, Airports &amp; Cruises
             </button>
           </nav>
@@ -100,27 +100,27 @@ export default function Navbar() {
             <nav className="flex items-center gap-4 lg:gap-6 text-brand">
               {rightLinks.map(renderLink)}
             </nav>
-            <a href="tel:+13053371815" className="flex items-center gap-1.5 px-2 py-2 text-xs text-brand whitespace-nowrap [font-family:'Sora',_sans-serif] font-bold hover:text-solar hover:-translate-y-0.5 transition-all duration-200">
+            <a href="tel:+13053371815" className="flex items-center gap-1.5 rounded-full px-3 py-2 text-xs text-brand whitespace-nowrap [font-family:'Sora',_sans-serif] font-bold hover:bg-solar hover:text-brand hover:-translate-y-0.5 active:scale-95 transition-all duration-200">
               <Phone className="w-4 h-4" /> Call
             </a>
-            <button onClick={() => scrollTo('fleet')} className="rounded-lg bg-solar px-4 py-2.5 text-xs font-bold text-brand whitespace-nowrap shadow hover:brightness-105 hover:scale-105 active:scale-95 transition-all duration-200">
+            <button onClick={() => scrollTo('fleet')} className="rounded-full bg-solar px-4 py-2.5 text-xs font-bold text-brand whitespace-nowrap shadow hover:brightness-110 hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
               Book Now
             </button>
           </div>
         </div>
 
         <div className="lg:hidden h-16 px-4 flex items-center justify-between gap-2">
-          <button onClick={() => setOpen(true)} className="flex items-center gap-1.5 text-sm font-semibold text-brand hover:text-solar hover:-translate-y-0.5 transition-all duration-200" aria-label="Open menu">
+          <button onClick={() => setOpen(true)} className="flex items-center gap-1.5 rounded-full px-3 py-2 text-sm font-semibold text-brand hover:bg-solar hover:text-brand hover:-translate-y-0.5 active:scale-95 transition-all duration-200" aria-label="Open menu">
             <Menu className="w-5 h-5" /> Menu
           </button>
           <Link to="/" aria-label="Paradise Rentals home">
             <video src={LOGO_VIDEO_URL} aria-label="Paradise Rentals" autoPlay loop muted playsInline className="h-16 w-16 object-cover rounded-full" />
           </Link>
           <div className="flex items-center gap-2">
-            <a href="tel:+13053371815" className="flex items-center gap-1.5 px-2 py-2 text-xs text-brand whitespace-nowrap [font-family:'Sora',_sans-serif] font-bold" aria-label="Call">
+            <a href="tel:+13053371815" className="flex items-center gap-1.5 rounded-full px-3 py-2 text-xs text-brand whitespace-nowrap [font-family:'Sora',_sans-serif] font-bold hover:bg-solar hover:text-brand active:scale-95 transition-all duration-200" aria-label="Call">
               <Phone className="w-4 h-4" /> Call
             </a>
-            <button onClick={() => scrollTo('fleet')} className="rounded-lg bg-solar px-4 py-2 text-sm font-bold text-brand hover:brightness-105 hover:scale-105 active:scale-95 transition-all duration-200">
+            <button onClick={() => scrollTo('fleet')} className="rounded-full bg-solar px-4 py-2 text-sm font-bold text-brand shadow hover:brightness-110 hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
               Book Now
             </button>
           </div>
