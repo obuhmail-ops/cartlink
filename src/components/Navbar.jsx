@@ -22,7 +22,7 @@ export default function Navbar() {
             <Image src={LOGO_URL} alt="Paradise Rentals" fittingType="fit" className="h-20 w-20" />
           </Link>
           <nav className="flex flex-1 items-center justify-center gap-3 lg:gap-5 text-[11px] lg:text-xs font-semibold uppercase tracking-wide text-brand/75 whitespace-nowrap">
-            <Link to="/" className="hover:text-brand transition">Home</Link>
+            <Link to="/" className="hover:text-brand transition [font-family:'Inter',_sans-serif]">Home</Link>
             <button onClick={() => scrollTo('fleet')} className="hover:text-brand transition">Golf Carts</button>
             <button onClick={() => scrollTo('delivery')} className="hover:text-brand transition">Delivery</button>
             <button onClick={() => scrollTo('arrival-options')} className="hover:text-brand transition">Ports, Airports &amp; Cruises</button>
@@ -66,7 +66,7 @@ export default function Navbar() {
             <button onClick={() => scrollTo('delivery')}>Delivery</button>
             <button onClick={() => scrollTo('arrival-options')}>Ports, Airports &amp; Cruises</button>
             <button onClick={() => scrollTo('explore')}>Explore Key West</button>
-            {pendingLinks.map((label) => <span key={label}>{label}</span>) }
+            {pendingLinks.map((label) => <span key={label}>{label}</span>)}
             <button onClick={() => scrollTo('faqs')}>FAQs</button>
             <button onClick={() => scrollTo('contact')}>Contact</button>
           </nav>
