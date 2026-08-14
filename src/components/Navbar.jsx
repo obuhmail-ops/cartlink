@@ -38,6 +38,9 @@ export default function Navbar() {
             <button onClick={() => scrollTo('fleet')} className="rounded-lg bg-solar px-3 lg:px-4 py-2.5 text-[11px] lg:text-xs font-bold text-brand whitespace-nowrap">
               Book Now
             </button>
+            <Link to="/" aria-label="Paradise Rentals home" className="shrink-0">
+              <video src={LOGO_VIDEO_URL} aria-label="Paradise Rentals" autoPlay loop muted playsInline className="h-28 w-28 object-cover" />
+            </Link>
           </div>
         </div>
 
