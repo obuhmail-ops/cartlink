@@ -24,6 +24,7 @@ export default function Navbar() {
           <nav className="flex flex-1 items-center justify-center gap-3 lg:gap-5 text-[11px] lg:text-xs font-semibold uppercase tracking-wide text-brand/75 whitespace-nowrap">
             <Link to="/" className="hover:text-brand transition">Home</Link>
             <button onClick={() => scrollTo('fleet')} className="hover:text-brand transition">Golf Carts</button>
+            <button onClick={() => scrollTo('delivery')} className="hover:text-brand transition">Delivery</button>
             {pendingLinks.map((label) => <span key={label}>{label}</span>)}
             <button onClick={() => scrollTo('contact')} className="hover:text-brand transition">Contact</button>
           </nav>
@@ -59,6 +60,7 @@ export default function Navbar() {
           <nav className="flex flex-col items-center justify-center gap-6 flex-1 text-2xl font-display text-brand">
             <Link to="/" onClick={() => setOpen(false)}>Home</Link>
             <button onClick={() => scrollTo('fleet')}>Golf Carts</button>
+            <button onClick={() => scrollTo('delivery')}>Delivery</button>
             {pendingLinks.map((label) => <span key={label}>{label}</span>)}
             <button onClick={() => scrollTo('contact')}>Contact</button>
           </nav>

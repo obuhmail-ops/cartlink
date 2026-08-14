@@ -3,6 +3,7 @@ import { base44 } from '@/api/base44Client';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CartCard from '@/components/CartCard';
+import DeliverySection from '@/components/DeliverySection';
 import { Image } from '@/components/ui/image';
 import { ArrowRight, CalendarDays, Clock, MapPin, ShieldCheck, Sparkles, Wallet } from 'lucide-react';
 
@@ -93,6 +94,8 @@ export default function Home() {
           
         </div>
       </section>
+
+      <DeliverySection />
 
       {/* Fleet Cinema */}
       <section id="fleet" className="py-24 md:py-32">
