@@ -1,12 +1,12 @@
 import React from 'react';
 
 const destinations = [
-  ['🏨', 'Hotel'],
-  ['🏡', 'Airbnb'],
-  ['🌴', 'Vacation Rental'],
-  ['✈️', 'Key West Airport'],
-  ['🚢', 'Cruise Arrival'],
-];
+['🏨', 'Hotel'],
+['🏡', 'Airbnb'],
+['🌴', 'Vacation Rental'],
+['✈️', 'Key West Airport'],
+['🚢', 'Cruise Arrival']];
+
 
 export default function DeliverySection() {
   return (
@@ -17,22 +17,22 @@ export default function DeliverySection() {
           <h2 className="max-w-xl font-display text-4xl leading-tight text-balance md:text-6xl">
             Don’t come to us.<br />We come to you. 🌴
           </h2>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-dune/75">
+          <p className="mt-6 max-w-xl leading-relaxed text-dune/75 text-xl">
             Your vacation shouldn’t start with searching for transportation to a rental counter.
           </p>
-          <p className="mt-4 max-w-xl text-lg leading-relaxed text-dune/75">
+          <p className="mt-4 max-w-xl leading-relaxed text-dune/75 text-xl">
             Paradise Rentals delivers your golf cart directly to your destination. When your rental is finished, we’ll handle pickup too.
           </p>
         </div>
 
         <div className="rounded-2xl border border-dune/15 bg-dune/5 p-6 md:p-8">
           <ul className="space-y-4">
-            {destinations.map(([icon, label]) => (
-              <li key={label} className="flex items-center gap-4 border-b border-dune/10 pb-4 text-lg last:border-0 last:pb-0">
+            {destinations.map(([icon, label]) =>
+            <li key={label} className="flex items-center gap-4 border-b border-dune/10 pb-4 text-lg last:border-0 last:pb-0">
                 <span aria-hidden="true" className="text-2xl">{icon}</span>
                 <span>{label}</span>
               </li>
-            ))}
+            )}
           </ul>
           <div className="mt-8 border-t border-dune/15 pt-7">
             <p className="font-display text-2xl text-solar">Free delivery &amp; pickup</p>
@@ -43,6 +43,6 @@ export default function DeliverySection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
