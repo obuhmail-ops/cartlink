@@ -1,5 +1,4 @@
 import React from 'react';
-import AnimatedText from '@/components/AnimatedText';
 
 const reviews = [
   { name: 'Nathan Miller', quote: 'Fantastic service and essentially brand new golf cart. Lynn, who dropped off our golf cart, was fun and super nice. Driving the golf cart was so much fun!' },
@@ -16,7 +15,7 @@ export default function SocialProofSection() {
       <div className="mx-auto max-w-6xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-solar">Section 4 — Social Proof</p>
         <div className="mt-4 flex flex-col justify-between gap-8 md:flex-row md:items-end">
-          <AnimatedText direction="right" className="max-w-3xl font-display text-3xl uppercase leading-tight md:text-5xl">One of Key West’s Favorite Ways to Ride</AnimatedText>
+          <h2 className="max-w-3xl font-display text-3xl uppercase leading-tight md:text-5xl">One of Key West’s Favorite Ways to Ride</h2>
           <div className="shrink-0 md:text-right">
             <p className="text-xl tracking-[0.18em] text-solar">★★★★★</p>
             <p className="mt-2 font-semibold">4.9 Google Rating</p>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
-import AnimatedText from '@/components/AnimatedText';
 
 const faqs = [
   ['How old do I need to be?', 'Drivers must meet Paradise Rentals’ rental requirements.'],
@@ -20,7 +19,7 @@ export default function FaqSection() {
     <section id="faqs" className="bg-dune px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto max-w-4xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-moss">Section 13 — FAQ</p>
-        <AnimatedText direction="right" className="mt-4 font-display text-4xl uppercase text-brand md:text-6xl">Questions?</AnimatedText>
+        <h2 className="mt-4 font-display text-4xl uppercase text-brand md:text-6xl">Questions?</h2>
         <div className="mt-12 divide-y divide-brand/15 border-y border-brand/15">
           {faqs.map(([question, answer]) => (
             <details key={question} className="group py-6">

@@ -1,5 +1,4 @@
 import React from 'react';
-import AnimatedText from '@/components/AnimatedText';
 
 const benefits = [
   { icon: '🌴', title: 'Free Delivery & Pickup', text: 'We bring your cart directly to your hotel, Airbnb or vacation rental.' },
@@ -17,7 +16,7 @@ export default function WhyParadiseSection() {
     <section id="why-paradise" className="bg-dune px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto max-w-6xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-moss">Section 9 — Why Paradise</p>
-        <AnimatedText direction="left" className="mt-4 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">Why Rent with Paradise?</AnimatedText>
+        <h2 className="mt-4 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">Why Rent with Paradise?</h2>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map((benefit) => (
             <div key={benefit.title} className="rounded-2xl border border-brand/10 bg-card p-7">

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Phone } from 'lucide-react';
 import { Image } from '@/components/ui/image';
-import AnimatedText from '@/components/AnimatedText';
 
 const TROPICAL_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/7d3ec60b1_generated_image.png';
 
@@ -14,7 +13,7 @@ export default function FinalBookingCta() {
       <div className="absolute inset-0 bg-brand/65" />
       <div className="relative z-10 flex min-h-[620px] flex-col items-center justify-center px-6 py-24 text-center text-card">
         <p className="text-sm font-semibold uppercase tracking-widest text-solar">Section 14 — Final Booking CTA</p>
-        <AnimatedText direction="left" className="mt-5 max-w-4xl font-display text-4xl uppercase leading-tight md:text-6xl">Ready to Explore Key West?</AnimatedText>
+        <h2 className="mt-5 max-w-4xl font-display text-4xl uppercase leading-tight md:text-6xl">Ready to Explore Key West?</h2>
         <p className="mt-5 text-lg text-card/85 md:text-xl">Your Paradise ride is only a few clicks away.</p>
         <button onClick={checkAvailability} className="mt-9 rounded-lg bg-solar px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-brand">Check Availability</button>
         <span className="my-4 text-sm uppercase tracking-widest text-card/60">or</span>

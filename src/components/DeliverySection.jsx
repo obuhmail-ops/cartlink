@@ -1,5 +1,4 @@
 import React from 'react';
-import AnimatedText from '@/components/AnimatedText';
 
 const destinations = [
 ['🏨', 'Hotel'],
@@ -15,9 +14,9 @@ export default function DeliverySection() {
       <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1.05fr_0.95fr] md:items-center">
         <div>
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-solar">Your big difference</p>
-          <AnimatedText direction="left" className="max-w-xl font-display text-4xl leading-tight text-balance md:text-6xl">
+          <h2 className="max-w-xl font-display text-4xl leading-tight text-balance md:text-6xl">
             Don’t come to us.<br />We come to you. 🌴
-          </AnimatedText>
+          </h2>
           <p className="mt-6 max-w-xl leading-relaxed text-dune/75 text-xl">
             Your vacation shouldn’t start with searching for transportation to a rental counter.
           </p>

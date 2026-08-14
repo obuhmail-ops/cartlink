@@ -1,6 +1,5 @@
 import React from 'react';
 import { ExternalLink, MapPin } from 'lucide-react';
-import AnimatedText from '@/components/AnimatedText';
 
 const MAP_URL = 'https://www.google.com/maps/d/embed?mid=1ehX5kM3oXtsGZPHLSK41x_r4qrYBBkc&ehbc=2E312F';
 const GUIDE_URL = 'https://www.google.com/maps/d/viewer?mid=1ehX5kM3oXtsGZPHLSK41x_r4qrYBBkc';
@@ -11,7 +10,7 @@ export default function ExploreKeyWestSection() {
     <section id="explore" className="bg-brand px-6 py-24 text-card md:px-10 md:py-32">
       <div className="mx-auto max-w-6xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-solar">Section 10 — Explore Key West</p>
-        <AnimatedText direction="right" className="mt-4 max-w-4xl font-display text-4xl uppercase leading-tight md:text-6xl">Your Cart. Your Island. Your Adventure.</AnimatedText>
+        <h2 className="mt-4 max-w-4xl font-display text-4xl uppercase leading-tight md:text-6xl">Your Cart. Your Island. Your Adventure.</h2>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-card/75">Use our interactive Paradise Rentals map to plan your Key West golf cart adventure, from iconic Old Town landmarks to the island’s best beaches and waterfront views.</p>
         <div className="mt-12 overflow-hidden rounded-2xl border border-card/15 bg-card/5">
           <iframe src={MAP_URL} title="Paradise Rentals interactive Key West golf cart map" className="h-[520px] w-full" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
