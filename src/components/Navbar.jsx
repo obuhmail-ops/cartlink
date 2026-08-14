@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, Phone, X } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 
-const LOGO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/a6e3bd84e_working.png';
+const LOGO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/8097bd863_generated_image.png';
 const pendingLinks = [];
 
 export default function Navbar() {
