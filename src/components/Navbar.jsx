@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-0 inset-x-0 z-40 bg-dune/95 backdrop-blur-md border-b border-brand/10">
-        <div className="hidden md:flex h-32 max-w-7xl items-center gap-6 px-6 lg:px-10 text-teal-500 bg-[hsl(var(--moss))]">
+        <div className="hidden md:flex h-32 max-w-7xl items-center gap-6 px-6 lg:px-10 text-teal-500 bg-[hsl(var(--sidebar-primary-foreground))]">
           <Link to="/" aria-label="Paradise Rentals home" className="shrink-0">
             <video src={LOGO_VIDEO_URL} aria-label="Paradise Rentals" autoPlay loop muted playsInline className="h-28 w-28 object-cover" />
           </Link>
