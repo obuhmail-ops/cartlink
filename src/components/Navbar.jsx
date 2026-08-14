@@ -23,6 +23,7 @@ export default function Navbar() {
           <nav className="flex flex-1 items-center justify-center gap-3 lg:gap-5 text-[11px] lg:text-xs font-semibold uppercase tracking-wide whitespace-nowrap text-[hsl(var(--foreground))]">
             <Link to="/" className="hover:text-brand transition text-sm [font-family:'Sora',_sans-serif] font-bold">Home</Link>
             <button onClick={() => scrollTo('fleet')} className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-bold text-sm">Golf Carts</button>
+            <button onClick={() => scrollTo('gallery')} className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-bold text-sm">Gallery</button>
             <button onClick={() => scrollTo('delivery')} className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-bold text-sm">Delivery</button>
             <button onClick={() => scrollTo('arrival-options')} className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-bold text-sm">Ports, Airports &amp; Cruises</button>
             <button onClick={() => scrollTo('explore')} className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-bold text-sm">Explore Key West</button>
@@ -62,6 +63,7 @@ export default function Navbar() {
           <nav className="flex flex-col items-center justify-center gap-6 flex-1 text-2xl font-display text-brand">
             <Link to="/" onClick={() => setOpen(false)}>Home</Link>
             <button onClick={() => scrollTo('fleet')}>Golf Carts</button>
+            <button onClick={() => scrollTo('gallery')}>Gallery</button>
             <button onClick={() => scrollTo('delivery')}>Delivery</button>
             <button onClick={() => scrollTo('arrival-options')}>Ports, Airports &amp; Cruises</button>
             <button onClick={() => scrollTo('explore')}>Explore Key West</button>
