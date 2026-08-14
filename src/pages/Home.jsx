@@ -48,7 +48,7 @@ export default function Home() {
         <Image src={HERO_URL} alt="Key West golf cart rental fleet by the coast" fittingType="fill" className="absolute inset-0 w-full h-full" />
         <div className="absolute inset-0 bg-gradient-to-b from-brand/50 via-brand/25 to-brand/65" />
         <div className="relative z-10 h-full flex flex-col justify-center pb-40 px-6 md:px-10 max-w-6xl mx-auto">
-          <p className="text-solar font-semibold tracking-[0.25em] uppercase mb-5 text-4xl md:text-4xl text-center">
+          <p className="text-solar font-semibold tracking-[0.25em] uppercase mb-5 text-4xl md:text-4xl text-center mt-16">
             Key West Golf Cart Rentals
           </p>
           <h1 className="font-display leading-[1.04] max-w-4xl text-4xl md:text-4xl lg:text-4xl text-[hsl(var(--card))] text-center">
@@ -66,7 +66,7 @@ export default function Home() {
             'Long-Range Electric Carts',
             'Easy Online Booking'].
             map((benefit) =>
-            <li key={benefit} className="flex items-center gap-2 [font-family:'Sora',_sans-serif] font-semibold text-xl my-3">
+            <li key={benefit} className="flex items-center gap-2 [font-family:'Sora',_sans-serif] font-semibold text-xl my-1">
                 <span className="text-solar font-bold" aria-hidden="true">✓</span>
                 {benefit}
               </li>
