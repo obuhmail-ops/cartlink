@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image } from '@/components/ui/image';
 
-const CRUISE_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/86ab8e5cf_generated_image.png';
+const CRUISE_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/b4b242b62_generated_image.png';
 const destinations = ['Duval Street', 'Southernmost Point', 'Mallory Square', 'Fort Zachary Taylor', 'Smathers Beach', 'Mile 0', 'Key West Lighthouse'];
 
 export default function CruiseVisitorsSection() {
