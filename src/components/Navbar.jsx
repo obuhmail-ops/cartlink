@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Phone, X } from 'lucide-react';
+import CartDropdown from '@/components/CartDropdown';
 
 const LOGO_VIDEO_URL = 'https://media.base44.com/videos/public/6a7e5db2c2620868d1046179/f22b7c6ba_gemini_generated_video_9fd05d99.mp4';
 
@@ -21,6 +22,7 @@ const rightLinks = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [cartDropdown, setCartDropdown] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -50,7 +52,31 @@ export default function Navbar() {
       <header className={`fixed top-3 inset-x-3 md:inset-x-6 z-40 transition-all duration-300 rounded-full ${scrolled ? 'bg-dune/95 backdrop-blur-md shadow-lg border border-brand/10' : 'bg-dune/80 backdrop-blur-sm'}`}>
         <div className="hidden lg:grid h-24 max-w-7xl mx-auto grid-cols-3 items-center px-6 lg:px-10">
           <nav className="flex items-center justify-start gap-4 lg:gap-6 text-brand">
-            {leftLinks.map(renderLink)}
+            <Link to="/" className="hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+              Home
+            </Link>
+            <div
+              className="relative"
+              onMouseEnter={() => setCartDropdown(true)}
+              onMouseLeave={() => setCartDropdown(false)}
+            >
+              <button
+                onClick={() => scrollTo('fleet')}
+                className="flex items-center gap-1 hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap"
+              >
+                Golf Carts
+              </button>
+              <CartDropdown open={cartDropdown} onClose={() => setCartDropdown(false)} />
+            </div>
+            <button onClick={() => scrollTo('gallery')} className="hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+              Gallery
+            </button>
+            <button onClick={() => scrollTo('delivery')} className="hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+              Delivery
+            </button>
+            <button onClick={() => scrollTo('arrival-options')} className="hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+              Ports, Airports &amp; Cruises
+            </button>
           </nav>
 
           <div className="flex items-center justify-center">
