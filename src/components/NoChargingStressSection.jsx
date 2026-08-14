@@ -7,7 +7,7 @@ export default function NoChargingStressSection() {
   return (
     <section id="no-charging-stress" className="bg-card px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2 md:gap-16">
-        <div className="order-2 overflow-hidden rounded-2xl border border-brand/10 bg-dune md:order-1">
+        <div className="order-2 overflow-hidden rounded-2xl border border-brand/10 bg-dune md:order-1 hidden">
           <Image
             src={BATTERY_IMAGE_URL}
             alt="Premium lithium battery pack for Paradise Rentals electric golf carts"
