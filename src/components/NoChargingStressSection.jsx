@@ -2,7 +2,7 @@ import React from 'react';
 import { Image } from '@/components/ui/image';
 
 const FLEET_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/1b4909b35_A6700569.jpg';
-const KEYS_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/fa933ba17_generated_image.png';
+const KEYS_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/ffbde5bd7_swapkeys.jpeg';
 
 export default function NoChargingStressSection() {
   return (
