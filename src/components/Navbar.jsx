@@ -4,7 +4,7 @@ import { Menu, Phone, X } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 
 const LOGO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/a6e3bd84e_working.png';
-const pendingLinks = ['Delivery', 'Explore Key West', 'FAQs'];
+const pendingLinks = ['FAQs'];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -25,6 +25,7 @@ export default function Navbar() {
             <Link to="/" className="hover:text-brand transition">Home</Link>
             <button onClick={() => scrollTo('fleet')} className="hover:text-brand transition">Golf Carts</button>
             <button onClick={() => scrollTo('delivery')} className="hover:text-brand transition">Delivery</button>
+            <button onClick={() => scrollTo('explore')} className="hover:text-brand transition">Explore Key West</button>
             {pendingLinks.map((label) => <span key={label}>{label}</span>)}
             <button onClick={() => scrollTo('contact')} className="hover:text-brand transition">Contact</button>
           </nav>
@@ -61,7 +62,8 @@ export default function Navbar() {
             <Link to="/" onClick={() => setOpen(false)}>Home</Link>
             <button onClick={() => scrollTo('fleet')}>Golf Carts</button>
             <button onClick={() => scrollTo('delivery')}>Delivery</button>
-            {pendingLinks.map((label) => <span key={label}>{label}</span>)}
+            <button onClick={() => scrollTo('explore')}>Explore Key West</button>
+            {pendingLinks.map((label) => <span key={label}>{label}</span>) }
             <button onClick={() => scrollTo('contact')}>Contact</button>
           </nav>
         </div>
