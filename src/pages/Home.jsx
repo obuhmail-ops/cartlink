@@ -11,8 +11,8 @@ import CruiseVisitorsSection from '@/components/CruiseVisitorsSection';
 import NoChargingStressSection from '@/components/NoChargingStressSection';
 import WhyParadiseSection from '@/components/WhyParadiseSection';
 import ExploreKeyWestSection from '@/components/ExploreKeyWestSection';
+import HowItWorksSection from '@/components/HowItWorksSection';
 import { Image } from '@/components/ui/image';
-import { ArrowRight, CalendarDays, Clock, MapPin, ShieldCheck, Sparkles, Wallet } from 'lucide-react';
 
 const HERO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/c8d09b784_A6700444.jpg';
 
@@ -145,35 +145,7 @@ export default function Home() {
 
       <ExploreKeyWestSection />
 
-      {/* How it works */}
-      <section id="how" className="py-24 md:py-32 bg-white">
-        <div className="px-6 md:px-10 max-w-6xl mx-auto">
-          <p className="text-moss text-sm font-semibold uppercase tracking-widest mb-3">How it works</p>
-          <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight max-w-2xl">
-            Three steps to the open road.
-          </h2>
-          <div className="grid md:grid-cols-3 gap-10 md:gap-16 mt-16">
-            {[
-            { icon: <CalendarDays className="w-6 h-6" />, n: '01', t: 'Pick your dates', d: 'Choose hourly or daily. Our live inventory shows exactly what is available, instantly.' },
-            { icon: <Wallet className="w-6 h-6" />, n: '02', t: 'Lock the rate', d: 'Transparent pricing that updates as you configure. No surprise fees at pickup.' },
-            { icon: <Sparkles className="w-6 h-6" />, n: '03', t: 'Roll out', d: 'Receive a sleek digital ticket. Show up, hop in, and let the vacation begin.' }].
-            map((s) =>
-            <div key={s.n} className="border-t border-brand/10 pt-6">
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-solar">{s.icon}</span>
-                  <span className="font-display text-2xl text-brand/20">{s.n}</span>
-                </div>
-                <h3 className="font-display text-xl text-brand mb-2">{s.t}</h3>
-                <p className="text-brand/55 leading-relaxed">{s.d}</p>
-              </div>
-            )}
-          </div>
-          <div className="mt-16 flex items-center gap-3 text-brand/60">
-            <ShieldCheck className="w-5 h-5 text-moss" />
-            <span className="text-sm">Fully insured · 24/7 roadside assistance · Free cancellation up to 24h</span>
-          </div>
-        </div>
-      </section>
+      <HowItWorksSection />
 
       <Footer />
     </div>);
