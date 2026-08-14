@@ -13,7 +13,7 @@ function revealWords(children, count) {
       return child.split(/(\s+)/).map((part) => {
         if (/^\s+$/.test(part)) return part;
         const key = count.current++;
-        return <motion.span key={key} variants={wordMotion} className="inline-block font-bold [font-family:'Poppins',_sans-serif] text-[hsl(var(--secondary))] text-6xl">{part}</motion.span>;
+        return <motion.span key={key} variants={wordMotion} className="inline-block font-bold [font-family:'Poppins',_sans-serif] text-[hsl(var(--secondary))] text-5xl">{part}</motion.span>;
       });
     }
     if (React.isValidElement(child) && child.props.children) {
