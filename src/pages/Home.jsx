@@ -78,10 +78,10 @@ export default function Home() {
         {/* Hero action buttons */}
         <div className="absolute bottom-8 right-6 md:right-10 z-20 flex flex-col sm:flex-row gap-3">
           <button onClick={goToFleet} className="rounded-full bg-solar px-6 py-3 text-sm font-bold text-brand shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
-            4-Passenger Cart
+            4-Passenger Features
           </button>
           <button onClick={goToFleet} className="rounded-full bg-brand/90 backdrop-blur-sm border border-solar/40 px-6 py-3 text-sm font-bold text-dune shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
-            6-Passenger Cart
+            6-Passenger Features
           </button>
         </div>
 
