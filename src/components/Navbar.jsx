@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Phone, X } from 'lucide-react';
 import CartDropdown from '@/components/CartDropdown';
@@ -23,6 +23,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [cartDropdown, setCartDropdown] = useState(false);
+  const closeTimer = useRef(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -30,6 +31,16 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  const openCart = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setCartDropdown(true);
+  };
+
+  const scheduleCloseCart = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setCartDropdown(false), 600);
+  };
 
   const scrollTo = (id) => {
     setOpen(false);
@@ -57,8 +68,8 @@ export default function Navbar() {
             </Link>
             <div
               className="relative"
-              onMouseEnter={() => setCartDropdown(true)}
-              onMouseLeave={() => setCartDropdown(false)}
+              onMouseEnter={openCart}
+              onMouseLeave={scheduleCloseCart}
             >
               <button
                 onClick={() => scrollTo('fleet')}
@@ -66,7 +77,7 @@ export default function Navbar() {
               >
                 Golf Carts
               </button>
-              <CartDropdown open={cartDropdown} onClose={() => setCartDropdown(false)} />
+              <CartDropdown open={cartDropdown} onClose={() => setCartDropdown(false)} onMouseEnter={openCart} onMouseLeave={scheduleCloseCart} />
             </div>
             <button onClick={() => scrollTo('gallery')} className="hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
               Gallery
