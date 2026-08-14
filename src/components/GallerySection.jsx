@@ -52,9 +52,9 @@ export default function GallerySection() {
         <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
           Paradise in Motion
         </h2>
-        <p className="mt-4 max-w-2xl text-brand/70 hidden">
-          Snapshots from happy riders exploring Key West in style with Paradise Rentals.
-        </p>
+        
+
+        
         <div className="mt-12 grid auto-rows-[200px] grid-cols-2 gap-4 md:grid-cols-4">
           {galleryImages.map((img, i) =>
           <button
