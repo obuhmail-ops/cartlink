@@ -51,7 +51,7 @@ export default function Home() {
           <p className="text-solar font-semibold tracking-[0.25em] uppercase mb-5 text-center mt-48 text-[42px] md:text-[42px] no-underline">
             Key West Golf Cart Rentals
           </p>
-          <h1 className="leading-[1.04] max-w-4xl text-center capitalize text-[hsl(var(--dune))] [font-family:'Poppins',_sans-serif] font-bold text-4xl md:text-4xl lg:text-4xl">
+          <h1 className="leading-[1.04] max-w-4xl text-center capitalize [font-family:'Poppins',_sans-serif] font-bold text-4xl md:text-4xl lg:text-4xl text-[hsl(var(--background))]">
             Explore Key West the paradise way
           </h1>
           <p className="text-white/90 max-w-xl leading-relaxed text-2xl md:text-2xl font-semibold [font-family:'Lexend',_sans-serif] text-center no-underline not-italic capitalize px-1 mx-2 my-5">
