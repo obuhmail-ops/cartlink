@@ -24,12 +24,12 @@ export default function Navbar() {
           <nav className="flex flex-1 items-center justify-center gap-3 lg:gap-5 text-[11px] lg:text-xs font-semibold uppercase tracking-wide text-brand/75 whitespace-nowrap">
             <Link to="/" className="hover:text-brand transition [font-family:'Inter',_sans-serif]">Home</Link>
             <button onClick={() => scrollTo('fleet')} className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-bold">Golf Carts</button>
-            <button onClick={() => scrollTo('delivery')} className="hover:text-brand transition">Delivery</button>
-            <button onClick={() => scrollTo('arrival-options')} className="hover:text-brand transition">Ports, Airports &amp; Cruises</button>
-            <button onClick={() => scrollTo('explore')} className="hover:text-brand transition">Explore Key West</button>
+            <button onClick={() => scrollTo('delivery')} className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-bold">Delivery</button>
+            <button onClick={() => scrollTo('arrival-options')} className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-bold">Ports, Airports &amp; Cruises</button>
+            <button onClick={() => scrollTo('explore')} className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-bold">Explore Key West</button>
             {pendingLinks.map((label) => <span key={label}>{label}</span>)}
-            <button onClick={() => scrollTo('faqs')} className="hover:text-brand transition">FAQs</button>
-            <button onClick={() => scrollTo('contact')} className="hover:text-brand transition">Contact</button>
+            <button onClick={() => scrollTo('faqs')} className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-bold">FAQs</button>
+            <button onClick={() => scrollTo('contact')} className="hover:text-brand transition [font-family:'Sora',_sans-serif]">Contact</button>
           </nav>
           <div className="flex items-center gap-2 shrink-0">
             <a href="tel:+13053371815" className="flex items-center gap-1.5 px-2 py-2 text-xs font-semibold text-brand whitespace-nowrap">
