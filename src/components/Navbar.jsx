@@ -48,7 +48,7 @@ export default function Navbar() {
   return (
     <>
       <header className={`fixed top-3 inset-x-3 md:inset-x-6 z-40 transition-all duration-300 rounded-full ${scrolled ? 'bg-dune/95 backdrop-blur-md shadow-lg border border-brand/10' : 'bg-dune/80 backdrop-blur-sm'}`}>
-        <div className="hidden md:grid h-24 max-w-7xl mx-auto grid-cols-3 items-center px-6 lg:px-10">
+        <div className="hidden lg:grid h-24 max-w-7xl mx-auto grid-cols-3 items-center px-6 lg:px-10">
           <nav className="flex items-center justify-start gap-4 lg:gap-6 text-brand">
             {leftLinks.map(renderLink)}
           </nav>
@@ -72,7 +72,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="md:hidden h-16 px-5 flex items-center justify-between gap-3">
+        <div className="lg:hidden h-16 px-5 flex items-center justify-between gap-3">
           <button onClick={() => setOpen(true)} className="flex items-center gap-1.5 text-sm font-semibold text-brand" aria-label="Open menu">
             <Menu className="w-5 h-5" /> Menu
           </button>
@@ -86,7 +86,7 @@ export default function Navbar() {
       </header>
 
       {open && (
-        <div className="fixed inset-0 z-50 bg-dune/95 backdrop-blur-2xl flex flex-col md:hidden">
+        <div className="fixed inset-0 z-50 bg-dune/95 backdrop-blur-2xl flex flex-col lg:hidden">
           <div className="flex items-center justify-between px-6 py-4 border-b border-brand/10">
             <video src={LOGO_VIDEO_URL} aria-label="Paradise Rentals" autoPlay loop muted playsInline className="h-20 w-20 object-cover rounded-full" />
             <button onClick={() => setOpen(false)} aria-label="Close menu" className="text-brand"><X className="w-6 h-6" /></button>
