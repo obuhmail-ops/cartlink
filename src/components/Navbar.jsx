@@ -25,6 +25,7 @@ export default function Navbar() {
             <Link to="/" className="hover:text-brand transition">Home</Link>
             <button onClick={() => scrollTo('fleet')} className="hover:text-brand transition">Golf Carts</button>
             <button onClick={() => scrollTo('delivery')} className="hover:text-brand transition">Delivery</button>
+            <button onClick={() => scrollTo('arrival-options')} className="hover:text-brand transition">Ports, Airports &amp; Cruises</button>
             <button onClick={() => scrollTo('explore')} className="hover:text-brand transition">Explore Key West</button>
             {pendingLinks.map((label) => <span key={label}>{label}</span>)}
             <button onClick={() => scrollTo('faqs')} className="hover:text-brand transition">FAQs</button>
@@ -63,6 +64,7 @@ export default function Navbar() {
             <Link to="/" onClick={() => setOpen(false)}>Home</Link>
             <button onClick={() => scrollTo('fleet')}>Golf Carts</button>
             <button onClick={() => scrollTo('delivery')}>Delivery</button>
+            <button onClick={() => scrollTo('arrival-options')}>Ports, Airports &amp; Cruises</button>
             <button onClick={() => scrollTo('explore')}>Explore Key West</button>
             {pendingLinks.map((label) => <span key={label}>{label}</span>) }
             <button onClick={() => scrollTo('faqs')}>FAQs</button>

@@ -33,7 +33,7 @@ const options = [
 
 export default function ArrivalOptionsSection() {
   return (
-    <section className="bg-dune px-6 py-24 md:px-10 md:py-32">
+    <section id="arrival-options" className="scroll-mt-24 bg-dune px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto max-w-6xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-moss">Delivery & Arrival Options</p>
         <h2 className="mt-4 max-w-3xl font-display text-3xl uppercase leading-tight text-brand md:text-5xl">Start Exploring Key West Your Way</h2>
