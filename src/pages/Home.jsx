@@ -7,7 +7,6 @@ import DeliverySection from '@/components/DeliverySection';
 import SocialProofSection from '@/components/SocialProofSection';
 import GallerySection from '@/components/GallerySection';
 import ArrivalOptionsSection from '@/components/ArrivalOptionsSection';
-import NoChargingStressSection from '@/components/NoChargingStressSection';
 import WhyParadiseSection from '@/components/WhyParadiseSection';
 import ExploreKeyWestSection from '@/components/ExploreKeyWestSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
@@ -151,8 +150,6 @@ export default function Home() {
       <SocialProofSection />
 
       <ArrivalOptionsSection />
-
-      <NoChargingStressSection />
 
       <WhyParadiseSection />
 
