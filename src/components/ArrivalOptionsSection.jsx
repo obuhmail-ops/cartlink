@@ -46,7 +46,7 @@ export default function ArrivalOptionsSection() {
                 <h3 className="mt-3 font-display text-2xl uppercase leading-tight text-brand">{option.title}</h3>
                 <p className="mt-4 leading-relaxed text-brand/65">{option.body}</p>
                 <p className="mt-5 font-semibold text-brand">{option.detail}</p>
-                <a href="#fleet" className="mt-7 inline-flex justify-center rounded-lg bg-solar px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-brand">{option.button}</a>
+                <a href="#fleet" className="inline-flex justify-center rounded-lg bg-solar px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-brand my-3">{option.button}</a>
               </div>
             </article>
           )}
