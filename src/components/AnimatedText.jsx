@@ -8,7 +8,7 @@ function renderWords(children, count) {
       return child.split(/(\s+)/).map((part) => {
         if (/^\s+$/.test(part)) return part;
         const key = count.current++;
-        return <span key={key} className="inline-block font-bold [font-family:'Poppins',_sans-serif] text-5xl text-[hsl(var(--brand))]">{part}</span>;
+        return <span key={key} className="inline-block font-bold [font-family:'Poppins',_sans-serif] text-5xl text-[hsl(var(--dune))]">{part}</span>;
       });
     }
     if (React.isValidElement(child) && child.props.children) {
