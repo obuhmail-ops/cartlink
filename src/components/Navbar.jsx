@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-0 inset-x-0 z-40 bg-dune/95 backdrop-blur-md border-b border-brand/10">
-        <div className="hidden md:flex h-24 max-w-7xl mx-auto items-center gap-5 px-5 lg:px-8">
+        <div className="hidden md:flex h-24 max-w-7xl mx-auto items-center gap-5 px-5 lg:px-8 text-neutral-950">
           <Link to="/" aria-label="Paradise Rentals home" className="shrink-0">
             <Image src={LOGO_URL} alt="Paradise Rentals" fittingType="fit" className="h-20 w-20" />
           </Link>
@@ -50,8 +50,8 @@ export default function Navbar() {
         </div>
       </header>
 
-      {open && (
-        <div className="fixed inset-0 z-50 bg-dune/95 backdrop-blur-2xl flex flex-col md:hidden">
+      {open &&
+      <div className="fixed inset-0 z-50 bg-dune/95 backdrop-blur-2xl flex flex-col md:hidden">
           <div className="flex items-center justify-between px-6 py-4 border-b border-brand/10">
             <Image src={LOGO_URL} alt="Paradise Rentals" fittingType="fit" className="h-16 w-16" />
             <button onClick={() => setOpen(false)} aria-label="Close menu" className="text-brand"><X className="w-6 h-6" /></button>
@@ -63,7 +63,7 @@ export default function Navbar() {
             <button onClick={() => scrollTo('contact')}>Contact</button>
           </nav>
         </div>
-      )}
-    </>
-  );
+      }
+    </>);
+
 }
