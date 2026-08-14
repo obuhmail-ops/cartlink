@@ -7,13 +7,13 @@ const LOGO_VIDEO_URL = 'https://media.base44.com/videos/public/6a7e5db2c2620868d
 
 const leftLinks = [
 { label: 'Home', type: 'link', to: '/' },
-{ label: 'Golf Carts', type: 'scroll', target: 'fleet' },
+{ label: 'Rentals', type: 'scroll', target: 'fleet' },
 { label: 'Gallery', type: 'scroll', target: 'gallery' },
-{ label: 'Delivery', type: 'scroll', target: 'delivery' },
-{ label: 'Ports, Airports & Cruises', type: 'scroll', target: 'arrival-options' }];
+{ label: 'Delivery', type: 'scroll', target: 'delivery' }];
 
 
 const rightLinks = [
+{ label: 'Ports, Airports & Cruises', type: 'scroll', target: 'arrival-options' },
 { label: 'Explore Key West', type: 'scroll', target: 'explore' },
 { label: 'FAQs', type: 'scroll', target: 'faqs' },
 { label: 'Contact', type: 'scroll', target: 'contact' }];
@@ -61,8 +61,8 @@ export default function Navbar() {
   return (
     <>
       <header className={`fixed top-3 inset-x-3 md:inset-x-6 z-40 transition-all duration-300 rounded-full ${scrolled ? 'bg-dune/95 backdrop-blur-md shadow-lg border border-brand/10' : 'bg-dune/80 backdrop-blur-sm'}`}>
-        <div className="hidden lg:grid h-24 max-w-7xl mx-auto grid-cols-3 items-center px-6 lg:px-10">
-          <nav className="flex items-center justify-start gap-4 lg:gap-6 text-brand">
+        <div className="hidden lg:grid h-20 max-w-7xl mx-auto grid-cols-[1fr_auto_1fr] items-center gap-4 px-6 lg:px-8">
+          <nav className="flex items-center justify-start gap-1 lg:gap-2 text-brand">
             <Link to="/" className="rounded-full px-3 py-2 hover:bg-solar hover:text-brand hover:-translate-y-0.5 active:scale-95 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
               Home
             </Link>
@@ -85,19 +85,16 @@ export default function Navbar() {
             <button onClick={() => scrollTo('delivery')} className="rounded-full px-3 py-2 hover:bg-solar hover:text-brand hover:-translate-y-0.5 active:scale-95 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
               Delivery
             </button>
-            <button onClick={() => scrollTo('arrival-options')} className="rounded-full px-3 py-2 hover:bg-solar hover:text-brand hover:-translate-y-0.5 active:scale-95 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
-              Ports, Airports &amp; Cruises
-            </button>
           </nav>
 
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center px-2">
             <Link to="/" aria-label="Paradise Rentals home" className="shrink-0">
-              <video src={LOGO_VIDEO_URL} aria-label="Paradise Rentals" autoPlay loop muted playsInline className="h-24 w-24 object-cover rounded-full" />
+              <video src={LOGO_VIDEO_URL} aria-label="Paradise Rentals" autoPlay loop muted playsInline className="h-20 w-20 object-cover rounded-full" />
             </Link>
           </div>
 
-          <div className="flex items-center justify-end gap-3 lg:gap-4">
-            <nav className="flex items-center gap-4 lg:gap-6 text-brand">
+          <div className="flex items-center justify-end gap-2 lg:gap-3">
+            <nav className="flex items-center gap-1 lg:gap-2 text-brand">
               {rightLinks.map(renderLink)}
             </nav>
             <a href="tel:+13053371815" className="flex items-center gap-1.5 rounded-full px-3 py-2 text-xs text-brand whitespace-nowrap [font-family:'Sora',_sans-serif] font-bold hover:bg-solar hover:text-brand hover:-translate-y-0.5 active:scale-95 transition-all duration-200">
