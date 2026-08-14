@@ -77,7 +77,7 @@ export default function Home() {
         {/* Hero action buttons */}
         <div className="absolute bottom-8 right-6 md:right-10 z-20 flex flex-col sm:flex-row gap-3">
           <button onClick={goToFleet} className="rounded-lg bg-solar px-6 py-3 text-sm font-bold text-brand shadow-lg transition hover:brightness-105">
-            Book Now
+            4-Passenger Golf Cart
           </button>
           <a href="tel:+13053371815" className="rounded-lg bg-brand/80 backdrop-blur px-6 py-3 text-sm font-bold text-dune shadow-lg transition hover:bg-brand text-center">
             Call Us
