@@ -17,18 +17,15 @@ export default function NoChargingStressSection() {
         </div>
         <div className="order-1 md:order-2">
           <p className="text-sm font-semibold uppercase tracking-widest text-moss">Section 8 — No Charging Stress</p>
-          <h2 className="mt-5 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">No Place to Charge?</h2>
-          <p className="mt-3 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">No Problem. 🔋</p>
-          
-
-          
-          <p className="mt-4 leading-relaxed text-brand/65">
-            Our premium lithium-powered carts offer excellent driving range for exploring Key West.
+          <h2 className="mt-5 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">🔋 No Place to Charge? We've Got You.</h2>
+          <p className="mt-5 leading-relaxed text-brand/65">
+            Our electric golf carts are made for exploring Key West.
           </p>
-          <p className="mt-4 leading-relaxed text-brand/65">And if you need assistance with your battery:</p>
-          <p className="mt-6 font-display text-2xl uppercase text-solar md:text-3xl">We Come to You.</p>
-          
-          <a href="#fleet" className="mt-9 inline-flex rounded-lg bg-solar px-6 py-3 text-sm font-bold uppercase tracking-wide text-brand">Book Electric</a>
+          <p className="mt-4 leading-relaxed text-brand/65">
+            Running low on battery? Just give us a call. We'll come to you and swap your cart.
+          </p>
+          <p className="mt-6 font-display text-2xl uppercase text-solar md:text-3xl">EASY. SIMPLE. PARADISE. 🌴</p>
+          <a href="#fleet" className="mt-9 inline-flex rounded-lg bg-solar px-6 py-3 text-sm font-bold uppercase tracking-wide text-brand">Book Your Cart</a>
         </div>
       </div>
     </section>);
