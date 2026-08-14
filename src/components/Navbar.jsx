@@ -47,8 +47,8 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${scrolled ? 'bg-dune/95 backdrop-blur-md shadow-md border-b border-brand/10' : 'bg-dune/80 backdrop-blur-sm'}`}>
-        <div className="hidden md:grid h-28 max-w-7xl mx-auto grid-cols-3 items-center px-6 lg:px-10">
+      <header className={`fixed top-3 inset-x-3 md:inset-x-6 z-40 transition-all duration-300 rounded-full ${scrolled ? 'bg-dune/95 backdrop-blur-md shadow-lg border border-brand/10' : 'bg-dune/80 backdrop-blur-sm'}`}>
+        <div className="hidden md:grid h-24 max-w-7xl mx-auto grid-cols-3 items-center px-6 lg:px-10">
           <nav className="flex items-center justify-start gap-4 lg:gap-6 text-brand">
             {leftLinks.map(renderLink)}
           </nav>
@@ -72,7 +72,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="md:hidden h-20 px-5 flex items-center justify-between gap-3">
+        <div className="md:hidden h-16 px-5 flex items-center justify-between gap-3">
           <button onClick={() => setOpen(true)} className="flex items-center gap-1.5 text-sm font-semibold text-brand" aria-label="Open menu">
             <Menu className="w-5 h-5" /> Menu
           </button>
