@@ -55,7 +55,7 @@ export default function Home() {
             Explore Key West the paradise way
           </h1>
           <p className="text-white/90 max-w-xl leading-relaxed text-2xl md:text-2xl text-left mt-5 mb-1">
-            Premium 4-passenger (forward-facing) and 6-passenger electric golf carts, delivered right to you.
+            Premium 4-passenger (forward-facing) and<br />6-passenger electric golf carts, delivered right to you.
           </p>
           <ul className="mt-6 grid grid-cols-1 gap-y-2 text-sm md:text-base text-white max-w-md">
             {[
