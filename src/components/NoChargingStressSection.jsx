@@ -7,14 +7,14 @@ export default function NoChargingStressSection() {
   return (
     <section id="no-charging-stress" className="bg-card px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2 md:gap-16">
-        <div className="order-2 overflow-hidden rounded-2xl border border-brand/10 bg-dune md:order-1 hidden">
-          <Image
-            src={BATTERY_IMAGE_URL}
-            alt="Premium lithium battery pack for Paradise Rentals electric golf carts"
-            fittingType="fill"
-            className="aspect-[4/3] w-full" />
-          
-        </div>
+        
+
+
+
+
+
+
+        
         <div className="order-1 md:order-2">
           <p className="text-sm font-semibold uppercase tracking-widest text-moss">Section 8 — No Charging Stress</p>
           <h2 className="mt-5 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">🔋 No Place to Charge? We've Got You.</h2>
