@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image } from '@/components/ui/image';
 
-const BATTERY_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/f55b5409a_generated_image.png';
+const BATTERY_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/926c59173_generated_image.png';
 
 export default function NoChargingStressSection() {
   return (
