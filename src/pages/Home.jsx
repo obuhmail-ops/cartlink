@@ -41,10 +41,10 @@ export default function Home() {
         <Image src={HERO_URL} alt="Key West golf cart rental fleet by the coast" fittingType="fill" className="absolute inset-0 w-full h-full" />
         <div className="absolute inset-0 bg-gradient-to-b from-brand/50 via-brand/25 to-brand/65" />
         <div className="relative z-10 h-full flex flex-col justify-center pb-40 px-6 md:px-10 max-w-6xl mx-auto">
-          <p className="text-solar text-xs md:text-sm font-semibold tracking-[0.25em] uppercase mb-5">
+          <p className="text-solar font-semibold tracking-[0.25em] uppercase mb-5 text-4xl md:text-4xl">
             Key West Golf Cart Rentals
           </p>
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-white text-balance leading-[1.04] max-w-4xl">
+          <h1 className="font-display leading-[1.04] max-w-4xl text-4xl md:text-4xl lg:text-4xl text-[hsl(var(--card))]">
             Explore Key West the paradise way
           </h1>
           <p className="mt-5 text-white/90 text-lg md:text-xl max-w-2xl leading-relaxed">
@@ -105,22 +105,22 @@ export default function Home() {
             Find the Perfect Golf Cart
           </h2>
 
-          {loading ? (
-            <div className="mt-12 grid gap-8 md:grid-cols-2">
-              {[0, 1].map((i) => (
-                <div key={i} className="overflow-hidden rounded-2xl border border-brand/10 bg-card">
+          {loading ?
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
+              {[0, 1].map((i) =>
+            <div key={i} className="overflow-hidden rounded-2xl border border-brand/10 bg-card">
                   <div className="aspect-[4/3] animate-pulse bg-brand/5" />
                   <div className="p-8"><div className="h-7 w-1/2 animate-pulse rounded bg-brand/5" /></div>
                 </div>
-              ))}
-            </div>
-          ) : carts.length === 0 ? (
-            <p className="mt-12 text-brand/50">No carts available right now. Check back soon.</p>
-          ) : (
-            <div className="mt-12 grid gap-8 md:grid-cols-2">
+            )}
+            </div> :
+          carts.length === 0 ?
+          <p className="mt-12 text-brand/50">No carts available right now. Check back soon.</p> :
+
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
               {carts.map((cart) => <CartCard key={cart.id} cart={cart} />)}
             </div>
-          )}
+          }
         </div>
       </section>
 
