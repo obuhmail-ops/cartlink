@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { Image } from '@/components/ui/image';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -17,8 +18,13 @@ export default function Navbar() {
     <>
       <header className="fixed top-0 inset-x-0 z-40">
         <div className="flex items-center justify-between px-6 md:px-10 py-5">
-          <Link to="/" className="font-display text-lg tracking-tight text-brand">
-            GolfCart<span className="text-solar">Go</span>
+          <Link to="/" aria-label="Paradise Rentals home" className="block">
+            <Image
+              src="https://media.base44.com/images/public/6a7e5db2c2620868d1046179/a6e3bd84e_working.png"
+              alt="Paradise Rentals"
+              fittingType="fit"
+              className="h-20 w-20 md:h-24 md:w-24"
+            />
           </Link>
           <div className="hidden md:flex items-center gap-8 text-sm text-brand/70">
             <button onClick={() => scrollTo('fleet')} className="hover:text-brand transition">Fleet</button>
