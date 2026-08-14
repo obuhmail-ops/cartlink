@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-brand text-dune px-6 md:px-10 py-16">
+    <footer id="contact" className="bg-brand text-dune px-6 md:px-10 py-16">
       <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="font-display text-2xl">GolfCart<span className="text-solar">Go</span></div>
