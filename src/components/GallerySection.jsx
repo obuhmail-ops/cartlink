@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Image } from '@/components/ui/image';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const BASE = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/';
 
@@ -21,6 +22,29 @@ const galleryImages = [
 ];
 
 export default function GallerySection() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const isOpen = activeIndex !== null;
+
+  const close = () => setActiveIndex(null);
+  const prev = () => setActiveIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length);
+  const next = () => setActiveIndex((i) => (i + 1) % galleryImages.length);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e) => {
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+    };
+    window.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   return (
     <section id="gallery" className="bg-dune px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto max-w-6xl">
@@ -32,13 +56,45 @@ export default function GallerySection() {
           Snapshots from happy riders exploring Key West in style with Paradise Rentals.
         </p>
         <div className="mt-12 grid auto-rows-[200px] grid-cols-2 gap-4 md:grid-cols-4">
-          {galleryImages.map((img) => (
-            <div key={img.src} className={`group overflow-hidden rounded-2xl border border-brand/10 ${img.span}`}>
+          {galleryImages.map((img, i) => (
+            <button
+              key={img.src}
+              onClick={() => setActiveIndex(i)}
+              className={`group overflow-hidden rounded-2xl border border-brand/10 ${img.span}`}
+            >
               <Image src={img.src} alt={img.alt} fittingType="fill" className="h-full w-full transition duration-500 group-hover:scale-105" />
-            </div>
+            </button>
           ))}
         </div>
       </div>
+
+      {isOpen && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4" onClick={close}>
+          <button onClick={close} aria-label="Close" className="absolute top-4 right-4 text-white/90 hover:text-white">
+            <X className="h-8 w-8" />
+          </button>
+          <button
+            onClick={(e) => { e.stopPropagation(); prev(); }}
+            aria-label="Previous"
+            className="absolute left-4 text-white/90 hover:text-white"
+          >
+            <ChevronLeft className="h-10 w-10" />
+          </button>
+          <img
+            src={galleryImages[activeIndex].src}
+            alt={galleryImages[activeIndex].alt}
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-[85vh] max-w-[90vw] rounded-lg object-contain"
+          />
+          <button
+            onClick={(e) => { e.stopPropagation(); next(); }}
+            aria-label="Next"
+            className="absolute right-4 text-white/90 hover:text-white"
+          >
+            <ChevronRight className="h-10 w-10" />
+          </button>
+        </div>
+      )}
     </section>
   );
 }
