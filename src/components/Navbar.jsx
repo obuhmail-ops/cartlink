@@ -72,16 +72,21 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="lg:hidden h-16 px-5 flex items-center justify-between gap-3">
+        <div className="lg:hidden h-16 px-4 flex items-center justify-between gap-2">
           <button onClick={() => setOpen(true)} className="flex items-center gap-1.5 text-sm font-semibold text-brand" aria-label="Open menu">
             <Menu className="w-5 h-5" /> Menu
           </button>
           <Link to="/" aria-label="Paradise Rentals home">
             <video src={LOGO_VIDEO_URL} aria-label="Paradise Rentals" autoPlay loop muted playsInline className="h-16 w-16 object-cover rounded-full" />
           </Link>
-          <button onClick={() => scrollTo('fleet')} className="rounded-lg bg-solar px-4 py-2 text-sm font-bold text-brand">
-            Book Now
-          </button>
+          <div className="flex items-center gap-2">
+            <a href="tel:+13053371815" className="flex items-center gap-1.5 px-2 py-2 text-xs text-brand whitespace-nowrap [font-family:'Sora',_sans-serif] font-bold" aria-label="Call">
+              <Phone className="w-4 h-4" /> Call
+            </a>
+            <button onClick={() => scrollTo('fleet')} className="rounded-lg bg-solar px-4 py-2 text-sm font-bold text-brand">
+              Book Now
+            </button>
+          </div>
         </div>
       </header>
 
