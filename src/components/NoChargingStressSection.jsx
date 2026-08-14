@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image } from '@/components/ui/image';
 
-const BATTERY_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/34ef9af56_Gemini_Generated_Image_gprglbgprglbgprg.jpeg';
+const BATTERY_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/fad7ae6a8_swapkeys.jpeg';
 
 export default function NoChargingStressSection() {
   return (
@@ -10,7 +10,7 @@ export default function NoChargingStressSection() {
         <div className="order-2 overflow-hidden rounded-2xl border border-brand/10 bg-dune md:order-1">
           <Image
             src={BATTERY_IMAGE_URL}
-            alt="Premium lithium battery pack for Paradise Rentals electric golf carts"
+            alt="Paradise Rentals staff handing over golf cart keys to a customer"
             fittingType="fill"
             className="aspect-[4/3] w-full" />
           
