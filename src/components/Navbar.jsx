@@ -69,12 +69,12 @@ export default function Navbar() {
             <div
               className="relative"
               onMouseEnter={openCart}
-              onMouseLeave={scheduleCloseCart}
-            >
+              onMouseLeave={scheduleCloseCart}>
+              
               <button
                 onClick={() => scrollTo('fleet')}
-                className="flex items-center gap-1 rounded-full px-3 py-2 hover:bg-solar hover:text-brand hover:-translate-y-0.5 hover:shadow-[0_0_18px_hsl(43_100%_50%)] focus-visible:bg-solar focus-visible:text-brand focus-visible:shadow-[0_0_18px_hsl(43_100%_50%)] active:bg-solar active:text-brand active:scale-95 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap"
-              >
+                className="flex items-center gap-1 rounded-full px-3 py-2 hover:bg-solar hover:text-brand hover:-translate-y-0.5 hover:shadow-[0_0_18px_hsl(43_100%_50%)] focus-visible:bg-solar focus-visible:text-brand focus-visible:shadow-[0_0_18px_hsl(43_100%_50%)] active:bg-solar active:text-brand active:scale-95 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+                
                 Rentals
               </button>
               <CartDropdown open={cartDropdown} onClose={() => setCartDropdown(false)} onMouseEnter={openCart} onMouseLeave={scheduleCloseCart} />
@@ -90,7 +90,7 @@ export default function Navbar() {
             </button>
           </nav>
 
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center px-1">
             <Link to="/" aria-label="Paradise Rentals home" className="shrink-0">
               <video src={LOGO_VIDEO_URL} aria-label="Paradise Rentals" autoPlay loop muted playsInline className="h-24 w-24 object-cover rounded-full" />
             </Link>
