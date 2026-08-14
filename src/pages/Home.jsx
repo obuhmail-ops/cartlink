@@ -5,9 +5,7 @@ import Footer from '@/components/Footer';
 import CartCard from '@/components/CartCard';
 import DeliverySection from '@/components/DeliverySection';
 import SocialProofSection from '@/components/SocialProofSection';
-import AirportDeliverySection from '@/components/AirportDeliverySection';
-import KeyWestExpressSection from '@/components/KeyWestExpressSection';
-import CruiseVisitorsSection from '@/components/CruiseVisitorsSection';
+import ArrivalOptionsSection from '@/components/ArrivalOptionsSection';
 import NoChargingStressSection from '@/components/NoChargingStressSection';
 import WhyParadiseSection from '@/components/WhyParadiseSection';
 import ExploreKeyWestSection from '@/components/ExploreKeyWestSection';
@@ -135,11 +133,7 @@ export default function Home() {
 
       <SocialProofSection />
 
-      <AirportDeliverySection />
-
-      <KeyWestExpressSection />
-
-      <CruiseVisitorsSection />
+      <ArrivalOptionsSection />
 
       <NoChargingStressSection />
 
