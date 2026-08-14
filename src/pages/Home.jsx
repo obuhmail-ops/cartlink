@@ -15,8 +15,8 @@ function HeroField({ icon, label, children }) {
         {icon} {label}
       </span>
       {children}
-    </label>
-  );
+    </label>);
+
 }
 
 export default function Home() {
@@ -24,9 +24,9 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    base44.entities.Cart.list('-created_date', 50)
-      .then(setCarts)
-      .finally(() => setLoading(false));
+    base44.entities.Cart.list('-created_date', 50).
+    then(setCarts).
+    finally(() => setLoading(false));
   }, []);
 
   const goToFleet = () => document.getElementById('fleet')?.scrollIntoView({ behavior: 'smooth' });
@@ -51,24 +51,24 @@ export default function Home() {
           </p>
           <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm md:text-base text-white max-w-2xl">
             {[
-              'FREE Hotel Delivery',
-              'FREE Airbnb & Vacation Rental Delivery',
-              'Airport Delivery Available',
-              'Cruise Port Service',
-              'Long-Range Electric Carts',
-              'Easy Online Booking',
-            ].map((benefit) => (
-              <li key={benefit} className="flex items-center gap-2">
+            'FREE Hotel Delivery',
+            'FREE Airbnb & Vacation Rental Delivery',
+            'Airport Delivery Available',
+            'Cruise Port Service',
+            'Long-Range Electric Carts',
+            'Easy Online Booking'].
+            map((benefit) =>
+            <li key={benefit} className="flex items-center gap-2">
                 <span className="text-solar font-bold" aria-hidden="true">✓</span>
                 {benefit}
               </li>
-            ))}
+            )}
           </ul>
         </div>
 
         {/* Floating glass island search */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[92%] max-w-3xl z-20">
-          <div className="rounded-2xl bg-white/15 backdrop-blur-xl border border-white/25 p-3 md:p-5 shadow-2xl">
+          <div className="rounded-2xl bg-white/15 backdrop-blur-xl border border-white/25 p-3 md:p-5 shadow-2xl hidden">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 items-end">
               <HeroField icon={<CalendarDays className="w-3.5 h-3.5" />} label="Pick-up">
                 <input type="datetime-local" className="w-full rounded-lg bg-white/90 text-brand text-sm px-3 py-2.5 outline-none focus:ring-2 ring-solar" />
@@ -85,8 +85,8 @@ export default function Home() {
               </HeroField>
               <button
                 onClick={goToFleet}
-                className="flex items-center justify-center gap-2 rounded-lg bg-solar text-brand font-semibold text-sm px-5 py-2.5 hover:brightness-105 transition"
-              >
+                className="flex items-center justify-center gap-2 rounded-lg bg-solar text-brand font-semibold text-sm px-5 py-2.5 hover:brightness-105 transition">
+                
                 Search Fleet <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -110,26 +110,26 @@ export default function Home() {
           </div>
         </div>
 
-        {loading ? (
-          <div className="px-6 md:px-10 flex gap-6 overflow-hidden">
-            {[0, 1, 2].map((i) => (
-              <div key={i} className="w-[280px] md:w-[360px] shrink-0">
+        {loading ?
+        <div className="px-6 md:px-10 flex gap-6 overflow-hidden">
+            {[0, 1, 2].map((i) =>
+          <div key={i} className="w-[280px] md:w-[360px] shrink-0">
                 <div className="aspect-[4/3] w-full rounded-2xl bg-brand/5 animate-pulse" />
                 <div className="h-6 w-2/3 bg-brand/5 rounded mt-5 animate-pulse" />
                 <div className="h-4 w-1/2 bg-brand/5 rounded mt-3 animate-pulse" />
               </div>
-            ))}
-          </div>
-        ) : carts.length === 0 ? (
-          <p className="px-6 md:px-10 text-brand/50">No carts available right now. Check back soon.</p>
-        ) : (
-          <div className="flex gap-6 md:gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory px-6 md:px-10 pb-4">
-            {carts.map((cart) => (
-              <CartCard key={cart.id} cart={cart} />
-            ))}
+          )}
+          </div> :
+        carts.length === 0 ?
+        <p className="px-6 md:px-10 text-brand/50">No carts available right now. Check back soon.</p> :
+
+        <div className="flex gap-6 md:gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory px-6 md:px-10 pb-4">
+            {carts.map((cart) =>
+          <CartCard key={cart.id} cart={cart} />
+          )}
             <div className="w-4 shrink-0" />
           </div>
-        )}
+        }
       </section>
 
       {/* How it works */}
@@ -141,11 +141,11 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-3 gap-10 md:gap-16 mt-16">
             {[
-              { icon: <CalendarDays className="w-6 h-6" />, n: '01', t: 'Pick your dates', d: 'Choose hourly or daily. Our live inventory shows exactly what is available, instantly.' },
-              { icon: <Wallet className="w-6 h-6" />, n: '02', t: 'Lock the rate', d: 'Transparent pricing that updates as you configure. No surprise fees at pickup.' },
-              { icon: <Sparkles className="w-6 h-6" />, n: '03', t: 'Roll out', d: 'Receive a sleek digital ticket. Show up, hop in, and let the vacation begin.' },
-            ].map((s) => (
-              <div key={s.n} className="border-t border-brand/10 pt-6">
+            { icon: <CalendarDays className="w-6 h-6" />, n: '01', t: 'Pick your dates', d: 'Choose hourly or daily. Our live inventory shows exactly what is available, instantly.' },
+            { icon: <Wallet className="w-6 h-6" />, n: '02', t: 'Lock the rate', d: 'Transparent pricing that updates as you configure. No surprise fees at pickup.' },
+            { icon: <Sparkles className="w-6 h-6" />, n: '03', t: 'Roll out', d: 'Receive a sleek digital ticket. Show up, hop in, and let the vacation begin.' }].
+            map((s) =>
+            <div key={s.n} className="border-t border-brand/10 pt-6">
                 <div className="flex items-center justify-between mb-6">
                   <span className="text-solar">{s.icon}</span>
                   <span className="font-display text-2xl text-brand/20">{s.n}</span>
@@ -153,7 +153,7 @@ export default function Home() {
                 <h3 className="font-display text-xl text-brand mb-2">{s.t}</h3>
                 <p className="text-brand/55 leading-relaxed">{s.d}</p>
               </div>
-            ))}
+            )}
           </div>
           <div className="mt-16 flex items-center gap-3 text-brand/60">
             <ShieldCheck className="w-5 h-5 text-moss" />
@@ -163,6 +163,6 @@ export default function Home() {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 }
