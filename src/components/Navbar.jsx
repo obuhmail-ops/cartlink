@@ -20,7 +20,7 @@ export default function Navbar() {
           <Link to="/" aria-label="Paradise Rentals home" className="shrink-0">
             <video src={LOGO_VIDEO_URL} aria-label="Paradise Rentals" autoPlay loop muted playsInline className="h-28 w-28 object-cover" />
           </Link>
-          <nav className="flex flex-1 items-center justify-center gap-3 lg:gap-5 text-[11px] lg:text-xs font-semibold uppercase tracking-wide whitespace-nowrap text-[hsl(var(--foreground))] px-1">
+          <nav className="flex flex-1 items-center justify-center gap-3 lg:gap-5 text-[11px] lg:text-xs font-semibold uppercase tracking-wide whitespace-nowrap text-[hsl(var(--foreground))]">
             <Link to="/" className="hover:text-brand transition text-sm [font-family:'Sora',_sans-serif] font-bold">Home</Link>
             <button onClick={() => scrollTo('fleet')} className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-bold text-sm">Golf Carts</button>
             <button onClick={() => scrollTo('delivery')} className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-bold text-sm">Delivery</button>
@@ -31,7 +31,7 @@ export default function Navbar() {
             <button onClick={() => scrollTo('contact')} className="hover:text-brand transition [font-family:'Sora',_sans-serif] text-sm font-bold">Contact</button>
           </nav>
           <div className="flex items-center gap-2 shrink-0">
-            <a href="tel:+13053371815" className="flex items-center gap-1.5 px-2 py-2 text-xs text-brand whitespace-nowrap [font-family:'Sora',_sans-serif] font-bold">
+            <a href="tel:+13053371815" className="flex items-center gap-1.5 px-2 py-2 text-xs text-brand whitespace-nowrap [font-family:'Sora',_sans-serif] font-bold my-4">
               <Phone className="w-4 h-4" /> Call Us
             </a>
             <button onClick={() => scrollTo('fleet')} className="rounded-lg bg-solar px-3 lg:px-4 py-2.5 text-[11px] lg:text-xs font-bold text-brand whitespace-nowrap">
