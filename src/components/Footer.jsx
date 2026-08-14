@@ -1,40 +1,49 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone, Star } from 'lucide-react';
+
+const quickLinks = [
+  ['Golf Carts', '#fleet'],
+  ['4 Passenger', '#fleet'],
+  ['6 Passenger', '#fleet'],
+  ['Airport Delivery', '#airport-delivery'],
+  ['Cruise Rentals', '#cruise-visitors'],
+  ['Key West Express', '#key-west-express'],
+  ['Explore Key West', '#explore'],
+  ['FAQs', '#faqs'],
+  ['Contact', '#contact'],
+  ['Book Now', '#fleet'],
+];
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-brand text-dune px-6 md:px-10 py-16">
-      <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-4">
-        <div className="md:col-span-2">
-          <div className="font-display text-2xl">GolfCart<span className="text-solar">Go</span></div>
-          <p className="mt-4 text-dune/60 max-w-sm leading-relaxed">
-            The first exhilarating breath of your vacation. Premium golf cart rentals, booked in seconds.
-          </p>
+    <footer id="contact" className="bg-brand px-6 py-16 text-dune md:px-10">
+      <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-3">
+        <div>
+          <h2 className="font-display text-2xl">Paradise Rentals Key West</h2>
+          <p className="mt-4 text-dune/65">Premium Electric Golf Cart Rentals</p>
         </div>
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-dune/50">Explore</h4>
-          <ul className="mt-4 space-y-3 text-dune/80">
-            <li><Link to="/" className="hover:text-solar transition">Fleet</Link></li>
-            <li><Link to="/admin" className="hover:text-solar transition">Admin</Link></li>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-dune/50">Quick Links</h3>
+          <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-dune/80">
+            {quickLinks.map(([label, href]) => (
+              <li key={label}><a href={href} className="transition hover:text-solar">{label}</a></li>
+            ))}
           </ul>
         </div>
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-dune/50">Contact</h4>
-          <ul className="mt-4 space-y-3 text-dune/80">
-            <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-solar" /> +1 (555) 010-2024</li>
-            <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-solar" /> hello@golfcartgo.com</li>
-            <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-solar" /> 18 Marina Way, Coastal Bay</li>
-          </ul>
+          <h3 className="text-sm font-semibold uppercase tracking-wider text-dune/50">Contact</h3>
+          <div className="mt-5 space-y-3 text-dune/80">
+            <a href="tel:+13053371815" className="flex items-center gap-2 transition hover:text-solar"><Phone className="h-4 w-4 text-solar" />305-337-1815</a>
+            <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-solar" />Key West, Florida</p>
+          </div>
+          <div className="mt-7 flex flex-wrap gap-4 text-sm text-dune/80">
+            <a href="https://www.instagram.com/paradiserentalskw/" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-solar"><Instagram className="h-4 w-4" />Instagram</a>
+            <a href="https://www.facebook.com/search/top?q=Paradise%20Rentals%20Key%20West" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-solar"><Facebook className="h-4 w-4" />Facebook</a>
+            <a href="https://www.google.com/search?q=Paradise+Rentals+Key+West+Google+Reviews" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-solar"><Star className="h-4 w-4" />Google Reviews</a>
+          </div>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto mt-16 pt-8 border-t border-dune/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-dune/50">
-        <span>© {new Date().getFullYear()} GolfCartGo. All rights reserved.</span>
-        <div className="flex gap-6">
-          <a href="#" className="hover:text-dune transition">Privacy</a>
-          <a href="#" className="hover:text-dune transition">Terms</a>
-        </div>
-      </div>
+      <div className="mx-auto mt-14 max-w-6xl border-t border-dune/10 pt-7 text-sm text-dune/50">© {new Date().getFullYear()} Paradise Rentals Key West. All rights reserved.</div>
     </footer>
   );
 }
