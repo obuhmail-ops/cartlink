@@ -50,7 +50,7 @@ export default function Home() {
         <Image src={HERO_URL} alt="Key West golf cart rental fleet by the coast" fittingType="fill" className="absolute inset-0 w-full h-full" />
         <div className="absolute inset-0 bg-gradient-to-b from-brand/50 via-brand/25 to-brand/65" />
         <div className="relative z-10 h-full flex flex-col justify-center pb-40 px-6 md:px-10 max-w-6xl mx-auto">
-          <p className="text-solar font-semibold tracking-[0.25em] uppercase mb-5 text-center mt-48 text-[42px] md:text-[42px] no-underline">
+          <p className="text-solar font-semibold tracking-[0.25em] uppercase mb-5 text-center text-[42px] md:text-[42px] no-underline mt-64">
             Key West Golf Cart Rentals
           </p>
           <AnimatedText as="h1" direction="left" className="font-display leading-[1.04] max-w-4xl text-4xl md:text-4xl lg:text-4xl text-center capitalize text-[hsl(var(--dune))]">
@@ -60,13 +60,13 @@ export default function Home() {
             Premium 4-passenger <span className="text-solar">(forward-facing)</span> and<br />6-passenger electric golf carts, delivered right to you.
           </p>
           <BenefitsWordReveal benefits={[
-            'FREE Hotel Delivery',
-            'FREE Airbnb & Vacation Rental Delivery',
-            'Airport Delivery Available',
-            'Cruise Port Service',
-            'Long-Range Electric Carts',
-            'Easy Online Booking',
-          ]} />
+          'FREE Hotel Delivery',
+          'FREE Airbnb & Vacation Rental Delivery',
+          'Airport Delivery Available',
+          'Cruise Port Service',
+          'Long-Range Electric Carts',
+          'Easy Online Booking']
+          } />
         </div>
 
         {/* Hero action buttons */}
