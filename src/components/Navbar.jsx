@@ -75,7 +75,7 @@ export default function Navbar() {
                 onClick={() => scrollTo('fleet')}
                 className="flex items-center gap-1 hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap"
               >
-                Golf Carts
+                Rentals
               </button>
               <CartDropdown open={cartDropdown} onClose={() => setCartDropdown(false)} onMouseEnter={openCart} onMouseLeave={scheduleCloseCart} />
             </div>
