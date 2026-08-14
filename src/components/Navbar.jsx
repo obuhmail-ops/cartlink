@@ -36,11 +36,11 @@ export default function Navbar() {
 
   const renderLink = (link) =>
   link.type === 'link' ?
-  <Link key={link.label} to={link.to} className="hover:text-solar transition [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+  <Link key={link.label} to={link.to} className="hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
         {link.label}
       </Link> :
 
-  <button key={link.label} onClick={() => scrollTo(link.target)} className="hover:text-solar transition [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+  <button key={link.label} onClick={() => scrollTo(link.target)} className="hover:text-solar hover:-translate-y-0.5 transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
         {link.label}
       </button>;
 
@@ -63,17 +63,17 @@ export default function Navbar() {
             <nav className="flex items-center gap-4 lg:gap-6 text-brand">
               {rightLinks.map(renderLink)}
             </nav>
-            <a href="tel:+13053371815" className="flex items-center gap-1.5 px-2 py-2 text-xs text-brand whitespace-nowrap [font-family:'Sora',_sans-serif] font-bold">
+            <a href="tel:+13053371815" className="flex items-center gap-1.5 px-2 py-2 text-xs text-brand whitespace-nowrap [font-family:'Sora',_sans-serif] font-bold hover:text-solar hover:-translate-y-0.5 transition-all duration-200">
               <Phone className="w-4 h-4" /> Call
             </a>
-            <button onClick={() => scrollTo('fleet')} className="rounded-lg bg-solar px-4 py-2.5 text-xs font-bold text-brand whitespace-nowrap shadow hover:brightness-105 transition">
+            <button onClick={() => scrollTo('fleet')} className="rounded-lg bg-solar px-4 py-2.5 text-xs font-bold text-brand whitespace-nowrap shadow hover:brightness-105 hover:scale-105 active:scale-95 transition-all duration-200">
               Book Now
             </button>
           </div>
         </div>
 
         <div className="lg:hidden h-16 px-4 flex items-center justify-between gap-2">
-          <button onClick={() => setOpen(true)} className="flex items-center gap-1.5 text-sm font-semibold text-brand" aria-label="Open menu">
+          <button onClick={() => setOpen(true)} className="flex items-center gap-1.5 text-sm font-semibold text-brand hover:text-solar hover:-translate-y-0.5 transition-all duration-200" aria-label="Open menu">
             <Menu className="w-5 h-5" /> Menu
           </button>
           <Link to="/" aria-label="Paradise Rentals home">
@@ -83,7 +83,7 @@ export default function Navbar() {
             <a href="tel:+13053371815" className="flex items-center gap-1.5 px-2 py-2 text-xs text-brand whitespace-nowrap [font-family:'Sora',_sans-serif] font-bold" aria-label="Call">
               <Phone className="w-4 h-4" /> Call
             </a>
-            <button onClick={() => scrollTo('fleet')} className="rounded-lg bg-solar px-4 py-2 text-sm font-bold text-brand">
+            <button onClick={() => scrollTo('fleet')} className="rounded-lg bg-solar px-4 py-2 text-sm font-bold text-brand hover:brightness-105 hover:scale-105 active:scale-95 transition-all duration-200">
               Book Now
             </button>
           </div>
