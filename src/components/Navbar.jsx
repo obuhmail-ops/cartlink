@@ -9,10 +9,10 @@ const leftLinks = [
   { label: 'Golf Carts', type: 'scroll', target: 'fleet' },
   { label: 'Gallery', type: 'scroll', target: 'gallery' },
   { label: 'Delivery', type: 'scroll', target: 'delivery' },
+  { label: 'Ports, Airports & Cruises', type: 'scroll', target: 'arrival-options' },
 ];
 
 const rightLinks = [
-  { label: 'Ports, Airports & Cruises', type: 'scroll', target: 'arrival-options' },
   { label: 'Explore Key West', type: 'scroll', target: 'explore' },
   { label: 'FAQs', type: 'scroll', target: 'faqs' },
   { label: 'Contact', type: 'scroll', target: 'contact' },
