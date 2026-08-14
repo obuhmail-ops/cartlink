@@ -17,10 +17,10 @@ export default function DeliverySection() {
           <h2 className="max-w-xl font-display text-4xl leading-tight text-balance md:text-6xl">
             Don’t come to us.<br />We come to you. 🌴
           </h2>
-          <p className="mt-6 max-w-xl leading-relaxed text-dune/75 text-xl">
+          <p className="mt-6 max-w-xl leading-relaxed text-xl text-[hsl(var(--dune))]">
             Your vacation shouldn’t start with searching for transportation to a rental counter.
           </p>
-          <p className="mt-4 max-w-xl leading-relaxed text-dune/75 text-xl">
+          <p className="mt-4 max-w-xl leading-relaxed text-xl text-[hsl(var(--dune))]">
             Paradise Rentals delivers your golf cart directly to your destination. When your rental is finished, we’ll handle pickup too.
           </p>
         </div>
