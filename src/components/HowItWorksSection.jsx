@@ -13,7 +13,7 @@ export default function HowItWorksSection() {
   const checkAvailability = () => document.getElementById('fleet')?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="how" className="bg-card px-6 py-24 md:px-10 md:py-32 text-[hsl(var(--background))]">
+    <section id="how" className="px-6 py-24 md:px-10 md:py-32 text-[hsl(var(--background))] bg-[hsl(var(--dune))]">
       <div className="mx-auto max-w-6xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-moss">Section 11 — How It Works</p>
         <AnimatedText direction="left" className="mt-4 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">Renting Is Easy</AnimatedText>
