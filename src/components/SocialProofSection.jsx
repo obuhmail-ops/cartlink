@@ -13,7 +13,7 @@ export default function SocialProofSection() {
   return (
     <section className="bg-brand px-6 py-24 text-dune md:px-10 md:py-32">
       <div className="mx-auto max-w-6xl">
-        <p className="text-sm font-semibold uppercase tracking-widest text-solar">Section 4 — Social Proof</p>
+        <p className="text-sm font-semibold uppercase tracking-widest text-solar">Section 5 — Social Proof</p>
         <div className="mt-4 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <h2 className="max-w-3xl font-display text-3xl uppercase leading-tight md:text-5xl">One of Key West’s Favorite Ways to Ride</h2>
           <div className="shrink-0 md:text-right">
