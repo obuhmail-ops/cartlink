@@ -77,12 +77,12 @@ export default function Home() {
 
         {/* Hero action buttons */}
         <div className="absolute bottom-8 right-6 md:right-10 z-20 flex flex-col sm:flex-row gap-3">
-          <button onClick={goToFleet} className="rounded-lg bg-solar px-6 py-3 text-sm font-bold text-brand shadow-lg transition hover:brightness-105 hidden">
-            4-Passenger Golf Cart Features
-          </button>
-          <button onClick={goToFleet} className="rounded-lg bg-brand/80 px-6 py-3 text-sm font-bold text-dune shadow-lg backdrop-blur transition hover:bg-brand hidden">
-            6-Passenger Golf Cart Features
-          </button>
+          
+
+          
+          
+
+          
         </div>
 
         {/* Floating glass island search */}
