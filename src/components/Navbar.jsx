@@ -22,7 +22,7 @@ export default function Navbar() {
             <Image src={LOGO_URL} alt="Paradise Rentals" fittingType="fit" className="h-20 w-20" />
           </Link>
           <nav className="flex flex-1 items-center justify-center gap-3 lg:gap-5 text-[11px] lg:text-xs font-semibold uppercase tracking-wide text-brand/75 whitespace-nowrap">
-            <Link to="/" className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-normal">Home</Link>
+            <Link to="/" className="hover:text-brand transition [font-family:'Sora',_sans-serif] font-bold">Home</Link>
             <button onClick={() => scrollTo('fleet')} className="hover:text-brand transition">Golf Carts</button>
             <button onClick={() => scrollTo('delivery')} className="hover:text-brand transition">Delivery</button>
             <button onClick={() => scrollTo('arrival-options')} className="hover:text-brand transition">Ports, Airports &amp; Cruises</button>
