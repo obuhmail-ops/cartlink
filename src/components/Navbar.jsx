@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-0 inset-x-0 z-40 bg-dune/95 backdrop-blur-md border-b border-brand/10">
-        <div className="hidden md:flex h-24 max-w-7xl mx-auto items-center gap-5 px-5 lg:px-8 text-teal-500 bg-lime-400">
+        <div className="hidden md:flex h-24 max-w-7xl mx-auto items-center gap-5 px-5 lg:px-8 text-teal-500 bg-[#3392e6]">
           <Link to="/" aria-label="Paradise Rentals home" className="shrink-0">
             <Image src={LOGO_URL} alt="Paradise Rentals" fittingType="fit" className="h-20 w-20" />
           </Link>
