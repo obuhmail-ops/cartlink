@@ -6,7 +6,7 @@ import CartCard from '@/components/CartCard';
 import { Image } from '@/components/ui/image';
 import { ArrowRight, CalendarDays, Clock, MapPin, ShieldCheck, Sparkles, Wallet } from 'lucide-react';
 
-const HERO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/22f151478_generated_image.png';
+const HERO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/c8d09b784_A6700444.jpg';
 
 function HeroField({ icon, label, children }) {
   return (
