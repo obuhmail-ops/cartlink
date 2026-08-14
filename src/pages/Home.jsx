@@ -63,7 +63,7 @@ export default function Home() {
             'FREE Hotel Delivery',
             'FREE Airbnb & Vacation Rental Delivery',
             'Airport Delivery Available',
-            'Cruise Port Service',
+            'Cruise Port Delivery',
             'Long-Range Electric Carts',
             'Easy Online Booking'].
             map((benefit, i) =>
