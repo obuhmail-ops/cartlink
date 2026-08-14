@@ -27,7 +27,7 @@ export default function NoChargingStressSection() {
           </p>
           <p className="mt-4 leading-relaxed text-brand/65">And if you need assistance with your battery:</p>
           <p className="mt-6 font-display text-2xl uppercase text-solar md:text-3xl">We Come to You.</p>
-          <p className="mt-6 whitespace-pre-line text-lg leading-relaxed text-brand/65">No charging stress.{`\n`}No vacation stress.{`\n`}Just call Paradise.</p>
+          <p className="mt-6 whitespace-pre-line text-lg leading-relaxed text-brand/65 hidden">No charging stress.{`\n`}No vacation stress.{`\n`}Just call Paradise.</p>
           <a href="#fleet" className="mt-9 inline-flex rounded-lg bg-solar px-6 py-3 text-sm font-bold uppercase tracking-wide text-brand">Book Electric</a>
         </div>
       </div>
