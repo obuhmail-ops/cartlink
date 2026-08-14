@@ -86,7 +86,7 @@ export default function Navbar() {
               Delivery
             </button>
             <button onClick={() => scrollTo('arrival-options')} className="hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
-              Ports, Airports &amp; Cruises
+              Airport &amp; Cruise
             </button>
           </nav>
 
@@ -138,7 +138,7 @@ export default function Navbar() {
             <button onClick={() => scrollTo('fleet')}>Golf Carts</button>
             <button onClick={() => scrollTo('gallery')}>Gallery</button>
             <button onClick={() => scrollTo('delivery')}>Delivery</button>
-            <button onClick={() => scrollTo('arrival-options')}>Ports, Airports &amp; Cruises</button>
+            <button onClick={() => scrollTo('arrival-options')}>Airport &amp; Cruise</button>
             <button onClick={() => scrollTo('explore')}>Explore Key West</button>
             <button onClick={() => scrollTo('faqs')}>FAQs</button>
             <button onClick={() => scrollTo('contact')}>Contact</button>
