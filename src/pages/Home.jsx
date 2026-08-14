@@ -15,7 +15,7 @@ import FaqSection from '@/components/FaqSection';
 import FinalBookingCta from '@/components/FinalBookingCta';
 import { Image } from '@/components/ui/image';
 
-const HERO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/da0bc7925_generated_image.png';
+const HERO_VIDEO_URL = 'https://media.base44.com/videos/public/6a7e5db2c2620868d1046179/0fdfc8acd_denagovid.mp4';
 
 function HeroField({ icon, label, children }) {
   return (
@@ -46,7 +46,7 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative h-screen min-h-[900px] md:min-h-[760px] w-full overflow-hidden">
-        <Image src={HERO_URL} alt="Key West golf cart rental fleet by the coast" fittingType="fill" className="absolute inset-0 w-full h-full" />
+        <video src={HERO_VIDEO_URL} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-brand/50 via-brand/25 to-brand/65" />
         <div className="relative z-10 h-full flex flex-col justify-center pb-40 px-6 md:px-10 max-w-6xl mx-auto opacity-100">
           <p className="text-solar font-semibold tracking-[0.25em] uppercase text-center text-[42px] md:text-[42px] no-underline mt-64">
