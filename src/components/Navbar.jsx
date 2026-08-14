@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Phone, X } from 'lucide-react';
+import PalmLeafDecoration from '@/components/PalmLeafDecoration';
 
 const LOGO_VIDEO_URL = 'https://media.base44.com/videos/public/6a7e5db2c2620868d1046179/f22b7c6ba_gemini_generated_video_9fd05d99.mp4';
 
@@ -47,8 +48,10 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${scrolled ? 'bg-dune/95 backdrop-blur-md shadow-md border-b border-brand/10' : 'bg-dune/80 backdrop-blur-sm'}`}>
-        <div className="hidden md:grid h-28 max-w-7xl mx-auto grid-cols-3 items-center px-6 lg:px-10">
+      <header className={`fixed top-0 inset-x-0 z-40 overflow-hidden transition-all duration-300 ${scrolled ? 'bg-dune/95 backdrop-blur-md shadow-md border-b border-brand/10' : 'bg-dune/80 backdrop-blur-sm'}`}>
+        <PalmLeafDecoration side="left" />
+        <PalmLeafDecoration side="right" />
+        <div className="relative hidden md:grid h-28 max-w-7xl mx-auto grid-cols-3 items-center px-6 lg:px-10">
           <nav className="flex items-center justify-start gap-4 lg:gap-6 text-brand">
             {leftLinks.map(renderLink)}
           </nav>
