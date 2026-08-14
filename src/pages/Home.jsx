@@ -6,7 +6,6 @@ import CartCard from '@/components/CartCard';
 import DeliverySection from '@/components/DeliverySection';
 import SocialProofSection from '@/components/SocialProofSection';
 import ArrivalOptionsSection from '@/components/ArrivalOptionsSection';
-import GallerySection from '@/components/GallerySection';
 import NoChargingStressSection from '@/components/NoChargingStressSection';
 import WhyParadiseSection from '@/components/WhyParadiseSection';
 import ExploreKeyWestSection from '@/components/ExploreKeyWestSection';
@@ -114,8 +113,6 @@ export default function Home() {
       </section>
 
       <DeliverySection />
-
-      <GallerySection />
 
       {/* Fleet */}
       <section id="fleet" className="py-24 md:py-32">
