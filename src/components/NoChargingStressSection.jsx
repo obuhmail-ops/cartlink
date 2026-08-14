@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image } from '@/components/ui/image';
+import AnimatedText from '@/components/AnimatedText';
 
 const BATTERY_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/34ef9af56_Gemini_Generated_Image_gprglbgprglbgprg.jpeg';
 
@@ -17,8 +18,10 @@ export default function NoChargingStressSection() {
         </div>
         <div className="order-1 md:order-2">
           <p className="text-sm font-semibold uppercase tracking-widest text-moss">Section 8 — No Charging Stress</p>
-          <h2 className="mt-5 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">No Place to Charge?</h2>
-          <p className="mt-3 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">No Problem. 🔋</p>
+          <AnimatedText as="div" direction="right">
+            <h2 className="mt-5 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">No Place to Charge?</h2>
+            <p className="mt-3 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">No Problem. 🔋</p>
+          </AnimatedText>
           <p className="mt-6 leading-relaxed text-brand/65">
             One of the biggest worries about renting an electric golf cart shouldn’t be your worry.
           </p>

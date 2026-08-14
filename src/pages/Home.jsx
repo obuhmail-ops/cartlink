@@ -13,6 +13,7 @@ import HowItWorksSection from '@/components/HowItWorksSection';
 import FaqSection from '@/components/FaqSection';
 import FinalBookingCta from '@/components/FinalBookingCta';
 import { Image } from '@/components/ui/image';
+import AnimatedText from '@/components/AnimatedText';
 
 const HERO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/da0bc7925_generated_image.png';
 
@@ -51,9 +52,9 @@ export default function Home() {
           <p className="text-solar font-semibold tracking-[0.25em] uppercase mb-5 text-center mt-48 text-[42px] md:text-[42px] no-underline">
             Key West Golf Cart Rentals
           </p>
-          <h1 className="font-display leading-[1.04] max-w-4xl text-4xl md:text-4xl lg:text-4xl text-center capitalize text-[hsl(var(--dune))]">
+          <AnimatedText as="h1" direction="left" className="font-display leading-[1.04] max-w-4xl text-4xl md:text-4xl lg:text-4xl text-center capitalize text-[hsl(var(--dune))]">
             Explore Key West the paradise way
-          </h1>
+          </AnimatedText>
           <p className="text-white/90 max-w-xl leading-relaxed text-2xl md:text-2xl font-semibold [font-family:'Lexend',_sans-serif] text-center no-underline not-italic capitalize px-1 mx-2 my-5">
             Premium 4-passenger <span className="text-solar">(forward-facing)</span> and<br />6-passenger electric golf carts, delivered right to you.
           </p>
@@ -118,9 +119,9 @@ export default function Home() {
       <section id="fleet" className="py-24 md:py-32">
         <div className="px-6 md:px-10 max-w-6xl mx-auto">
           <p className="text-moss text-sm font-semibold uppercase tracking-widest mb-3">Section 3 — Choose Your Ride</p>
-          <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
+          <AnimatedText direction="right" className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
             Find the Perfect Golf Cart
-          </h2>
+          </AnimatedText>
 
           {loading ?
           <div className="mt-12 grid gap-8 md:grid-cols-2">
