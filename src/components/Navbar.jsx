@@ -48,16 +48,7 @@ export default function Navbar() {
   return (
     <>
       <header className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${scrolled ? 'bg-dune/95 backdrop-blur-md shadow-md border-b border-brand/10' : 'bg-dune/80 backdrop-blur-sm'}`}>
-        {/* Palm leaf decorations */}
-        <svg className="pointer-events-none absolute top-0 left-0 h-28 w-40 text-moss/30" viewBox="0 0 160 112" fill="none" preserveAspectRatio="xMinYMin meet" aria-hidden="true">
-          <path d="M10 108 Q15 60 45 40 Q30 55 28 78 Q40 50 60 45 Q42 58 40 80 Q55 52 78 52 Q56 64 54 86 Q70 60 92 64 Q66 74 64 96 Q78 72 100 80 Q74 88 74 108" stroke="currentColor" strokeWidth="3" strokeLinecap="round" fill="none"/>
-          <path d="M10 108 Q18 70 8 40 Q22 58 26 80 Q14 50 4 30" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
-        </svg>
-        <svg className="pointer-events-none absolute top-0 right-0 h-28 w-40 text-moss/30 -scale-x-100" viewBox="0 0 160 112" fill="none" preserveAspectRatio="xMinYMin meet" aria-hidden="true">
-          <path d="M10 108 Q15 60 45 40 Q30 55 28 78 Q40 50 60 45 Q42 58 40 80 Q55 52 78 52 Q56 64 54 86 Q70 60 92 64 Q66 74 64 96 Q78 72 100 80 Q74 88 74 108" stroke="currentColor" strokeWidth="3" strokeLinecap="round" fill="none"/>
-          <path d="M10 108 Q18 70 8 40 Q22 58 26 80 Q14 50 4 30" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
-        </svg>
-        <div className="hidden md:grid h-28 max-w-7xl mx-auto grid-cols-3 items-center px-6 lg:px-10 relative">
+        <div className="hidden md:grid h-28 max-w-7xl mx-auto grid-cols-3 items-center px-6 lg:px-10">
           <nav className="flex items-center justify-start gap-4 lg:gap-6 text-brand">
             {leftLinks.map(renderLink)}
           </nav>
