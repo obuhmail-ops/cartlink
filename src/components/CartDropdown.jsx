@@ -32,7 +32,7 @@ export default function CartDropdown({ open, onClose, onNavigate }) {
   if (!open) return null;
 
   return (
-    <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[min(92vw,900px)] z-50">
+    <div className="fixed left-1/2 -translate-x-1/2 top-28 w-[min(80vw,720px)] z-50">
       <div className="rounded-2xl border border-brand/10 bg-dune shadow-2xl overflow-hidden">
         <div className="px-6 py-4 bg-brand/5 border-b border-brand/10">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-moss">Choose Your Ride</p>
