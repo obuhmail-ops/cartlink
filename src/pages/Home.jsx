@@ -14,6 +14,7 @@ import FaqSection from '@/components/FaqSection';
 import FinalBookingCta from '@/components/FinalBookingCta';
 import { Image } from '@/components/ui/image';
 import AnimatedText from '@/components/AnimatedText';
+import BenefitsWordReveal from '@/components/BenefitsWordReveal';
 
 const HERO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/da0bc7925_generated_image.png';
 
@@ -58,21 +59,14 @@ export default function Home() {
           <p className="text-white/90 max-w-xl leading-relaxed text-2xl md:text-2xl font-semibold [font-family:'Lexend',_sans-serif] text-center no-underline not-italic capitalize px-1 mx-2 my-5">
             Premium 4-passenger <span className="text-solar">(forward-facing)</span> and<br />6-passenger electric golf carts, delivered right to you.
           </p>
-          <ul className="mt-6 grid grid-cols-1 gap-y-2 text-sm md:text-base text-white max-w-md">
-            {[
+          <BenefitsWordReveal benefits={[
             'FREE Hotel Delivery',
             'FREE Airbnb & Vacation Rental Delivery',
             'Airport Delivery Available',
             'Cruise Port Service',
             'Long-Range Electric Carts',
-            'Easy Online Booking'].
-            map((benefit) =>
-            <li key={benefit} className="flex items-center gap-2 [font-family:'Sora',_sans-serif] font-semibold text-xl my-1">
-                <span className="text-solar font-bold" aria-hidden="true">✓</span>
-                {benefit}
-              </li>
-            )}
-          </ul>
+            'Easy Online Booking',
+          ]} />
         </div>
 
         {/* Hero action buttons */}
