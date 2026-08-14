@@ -36,19 +36,34 @@ export default function Home() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative h-screen min-h-[680px] w-full overflow-hidden">
-        <Image src={HERO_URL} alt="Golf cart at golden hour by the coast" fittingType="fill" className="absolute inset-0 w-full h-full" />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand/40 via-brand/10 to-brand/55" />
-        <div className="relative z-10 h-full flex flex-col justify-center px-6 md:px-10 max-w-6xl mx-auto">
+      <section className="relative h-screen min-h-[900px] md:min-h-[760px] w-full overflow-hidden">
+        <Image src={HERO_URL} alt="Key West golf cart rental fleet by the coast" fittingType="fill" className="absolute inset-0 w-full h-full" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand/50 via-brand/25 to-brand/65" />
+        <div className="relative z-10 h-full flex flex-col justify-center pb-40 px-6 md:px-10 max-w-6xl mx-auto">
           <p className="text-solar text-xs md:text-sm font-semibold tracking-[0.25em] uppercase mb-5">
-            Coastal Bay · Book in seconds
+            Key West Golf Cart Rentals
           </p>
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-white text-balance leading-[1.04] max-w-3xl">
-            Your adventure begins the moment you press book.
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-white text-balance leading-[1.04] max-w-4xl">
+            Explore Key West the paradise way
           </h1>
-          <p className="mt-6 text-white/80 text-lg md:text-xl max-w-xl leading-relaxed">
-            Premium golf cart rentals with flexible hourly and daily rates. Real-time availability, zero friction.
+          <p className="mt-5 text-white/90 text-lg md:text-xl max-w-2xl leading-relaxed">
+            Premium 4 facing-forward and 6-passenger electric golf carts delivered right to you.
           </p>
+          <ul className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm md:text-base text-white max-w-2xl">
+            {[
+              'FREE Hotel Delivery',
+              'FREE Airbnb & Vacation Rental Delivery',
+              'Airport Delivery Available',
+              'Cruise Port Service',
+              'Long-Range Electric Carts',
+              'Easy Online Booking',
+            ].map((benefit) => (
+              <li key={benefit} className="flex items-center gap-2">
+                <span className="text-solar font-bold" aria-hidden="true">✓</span>
+                {benefit}
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* Floating glass island search */}
