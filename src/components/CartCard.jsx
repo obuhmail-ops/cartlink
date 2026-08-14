@@ -1,38 +1,43 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 
+const rideDetails = {
+  four: {
+    title: '4-Passenger',
+    description: 'Perfect for couples and families.',
+    features: ['Forward-Facing Seating', 'Premium Electric Cart', 'Lithium Battery', 'Quiet Ride', 'Comfortable Seating', 'Key West Delivery'],
+    button: 'Check 4-Seater Availability',
+  },
+  six: {
+    title: '6-Passenger',
+    description: 'Bring the whole crew.',
+    features: ['Seats Up to 6', 'Premium Electric Cart', 'Spacious Seating', 'Long-Range Lithium Battery', 'Perfect for Families & Groups', 'Key West Delivery'],
+    button: 'Check 6-Seater Availability',
+  },
+};
+
 export default function CartCard({ cart }) {
+  const details = cart.seats >= 6 ? rideDetails.six : rideDetails.four;
+
   return (
-    <div className="group relative w-[280px] md:w-[360px] shrink-0 snap-center">
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white shadow-sm">
-        <Image
-          src={cart.image_url}
-          alt={cart.name}
-          fittingType="fill"
-          className="absolute inset-0 w-full h-full transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute top-3 left-3 flex items-center gap-1.5 rounded-full bg-brand/90 text-dune px-3 py-1 text-xs font-medium backdrop-blur">
-          <Users className="w-3.5 h-3.5" /> {cart.seats} seats
-        </div>
-      </div>
-      <div className="mt-5">
-        <h3 className="font-display text-xl text-brand">{cart.name}</h3>
-        <p className="text-sm text-brand/55 mt-1.5 line-clamp-2 leading-relaxed">{cart.description}</p>
-      </div>
-      <div className="mt-5 flex items-center justify-between">
-        <div className="text-brand">
-          <span className="text-2xl font-display">${cart.hourly_rate}</span>
-          <span className="text-sm text-brand/45">/hr · ${cart.daily_rate}/day</span>
-        </div>
-        <Link
-          to={`/cart/${cart.id}`}
-          className="rounded-full bg-solar text-brand px-5 py-2.5 text-sm font-semibold hover:brightness-105 transition shadow-sm"
-        >
-          View & Book
+    <article className="overflow-hidden rounded-2xl border border-brand/10 bg-card shadow-sm">
+      <Image src={cart.image_url} alt={`${details.title} electric golf cart`} fittingType="fill" className="aspect-[4/3] w-full" />
+      <div className="p-6 md:p-8">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-moss">{details.title}</p>
+        <h3 className="mt-3 font-display text-2xl text-brand md:text-3xl">{details.description}</h3>
+        <ul className="mt-6 grid gap-3 text-sm text-brand/70 sm:grid-cols-2">
+          {details.features.map((feature) => (
+            <li key={feature} className="flex items-start gap-2">
+              <span className="font-bold text-moss" aria-hidden="true">✓</span>
+              <span>{feature}</span>
+            </li>
+          ))}
+        </ul>
+        <Link to={`/cart/${cart.id}`} className="mt-8 inline-flex w-full justify-center rounded-lg bg-solar px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-brand">
+          {details.button}
         </Link>
       </div>
-    </div>
+    </article>
   );
 }

@@ -97,42 +97,31 @@ export default function Home() {
 
       <DeliverySection />
 
-      {/* Fleet Cinema */}
+      {/* Fleet */}
       <section id="fleet" className="py-24 md:py-32">
         <div className="px-6 md:px-10 max-w-6xl mx-auto">
-          <div className="flex items-end justify-between gap-6 mb-12">
-            <div>
-              <p className="text-moss text-sm font-semibold uppercase tracking-widest mb-3">The Fleet</p>
-              <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
-                Choose your chariot.
-              </h2>
+          <p className="text-moss text-sm font-semibold uppercase tracking-widest mb-3">Section 3 — Choose Your Ride</p>
+          <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
+            Find the Perfect Golf Cart
+          </h2>
+
+          {loading ? (
+            <div className="mt-12 grid gap-8 md:grid-cols-2">
+              {[0, 1].map((i) => (
+                <div key={i} className="overflow-hidden rounded-2xl border border-brand/10 bg-card">
+                  <div className="aspect-[4/3] animate-pulse bg-brand/5" />
+                  <div className="p-8"><div className="h-7 w-1/2 animate-pulse rounded bg-brand/5" /></div>
+                </div>
+              ))}
             </div>
-            <p className="hidden md:block text-brand/55 max-w-xs text-right">
-              Swipe through the lineup. Every cart is charged, cleaned, and ready when you are.
-            </p>
-          </div>
+          ) : carts.length === 0 ? (
+            <p className="mt-12 text-brand/50">No carts available right now. Check back soon.</p>
+          ) : (
+            <div className="mt-12 grid gap-8 md:grid-cols-2">
+              {carts.map((cart) => <CartCard key={cart.id} cart={cart} />)}
+            </div>
+          )}
         </div>
-
-        {loading ?
-        <div className="px-6 md:px-10 flex gap-6 overflow-hidden">
-            {[0, 1, 2].map((i) =>
-          <div key={i} className="w-[280px] md:w-[360px] shrink-0">
-                <div className="aspect-[4/3] w-full rounded-2xl bg-brand/5 animate-pulse" />
-                <div className="h-6 w-2/3 bg-brand/5 rounded mt-5 animate-pulse" />
-                <div className="h-4 w-1/2 bg-brand/5 rounded mt-3 animate-pulse" />
-              </div>
-          )}
-          </div> :
-        carts.length === 0 ?
-        <p className="px-6 md:px-10 text-brand/50">No carts available right now. Check back soon.</p> :
-
-        <div className="flex gap-6 md:gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory px-6 md:px-10 pb-4">
-            {carts.map((cart) =>
-          <CartCard key={cart.id} cart={cart} />
-          )}
-            <div className="w-4 shrink-0" />
-          </div>
-        }
       </section>
 
       {/* How it works */}
