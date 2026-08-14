@@ -97,7 +97,7 @@ export default function Navbar() {
             <button onClick={() => setOpen(false)} aria-label="Close menu" className="text-brand"><X className="w-6 h-6" /></button>
           </div>
           <nav className="flex flex-col items-center justify-center gap-6 flex-1 text-2xl font-display text-brand">
-            <Link to="/" onClick={() => setOpen(false)} className="my-1">Home</Link>
+            <Link to="/" onClick={() => setOpen(false)}>Home</Link>
             <button onClick={() => scrollTo('fleet')}>Golf Carts</button>
             <button onClick={() => scrollTo('gallery')}>Gallery</button>
             <button onClick={() => scrollTo('delivery')}>Delivery</button>
