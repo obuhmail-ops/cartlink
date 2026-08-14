@@ -7,6 +7,7 @@ import DeliverySection from '@/components/DeliverySection';
 import SocialProofSection from '@/components/SocialProofSection';
 import AirportDeliverySection from '@/components/AirportDeliverySection';
 import KeyWestExpressSection from '@/components/KeyWestExpressSection';
+import CruiseVisitorsSection from '@/components/CruiseVisitorsSection';
 import { Image } from '@/components/ui/image';
 import { ArrowRight, CalendarDays, Clock, MapPin, ShieldCheck, Sparkles, Wallet } from 'lucide-react';
 
@@ -132,6 +133,8 @@ export default function Home() {
       <AirportDeliverySection />
 
       <KeyWestExpressSection />
+
+      <CruiseVisitorsSection />
 
       {/* How it works */}
       <section id="how" className="py-24 md:py-32 bg-white">
