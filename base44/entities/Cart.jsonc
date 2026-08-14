@@ -1,0 +1,60 @@
+{
+  "name": "Cart",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "image_url": {
+      "type": "string",
+      "title": "Image URL",
+      "format": "uri"
+    },
+    "seats": {
+      "type": "integer",
+      "title": "Seats"
+    },
+    "hourly_rate": {
+      "type": "number",
+      "title": "Hourly Rate"
+    },
+    "daily_rate": {
+      "type": "number",
+      "title": "Daily Rate"
+    },
+    "battery_range": {
+      "type": "string",
+      "title": "Battery Range"
+    },
+    "top_speed": {
+      "type": "string",
+      "title": "Top Speed"
+    },
+    "total_inventory": {
+      "type": "integer",
+      "title": "Total Inventory",
+      "default": 1
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "available",
+        "maintenance"
+      ],
+      "default": "available"
+    }
+  },
+  "required": [
+    "name",
+    "seats",
+    "hourly_rate",
+    "daily_rate",
+    "total_inventory"
+  ]
+}
