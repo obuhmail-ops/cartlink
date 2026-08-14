@@ -66,7 +66,7 @@ export default function Home() {
             'Long-Range Electric Carts',
             'Easy Online Booking'].
             map((benefit) =>
-            <li key={benefit} className="flex items-center gap-2">
+            <li key={benefit} className="flex items-center gap-2 [font-family:'Sora',_sans-serif] font-semibold text-xl">
                 <span className="text-solar font-bold" aria-hidden="true">✓</span>
                 {benefit}
               </li>
