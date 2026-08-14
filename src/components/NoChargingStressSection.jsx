@@ -12,14 +12,14 @@ export default function NoChargingStressSection() {
             src={BATTERY_IMAGE_URL}
             alt="Premium lithium battery pack for Paradise Rentals electric golf carts"
             fittingType="fill"
-            className="aspect-[4/3] w-full"
-          />
+            className="aspect-[4/3] w-full" />
+          
         </div>
         <div className="order-1 md:order-2">
           <p className="text-sm font-semibold uppercase tracking-widest text-moss">Section 8 — No Charging Stress</p>
           <h2 className="mt-5 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">No Place to Charge?</h2>
           <p className="mt-3 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">No Problem. 🔋</p>
-          <p className="mt-6 leading-relaxed text-brand/65">
+          <p className="mt-6 leading-relaxed text-brand/65 hidden">
             One of the biggest worries about renting an electric golf cart shouldn’t be your worry.
           </p>
           <p className="mt-4 leading-relaxed text-brand/65">
@@ -31,6 +31,6 @@ export default function NoChargingStressSection() {
           <a href="#fleet" className="mt-9 inline-flex rounded-lg bg-solar px-6 py-3 text-sm font-bold uppercase tracking-wide text-brand">Book Electric</a>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
