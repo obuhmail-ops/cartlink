@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 const animatedTags = { h1: motion.h1, h2: motion.h2, div: motion.div };
 const wordMotion = {
   hidden: { opacity: 0, y: '0.7em', filter: 'blur(5px)' },
-  visible: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.45 } },
+  visible: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.45 } }
 };
 
 function revealWords(children, count) {
@@ -13,7 +13,7 @@ function revealWords(children, count) {
       return child.split(/(\s+)/).map((part) => {
         if (/^\s+$/.test(part)) return part;
         const key = count.current++;
-        return <motion.span key={key} variants={wordMotion} className="inline-block">{part}</motion.span>;
+        return <motion.span key={key} variants={wordMotion} className="inline-block [font-family:'Bodoni_Moda',_serif] font-bold">{part}</motion.span>;
       });
     }
     if (React.isValidElement(child) && child.props.children) {
@@ -34,9 +34,9 @@ export default function AnimatedText({ as = 'h2', className, children }) {
       variants={{ visible: { transition: { staggerChildren: 0.065 } } }}
       initial={reduceMotion ? false : 'hidden'}
       whileInView="visible"
-      viewport={{ once: true, amount: 0.35 }}
-    >
+      viewport={{ once: true, amount: 0.35 }}>
+      
       {revealWords(children, count)}
-    </Component>
-  );
+    </Component>);
+
 }
