@@ -41,12 +41,12 @@ export default function ArrivalOptionsSection() {
           {options.map((option) =>
           <article id={option.id} key={option.id} className="scroll-mt-24 overflow-hidden rounded-2xl bg-card shadow-sm">
               <Image src={option.image} alt={option.label} fittingType="fill" className="aspect-[4/3] w-full" />
-              <div className="flex flex-col p-7">
+              <div className="flex flex-col p-7 h-full">
                 <p className="font-bold uppercase tracking-[0.18em] text-base text-[hsl(var(--destructive))]">{option.label}</p>
                 <h3 className="mt-3 font-display text-2xl uppercase leading-tight text-brand">{option.title}</h3>
                 <p className="mt-4 leading-relaxed text-brand/65">{option.body}</p>
                 <p className="mt-5 font-semibold text-brand">{option.detail}</p>
-                <a href="#fleet" className="mt-7 inline-flex justify-center rounded-lg bg-solar px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-brand">{option.button}</a>
+                <a href="#fleet" className="mt-auto inline-flex justify-center rounded-lg bg-solar px-5 py-3 text-center text-sm font-bold uppercase tracking-wide text-brand">{option.button}</a>
               </div>
             </article>
           )}
