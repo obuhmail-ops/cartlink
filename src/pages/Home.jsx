@@ -12,6 +12,7 @@ import NoChargingStressSection from '@/components/NoChargingStressSection';
 import WhyParadiseSection from '@/components/WhyParadiseSection';
 import ExploreKeyWestSection from '@/components/ExploreKeyWestSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
+import FaqSection from '@/components/FaqSection';
 import { Image } from '@/components/ui/image';
 
 const HERO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/c8d09b784_A6700444.jpg';
@@ -146,6 +147,8 @@ export default function Home() {
       <ExploreKeyWestSection />
 
       <HowItWorksSection />
+
+      <FaqSection />
 
       <Footer />
     </div>);
