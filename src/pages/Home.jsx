@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CartCard from '@/components/CartCard';
 import DeliverySection from '@/components/DeliverySection';
+import SocialProofSection from '@/components/SocialProofSection';
 import { Image } from '@/components/ui/image';
 import { ArrowRight, CalendarDays, Clock, MapPin, ShieldCheck, Sparkles, Wallet } from 'lucide-react';
 
@@ -123,6 +124,8 @@ export default function Home() {
           }
         </div>
       </section>
+
+      <SocialProofSection />
 
       {/* How it works */}
       <section id="how" className="py-24 md:py-32 bg-white">
