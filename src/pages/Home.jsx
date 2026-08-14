@@ -54,7 +54,7 @@ export default function Home() {
           <h1 className="font-display leading-[1.04] max-w-4xl text-4xl md:text-4xl lg:text-4xl text-[hsl(var(--card))] text-center">
             Explore Key West the paradise way
           </h1>
-          <p className="text-white/90 max-w-xl leading-relaxed text-2xl md:text-2xl mt-5 font-semibold [font-family:'Lexend',_sans-serif] text-center no-underline not-italic capitalize px-1 ml-2 mb-1 mr-1">
+          <p className="text-white/90 max-w-xl leading-relaxed text-2xl md:text-2xl font-semibold [font-family:'Lexend',_sans-serif] text-center no-underline not-italic capitalize px-1 mx-2 my-5">
             Premium 4-passenger <span className="text-solar">(forward-facing)</span> and<br />6-passenger electric golf carts, delivered right to you.
           </p>
           <ul className="mt-6 grid grid-cols-1 gap-y-2 text-sm md:text-base text-white max-w-md">
