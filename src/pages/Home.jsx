@@ -14,7 +14,7 @@ import FaqSection from '@/components/FaqSection';
 import FinalBookingCta from '@/components/FinalBookingCta';
 import { Image } from '@/components/ui/image';
 
-const HERO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/091ad4f99_generated_image.png';
+const HERO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/5afb0dda9_generated_image.png';
 
 function HeroField({ icon, label, children }) {
   return (
