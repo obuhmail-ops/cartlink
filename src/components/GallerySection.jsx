@@ -99,9 +99,9 @@ export default function GallerySection() {
                     </ul>
 
                     <div className="mt-6 flex items-center justify-between">
-                      <div className="text-sm text-brand/60 hidden">
-                        <span className="font-bold text-brand">${cart.daily_rate}</span> / day
-                      </div>
+                      
+
+                    
                       <Link to={`/cart/${cart.id}`} className="rounded-lg bg-solar px-4 py-2 text-xs font-bold uppercase tracking-wide text-brand transition hover:brightness-105">
                         Book Now
                       </Link>
