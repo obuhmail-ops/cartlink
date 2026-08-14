@@ -76,24 +76,24 @@ export default function Home() {
 
         {/* Hero action buttons */}
         <div className="absolute bottom-8 right-6 md:right-10 z-20 flex flex-col sm:flex-row gap-3">
-          <button onClick={goToFleet} className="rounded-lg bg-solar/95 backdrop-blur px-5 py-4 text-left shadow-lg transition hover:brightness-105 w-64 hidden">
-            <span className="block text-sm font-bold text-brand">4-Passenger Golf Cart</span>
-            <ul className="mt-2 space-y-1 text-xs text-brand/80">
-              <li className="flex items-center gap-1.5"><span className="text-brand font-bold">✓</span>Forward-Facing Seating</li>
-              <li className="flex items-center gap-1.5"><span className="text-brand font-bold">✓</span>Premium Electric Cart</li>
-              <li className="flex items-center gap-1.5"><span className="text-brand font-bold">✓</span>Lithium Battery</li>
-              <li className="flex items-center gap-1.5"><span className="text-brand font-bold">✓</span>Quiet Ride</li>
-            </ul>
-          </button>
-          <button onClick={goToFleet} className="rounded-lg bg-brand/80 backdrop-blur px-5 py-4 text-left shadow-lg transition hover:bg-brand w-64 hidden">
-            <span className="block text-sm font-bold text-dune">6-Passenger Golf Cart</span>
-            <ul className="mt-2 space-y-1 text-xs text-dune/80">
-              <li className="flex items-center gap-1.5"><span className="text-solar font-bold">✓</span>Seats Up to 6</li>
-              <li className="flex items-center gap-1.5"><span className="text-solar font-bold">✓</span>Spacious Seating</li>
-              <li className="flex items-center gap-1.5"><span className="text-solar font-bold">✓</span>Long-Range Lithium Battery</li>
-              <li className="flex items-center gap-1.5"><span className="text-solar font-bold">✓</span>Perfect for Groups</li>
-            </ul>
-          </button>
+          
+
+
+
+
+
+
+
+          
+          
+
+
+
+
+
+
+
+          
         </div>
 
         {/* Floating glass island search */}
