@@ -9,12 +9,12 @@ const leftLinks = [
 { label: 'Home', type: 'link', to: '/' },
 { label: 'Rentals', type: 'scroll', target: 'fleet' },
 { label: 'Gallery', type: 'scroll', target: 'gallery' },
-{ label: 'Delivery', type: 'scroll', target: 'delivery' }];
+{ label: 'Delivery', type: 'scroll', target: 'delivery' },
+{ label: 'Explore Key West', type: 'scroll', target: 'explore' }];
 
 
 const rightLinks = [
 { label: 'Airport & Cruise', type: 'scroll', target: 'arrival-options' },
-{ label: 'Explore Key West', type: 'scroll', target: 'explore' },
 { label: 'FAQs', type: 'scroll', target: 'faqs' },
 { label: 'Contact', type: 'scroll', target: 'contact' }];
 
