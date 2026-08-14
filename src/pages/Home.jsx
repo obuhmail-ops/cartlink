@@ -110,7 +110,7 @@ export default function Home() {
       <DeliverySection />
 
       {/* Fleet */}
-      <section id="fleet" className="py-24 md:py-32">
+      <section id="fleet" className="py-24 md:py-32 bg-[hsl(var(--dune))]">
         <div className="px-6 md:px-10 max-w-6xl mx-auto">
           <p className="text-moss text-sm font-semibold uppercase tracking-widest mb-3">Section 3 — Choose Your Ride</p>
           <AnimatedText direction="right" className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
