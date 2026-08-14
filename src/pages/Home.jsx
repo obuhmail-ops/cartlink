@@ -65,8 +65,8 @@ export default function Home() {
             'Cruise Port Service',
             'Long-Range Electric Carts',
             'Easy Online Booking'].
-            map((benefit) =>
-            <li key={benefit} className="flex items-center gap-2 [font-family:'Sora',_sans-serif] font-semibold text-xl my-1">
+            map((benefit, i) =>
+            <li key={benefit} style={{ animation: `hero-benefit-rise 0.7s ease-out ${0.15 + i * 0.12}s both` }} className="flex items-center gap-2 [font-family:'Sora',_sans-serif] font-semibold text-xl my-1">
                 <span className="text-solar font-bold" aria-hidden="true">✓</span>
                 {benefit}
               </li>
