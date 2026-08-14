@@ -68,29 +68,29 @@ export default function Home() {
 
         {/* Floating glass island search */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[92%] max-w-3xl z-20">
-          <div className="rounded-2xl bg-white/15 backdrop-blur-xl border border-white/25 p-3 md:p-5 shadow-2xl hidden">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 items-end">
-              <HeroField icon={<CalendarDays className="w-3.5 h-3.5" />} label="Pick-up">
-                <input type="datetime-local" className="w-full rounded-lg bg-white/90 text-brand text-sm px-3 py-2.5 outline-none focus:ring-2 ring-solar" />
-              </HeroField>
-              <HeroField icon={<CalendarDays className="w-3.5 h-3.5" />} label="Return">
-                <input type="datetime-local" className="w-full rounded-lg bg-white/90 text-brand text-sm px-3 py-2.5 outline-none focus:ring-2 ring-solar" />
-              </HeroField>
-              <HeroField icon={<MapPin className="w-3.5 h-3.5" />} label="Location">
-                <select className="w-full rounded-lg bg-white/90 text-brand text-sm px-3 py-2.5 outline-none focus:ring-2 ring-solar">
-                  <option>Marina Hub</option>
-                  <option>Beachfront</option>
-                  <option>Old Town</option>
-                </select>
-              </HeroField>
-              <button
-                onClick={goToFleet}
-                className="flex items-center justify-center gap-2 rounded-lg bg-solar text-brand font-semibold text-sm px-5 py-2.5 hover:brightness-105 transition">
-                
-                Search Fleet <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </div>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </div>
       </section>
 
