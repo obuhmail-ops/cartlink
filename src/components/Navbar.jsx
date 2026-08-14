@@ -35,7 +35,7 @@ export default function Navbar() {
               <Phone className="w-4 h-4" /> Call Us
             </a>
             <button onClick={() => scrollTo('fleet')} className="rounded-lg bg-solar px-3 lg:px-4 py-2.5 text-[11px] lg:text-xs font-bold text-brand whitespace-nowrap">
-              Check Availability
+              Book Now
             </button>
           </div>
         </div>
