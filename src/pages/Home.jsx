@@ -56,7 +56,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <h1 className="self-center leading-[1.04] text-center capitalize [font-family:'Poppins',_sans-serif] font-bold text-4xl md:text-4xl lg:text-4xl text-[hsl(var(--background))]">
+          <h1 className="hidden self-center leading-[1.04] text-center capitalize [font-family:'Poppins',_sans-serif] font-bold text-4xl md:block md:text-4xl lg:text-4xl text-[hsl(var(--background))]">
             Explore Key West the paradise way
           </h1>
           <p className="self-center text-white/90 max-w-2xl leading-relaxed text-2xl md:text-2xl font-semibold [font-family:'Lexend',_sans-serif] text-center no-underline not-italic capitalize px-1 my-5">
