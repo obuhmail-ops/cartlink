@@ -139,7 +139,6 @@ export default function Navbar() {
             <button onClick={() => scrollTo('gallery')}>Gallery</button>
             <button onClick={() => scrollTo('delivery')}>Delivery</button>
             <button onClick={() => scrollTo('arrival-options')}>Airport &amp; Cruise</button>
-            <button onClick={() => scrollTo('explore')}>Explore Key West</button>
             <button onClick={() => scrollTo('faqs')}>FAQs</button>
             <button onClick={() => scrollTo('contact')}>Contact</button>
           </nav>
