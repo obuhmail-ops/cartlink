@@ -7,7 +7,7 @@ const landmarks = ['Duval Street', 'Mallory Square', 'Southernmost Point', 'Fort
 
 export default function ExploreKeyWestSection() {
   return (
-    <section id="explore" className="bg-brand px-6 py-24 text-card md:px-10 md:py-32">
+    <section id="explore" className="hidden bg-brand px-6 py-24 text-card md:block md:px-10 md:py-32">
       <div className="mx-auto max-w-6xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-solar">Section 10 — Explore Key West</p>
         <h2 className="mt-4 max-w-4xl font-display text-4xl uppercase leading-tight md:text-6xl">Your Cart. Your Island. Your Adventure.</h2>
