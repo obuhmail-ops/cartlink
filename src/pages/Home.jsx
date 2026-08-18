@@ -53,7 +53,7 @@ export default function Home() {
             <div className="md:rounded-full md:px-10 md:py-3 md:bg-brand/40 md:backdrop-blur-sm md:border md:border-solar/50 md:shadow-[0_0_30px_hsl(43_100%_50%/0.6),inset_0_0_20px_hsl(43_100%_50%/0.3)]">
               <p className="text-solar font-semibold tracking-[0.25em] uppercase text-center text-[26px] md:text-[42px] no-underline drop-shadow-[0_0_12px_hsl(43_100%_50%/0.8)]">
                 <span className="block md:inline">Key West</span>
-                <span className="block md:inline">Golf Cart Rentals</span>
+                <span className="block md:inline text-[20px] md:text-[42px]">Golf Cart Rentals</span>
               </p>
             </div>
           </div>
