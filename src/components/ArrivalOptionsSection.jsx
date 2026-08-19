@@ -39,18 +39,20 @@ export default function ArrivalOptionsSection() {
         <h2 className="mt-4 max-w-3xl font-display text-3xl uppercase leading-tight text-brand md:text-5xl">Start Exploring Key West Your Way</h2>
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {options.map((option) =>
-          <article id={option.id} key={option.id} className="scroll-mt-24 overflow-hidden rounded-2xl bg-card shadow-sm">
-              <Image src={option.image} alt={option.label} fittingType="fill" className="aspect-[4/3] w-full" />
-              <div className="flex justify-center -mt-6 relative z-10">
-                <a href="#fleet" className="inline-flex justify-center rounded-full bg-solar px-8 py-3 text-center text-sm font-bold uppercase tracking-wide text-brand shadow-lg">{option.button}</a>
-              </div>
-              <div className="flex flex-col p-7">
-                <p className="font-bold uppercase tracking-[0.18em] text-base text-[hsl(var(--destructive))] text-center">{option.label}</p>
-                <h3 className="mt-3 font-display text-2xl uppercase leading-tight text-brand text-center">{option.title}</h3>
-                <p className="mt-4 leading-relaxed text-brand/65">{option.body}</p>
-                <p className="mt-5 font-semibold text-brand">{option.detail}</p>
-              </div>
-            </article>
+          <a href="#fleet" key={option.id} className="group block scroll-mt-24 overflow-hidden rounded-2xl bg-card shadow-sm transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+              <article id={option.id}>
+                <Image src={option.image} alt={option.label} fittingType="fill" className="aspect-[4/3] w-full" />
+                <div className="flex justify-center -mt-6 relative z-10">
+                  <span className="inline-flex justify-center rounded-full bg-solar px-8 py-3 text-center text-sm font-bold uppercase tracking-wide text-brand shadow-lg group-hover:brightness-110 group-hover:scale-105 transition-all duration-200">{option.button}</span>
+                </div>
+                <div className="flex flex-col p-7">
+                  <p className="font-bold uppercase tracking-[0.18em] text-base text-[hsl(var(--destructive))] text-center">{option.label}</p>
+                  <h3 className="mt-3 font-display text-2xl uppercase leading-tight text-brand text-center">{option.title}</h3>
+                  <p className="mt-4 leading-relaxed text-brand/65">{option.body}</p>
+                  <p className="mt-5 font-semibold text-brand">{option.detail}</p>
+                </div>
+              </article>
+            </a>
           )}
         </div>
       </div>
