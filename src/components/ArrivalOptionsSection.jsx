@@ -4,7 +4,7 @@ import { Image } from '@/components/ui/image';
 const options = [
 {
   id: 'airport-delivery',
-  image: 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/936a7c2a8_A6700411.jpg',
+  image: 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/fa9f7a8c5_generated_image.png',
   label: 'Airport Delivery',
   title: 'Land. Grab Your Bags. Start Your Vacation.',
   body: 'Skip the rental-car counter with convenient golf-cart delivery for arrivals at Key West International Airport.',
