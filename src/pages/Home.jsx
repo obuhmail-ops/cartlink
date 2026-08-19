@@ -82,11 +82,11 @@ export default function Home() {
         </div>
 
         {/* Hero action buttons */}
-        <div className="hidden absolute bottom-8 right-6 md:right-10 z-20 md:flex flex-col sm:flex-row gap-3">
-          <button onClick={goToFleet} className="rounded-full bg-solar px-6 py-3 text-sm font-bold text-brand shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 md:left-auto md:right-6 md:translate-x-0 lg:right-10 z-20 flex flex-col sm:flex-row gap-3 w-[92%] max-w-sm md:w-auto">
+          <button onClick={goToFleet} className="rounded-full bg-solar px-5 py-3 text-xs md:text-sm font-bold text-brand shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 w-full md:w-auto">
             4-Passenger Features
           </button>
-          <button onClick={goToFleet} className="rounded-full bg-brand/90 backdrop-blur-sm border border-solar/40 px-6 py-3 text-sm font-bold text-dune shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
+          <button onClick={goToFleet} className="rounded-full bg-brand/90 backdrop-blur-sm border border-solar/40 px-5 py-3 text-xs md:text-sm font-bold text-dune shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 w-full md:w-auto">
             6-Passenger Features
           </button>
         </div>
