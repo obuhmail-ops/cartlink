@@ -13,7 +13,7 @@ const options = [
 },
 {
   id: 'key-west-express',
-  image: 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/8090f1a27_A6700430.jpg',
+  image: 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/6b280111a_generated_image.png',
   label: 'Key West Express',
   title: 'Make the Most of Every Island Hour.',
   body: 'Qualifying rentals of 24 hours or longer for Key West Express arrivals can receive extra island time.',
