@@ -15,7 +15,7 @@ import FaqSection from '@/components/FaqSection';
 import FinalBookingCta from '@/components/FinalBookingCta';
 import { Image } from '@/components/ui/image';
 
-const HERO_VIDEO_URL = 'https://media.base44.com/videos/public/6a7e5db2c2620868d1046179/0fdfc8acd_denagovid.mp4';
+const HERO_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/2de60402f_generated_image.png';
 
 function HeroField({ icon, label, children }) {
   return (
@@ -46,22 +46,23 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative h-screen min-h-[900px] md:min-h-[760px] w-full overflow-hidden">
-        <video src={HERO_VIDEO_URL} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand/50 via-brand/25 to-brand/65" />
-        <div className="relative z-10 h-full flex flex-col justify-start pt-24 md:justify-start md:pt-28 pb-40 px-6 md:px-10 max-w-6xl mx-auto opacity-100">
-          <div className="mt-0 md:mt-0 self-center">
+        <img src={HERO_IMAGE_URL} alt="Paradise Rentals white electric golf cart parked beside a Key West beach" className="absolute inset-0 w-full h-full object-cover object-center md:object-right" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand/55 via-brand/15 to-transparent md:from-brand/50 md:via-brand/10 md:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand/40 via-transparent to-brand/55" />
+        <div className="relative z-10 h-full flex flex-col justify-start items-center md:items-start pt-24 md:justify-start md:pt-28 pb-40 px-6 md:px-10 max-w-6xl mx-auto opacity-100">
+          <div className="mt-0 md:mt-0 self-center md:self-start">
             <div className="md:rounded-full md:px-10 md:py-3 md:bg-brand/40 md:backdrop-blur-sm md:border md:border-solar/50 md:shadow-[0_0_30px_hsl(43_100%_50%/0.6),inset_0_0_20px_hsl(43_100%_50%/0.3)]">
-              <p className="text-solar font-semibold tracking-[0.25em] uppercase text-center text-[26px] md:text-[42px] no-underline drop-shadow-[0_0_12px_hsl(43_100%_50%/0.8)]">
+              <p className="text-solar font-semibold tracking-[0.25em] uppercase text-center md:text-left text-[26px] md:text-[42px] no-underline drop-shadow-[0_0_12px_hsl(43_100%_50%/0.8)]">
                 <span className="block md:inline">Key West</span>
                 <span className="hidden md:inline" aria-hidden="true">&nbsp;</span>
                 <span className="block md:inline text-[20px] md:text-[42px] rounded-full px-6 py-2 bg-brand/40 backdrop-blur-sm border border-solar/50 shadow-[0_0_30px_hsl(43_100%_50%/0.6),inset_0_0_20px_hsl(43_100%_50%/0.3)] md:rounded-none md:px-0 md:py-0 md:bg-transparent md:backdrop-blur-none md:border-0 md:shadow-none">Golf Cart Rentals</span>
               </p>
             </div>
           </div>
-          <h1 className="hidden self-center leading-[1.04] text-center capitalize [font-family:'Poppins',_sans-serif] font-bold text-4xl md:block md:text-4xl lg:text-4xl text-[hsl(var(--background))]">
+          <h1 className="hidden self-center md:self-start leading-[1.04] text-center md:text-left capitalize [font-family:'Poppins',_sans-serif] font-bold text-4xl md:block md:text-4xl lg:text-4xl text-[hsl(var(--background))]">
             Explore Key West the paradise way
           </h1>
-          <p className="self-center max-w-2xl leading-relaxed text-center no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
+          <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
             Your Cart. Your Island. Your Adventure.
           </p>
           <ul className="mt-6 grid grid-cols-1 gap-y-2 text-sm md:text-base text-white max-w-md">
