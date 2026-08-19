@@ -61,7 +61,7 @@ export default function Home() {
           <h1 className="hidden self-center leading-[1.04] text-center capitalize [font-family:'Poppins',_sans-serif] font-bold text-4xl md:block md:text-4xl lg:text-4xl text-[hsl(var(--background))]">
             Explore Key West the paradise way
           </h1>
-          <p className="self-center max-w-2xl leading-relaxed text-center no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-lg md:text-lg [font-family:'Fredoka',_system-ui] font-normal">
+          <p className="self-center max-w-2xl leading-relaxed text-center no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
             Your Cart. Your Island. Your Adventure.
           </p>
           <ul className="mt-6 grid grid-cols-1 gap-y-2 text-sm md:text-base text-white max-w-md">
