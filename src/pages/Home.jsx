@@ -17,6 +17,7 @@ import { Image } from '@/components/ui/image';
 
 const HERO_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/2de60402f_generated_image.png';
 const HERO_MOBILE_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/628f37336_generated_image.png';
+const HERO_MOBILE_IMAGE_2_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/fd255c606_A6700476.jpg';
 
 function HeroField({ icon, label, children }) {
   return (
@@ -48,6 +49,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative h-screen min-h-[900px] md:min-h-[760px] w-full overflow-hidden">
         <img src={HERO_MOBILE_IMAGE_URL} alt="Paradise Rentals golf cart beside a Key West beach" className="absolute inset-0 w-full h-full object-contain object-top md:hidden" />
+        <img src={HERO_MOBILE_IMAGE_2_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="absolute bottom-24 left-1/2 -translate-x-1/2 w-[88%] max-w-xs rounded-2xl object-cover shadow-lg md:hidden" />
         <img src={HERO_IMAGE_URL} alt="Paradise Rentals white electric golf cart parked beside a Key West beach" className="absolute inset-0 w-full h-full object-cover object-right hidden md:block" />
         <div className="absolute inset-0 bg-gradient-to-r from-brand/55 via-brand/15 to-transparent md:from-brand/50 md:via-brand/10 md:to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-brand/40 via-transparent to-brand/55" />
