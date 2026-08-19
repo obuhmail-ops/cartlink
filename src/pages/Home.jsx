@@ -166,6 +166,14 @@ export default function Home() {
       <FinalBookingCta />
 
       <Footer />
+
+      {/* Floating Book Now button (mobile only) */}
+      <button
+        onClick={goToFleet}
+        className="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 rounded-full bg-solar px-8 py-3 text-sm font-bold uppercase tracking-wide text-brand shadow-[0_8px_30px_hsl(43_100%_50%/0.5)] hover:scale-105 active:scale-95 transition-all duration-200 lg:hidden"
+      >
+        Book Now
+      </button>
     </div>);
 
 }
