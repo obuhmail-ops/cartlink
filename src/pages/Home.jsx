@@ -61,7 +61,7 @@ export default function Home() {
             Explore Key West the paradise way
           </h1>
           <p className="self-center text-white/90 max-w-2xl leading-relaxed text-base md:text-2xl font-semibold [font-family:'Lexend',_sans-serif] text-center no-underline not-italic capitalize px-1 my-5">
-            Premium 4-passenger <span className="text-solar">(forward-facing)</span> and<br />6-passenger electric golf carts, delivered right to you.
+            Your Cart. Your Island. Your Adventure.
           </p>
           <ul className="mt-6 grid grid-cols-1 gap-y-2 text-sm md:text-base text-white max-w-md">
             {[
