@@ -46,7 +46,7 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative h-screen min-h-[900px] md:min-h-[760px] w-full overflow-hidden">
-        <img src={HERO_IMAGE_URL} alt="Paradise Rentals white electric golf cart parked beside a Key West beach" className="absolute inset-0 w-full h-full object-cover object-center md:object-right" />
+        <img src={HERO_IMAGE_URL} alt="Paradise Rentals white electric golf cart parked beside a Key West beach" className="absolute inset-0 w-full h-full object-contain object-right object-bottom md:object-cover md:object-right" />
         <div className="absolute inset-0 bg-gradient-to-r from-brand/55 via-brand/15 to-transparent md:from-brand/50 md:via-brand/10 md:to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-brand/40 via-transparent to-brand/55" />
         <div className="relative z-10 h-full flex flex-col justify-start items-center md:items-start pt-24 md:justify-start md:pt-28 pb-40 px-6 md:px-10 max-w-6xl mx-auto opacity-100">
