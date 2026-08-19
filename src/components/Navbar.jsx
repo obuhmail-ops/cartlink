@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Phone, X } from 'lucide-react';
 import CartDropdown from '@/components/CartDropdown';
+import ArrivalDropdown from '@/components/ArrivalDropdown';
 
 const LOGO_VIDEO_URL = 'https://media.base44.com/videos/public/6a7e5db2c2620868d1046179/f22b7c6ba_gemini_generated_video_9fd05d99.mp4';
 
@@ -23,7 +24,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [cartDropdown, setCartDropdown] = useState(false);
+  const [arrivalDropdown, setArrivalDropdown] = useState(false);
   const closeTimer = useRef(null);
+  const arrivalCloseTimer = useRef(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -40,6 +43,17 @@ export default function Navbar() {
   const scheduleCloseCart = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     closeTimer.current = setTimeout(() => setCartDropdown(false), 600);
+  };
+
+  const openArrival = () => {
+    if (arrivalCloseTimer.current) clearTimeout(arrivalCloseTimer.current);
+    setArrivalDropdown(true);
+    setCartDropdown(false);
+  };
+
+  const scheduleCloseArrival = () => {
+    if (arrivalCloseTimer.current) clearTimeout(arrivalCloseTimer.current);
+    arrivalCloseTimer.current = setTimeout(() => setArrivalDropdown(false), 600);
   };
 
   const scrollTo = (id) => {
@@ -85,9 +99,19 @@ export default function Navbar() {
             <button onClick={() => scrollTo('delivery')} className="hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
               Delivery
             </button>
-            <button onClick={() => scrollTo('arrival-options')} className="hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
-              Airport &amp; Cruise
-            </button>
+            <div
+              className="relative"
+              onMouseEnter={openArrival}
+              onMouseLeave={scheduleCloseArrival}
+            >
+              <button
+                onClick={() => scrollTo('arrival-options')}
+                className="flex items-center gap-1 hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap"
+              >
+                Airport &amp; Cruise
+              </button>
+              <ArrivalDropdown open={arrivalDropdown} onClose={() => setArrivalDropdown(false)} onMouseEnter={openArrival} onMouseLeave={scheduleCloseArrival} />
+            </div>
           </nav>
 
           <div className="flex items-center justify-center">
