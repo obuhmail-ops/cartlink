@@ -73,9 +73,9 @@ export default function Home() {
               </div>
             </div>
 
-            <h1 className="hidden self-center md:self-start leading-[1.04] text-center md:text-left capitalize [font-family:'Poppins',_sans-serif] font-bold md:block text-[hsl(var(--background))] text-3xl md:text-3xl lg:text-3xl">
-              Explore Key West the paradise way
-            </h1>
+            
+
+            
 
             <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
               <span className="block md:inline [font-family:'Kalam',_system-ui]">Your Cart. Your Island.</span>
