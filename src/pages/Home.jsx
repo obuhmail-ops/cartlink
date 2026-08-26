@@ -64,7 +64,7 @@ export default function Home() {
 
             {/* Badge */}
             <div className="self-center md:self-start">
-              <div className="md:rounded-full md:px-10 md:py-3 md:bg-brand/40 md:backdrop-blur-sm md:border md:border-solar/50">
+              <div>
                 <p className="text-solar font-semibold tracking-[0.25em] uppercase text-center md:text-left text-[26px] md:text-[42px] no-underline">
                   <span className="block md:inline">Key West</span>
                   <span className="hidden md:inline" aria-hidden="true">&nbsp;</span>
