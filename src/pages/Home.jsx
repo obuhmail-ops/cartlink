@@ -86,6 +86,7 @@ export default function Home() {
             'Free Delivery & Pickup',
             'Forward-Facing 4-Seaters',
             'Airport & Cruise Port Service',
+            'Long Range up to 60 Miles',
             'No Place to Charge? We Swap Your Cart'].
             map((benefit, i) =>
             <li key={benefit} style={{ animation: `hero-benefit-rise 0.7s ease-out ${0.15 + i * 0.12}s both` }} className="flex items-center gap-2 [font-family:'Sora',_sans-serif] font-semibold text-xl my-1">
