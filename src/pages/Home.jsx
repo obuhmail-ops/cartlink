@@ -68,12 +68,12 @@ export default function Home() {
                 <p className="text-solar font-semibold tracking-[0.25em] uppercase text-center md:text-left text-[26px] md:text-[42px] no-underline drop-shadow-[0_0_12px_hsl(43_100%_50%/0.8)]">
                   <span className="block md:inline">Key West</span>
                   <span className="hidden md:inline" aria-hidden="true">&nbsp;</span>
-                  <span className="block md:inline text-[20px] md:text-[42px]">Golf Cart Rentals</span>
+                  <span className="block md:inline text-[20px] md:text-[42px] text-center">Golf Cart Rentals</span>
                 </p>
               </div>
             </div>
 
-            <h1 className="hidden self-center md:self-start leading-[1.04] text-center md:text-left capitalize [font-family:'Poppins',_sans-serif] font-bold text-4xl md:block md:text-4xl lg:text-4xl text-[hsl(var(--background))]">
+            <h1 className="hidden self-center md:self-start leading-[1.04] text-center md:text-left capitalize [font-family:'Poppins',_sans-serif] font-bold md:block text-[hsl(var(--background))] text-3xl md:text-3xl lg:text-3xl">
               Explore Key West the paradise way
             </h1>
 
