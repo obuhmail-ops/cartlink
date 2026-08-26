@@ -3,13 +3,13 @@ import { Image } from '@/components/ui/image';
 import { Volume2, Navigation, BatteryCharging, Gauge, Music, Smartphone } from 'lucide-react';
 
 const features = [
-  { icon: Volume2, title: 'Premium Soundbar', body: 'DENAGO overhead soundbar with blue LED accents for island-wide beats.' },
-  { icon: Navigation, title: 'Apple CarPlay', body: 'Built-in CarPlay display with Maps, Music and hands-free calls.' },
-  { icon: BatteryCharging, title: 'Long-Range Battery', body: 'All-day electric range with on-demand battery swaps — no charging stress.' },
-  { icon: Gauge, title: 'Street-Legal Speed', body: 'Smooth, street-legal top speed to explore Key West at your pace.' },
-  { icon: Music, title: 'Bluetooth Audio', body: 'Stream your favorite playlists straight from your phone.' },
-  { icon: Smartphone, title: 'Easy Online Booking', body: 'Reserve your cart in minutes and we deliver it to your door.' }
-];
+{ icon: Volume2, title: 'Premium Soundbar', body: 'DENAGO overhead soundbar with blue LED accents for island-wide beats.' },
+{ icon: Navigation, title: 'Apple CarPlay', body: 'Built-in CarPlay display with Maps, Music and hands-free calls.' },
+{ icon: BatteryCharging, title: 'Long-Range Battery', body: 'All-day electric range with on-demand battery swaps — no charging stress.' },
+{ icon: Gauge, title: 'Street-Legal Speed', body: 'Smooth, street-legal top speed to explore Key West at your pace.' },
+{ icon: Music, title: 'Bluetooth Audio', body: 'Stream your favorite playlists straight from your phone.' },
+{ icon: Smartphone, title: 'Easy Online Booking', body: 'Reserve your cart in minutes and we deliver it to your door.' }];
+
 
 const FEATURE_IMAGE_1 = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/724153794_A6700476.jpg';
 const FEATURE_IMAGE_2 = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/3512606ee_A6700589.jpg';
@@ -18,7 +18,7 @@ export default function GolfCartFeaturesSection() {
   const goToFleet = () => document.getElementById('fleet')?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="cart-features" className="scroll-mt-24 bg-brand px-6 py-24 text-dune md:px-10 md:py-32">
+    <section id="cart-features" className="scroll-mt-24 px-6 py-24 text-dune md:px-10 md:py-32 bg-[hsl(var(--secondary-foreground))]">
       <div className="mx-auto max-w-6xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-solar">Section 5 — Golf Cart Features</p>
         <h2 className="mt-4 max-w-3xl font-display text-3xl uppercase leading-tight md:text-5xl">Loaded With Island-Ready Features</h2>
@@ -34,15 +34,15 @@ export default function GolfCartFeaturesSection() {
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map(({ icon: Icon, title, body }) => (
-            <div key={title} className="rounded-2xl border border-dune/15 bg-dune/5 p-6 transition-all duration-200 hover:bg-dune/10 hover:-translate-y-1">
+          {features.map(({ icon: Icon, title, body }) =>
+          <div key={title} className="rounded-2xl border border-dune/15 bg-dune/5 p-6 transition-all duration-200 hover:bg-dune/10 hover:-translate-y-1">
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-solar text-brand">
                 <Icon className="h-6 w-6" />
               </span>
               <h3 className="mt-4 font-display text-xl uppercase text-solar">{title}</h3>
               <p className="mt-2 leading-relaxed text-dune/70">{body}</p>
             </div>
-          ))}
+          )}
         </div>
 
         <div className="mt-12 text-center">
@@ -51,6 +51,6 @@ export default function GolfCartFeaturesSection() {
           </button>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
