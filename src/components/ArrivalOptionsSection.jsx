@@ -67,6 +67,7 @@ export default function ArrivalOptionsSection() {
                   ) : option.id === 'cruise-visitors' ? (
                     <>
                       <p className="md:hidden text-center text-3xl" aria-hidden="true">🚢 ARRIVING BY CRUISE?</p>
+                      <p className="md:hidden mt-3 text-center text-sm font-semibold text-brand">Convenient pickup arrangements so you can spend more of your port day exploring.</p>
                       <p className="hidden md:block font-bold uppercase tracking-[0.18em] text-base text-[hsl(var(--destructive))] text-center">{option.label}</p>
                       <h3 className="hidden md:block mt-3 font-display text-2xl uppercase leading-tight text-brand text-center">{option.title}</h3>
                       <p className="hidden md:block mt-4 leading-relaxed text-brand/65">{option.body}</p>
