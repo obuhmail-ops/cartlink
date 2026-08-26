@@ -86,17 +86,17 @@ export default function Home() {
           </p>
           <ul className="mt-6 grid grid-cols-1 gap-y-2 text-sm md:text-base text-white max-w-md">
             {[
-            'Free Delivery & Pickup',
-            'Forward-Facing 4-Seaters',
-            'Airport & Cruise Port Service',
-            'Long-Range Lithium Battery up to 60 Miles',
-            'No Place to Charge? We Swap Your Cart'].
-            map((benefit, i) =>
-            <li key={benefit} style={{ animation: `hero-benefit-rise 0.7s ease-out ${0.15 + i * 0.12}s both` }} className="flex items-center gap-2 [font-family:'Sora',_sans-serif] font-semibold text-xl my-1">
+              'Free Delivery & Pickup',
+              'Forward-Facing 4-Seaters',
+              'Airport & Cruise Port Service',
+              'Long-Range Lithium Battery up to 60 Miles',
+              'No Place to Charge? We Swap Your Cart'].
+              map((benefit, i) =>
+              <li key={benefit} style={{ animation: `hero-benefit-rise 0.7s ease-out ${0.15 + i * 0.12}s both` }} className="flex items-center gap-2 [font-family:'Sora',_sans-serif] font-semibold text-xl my-1">
                 <span className="text-solar font-bold" aria-hidden="true">✓</span>
                 {benefit}
               </li>
-            )}
+              )}
           </ul>
           <div className="mt-4 flex gap-2 w-full max-w-md md:hidden">
             <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
@@ -114,10 +114,10 @@ export default function Home() {
 
         {/* Hero action buttons */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 md:left-auto md:right-6 md:translate-x-0 lg:right-10 z-20 flex flex-col sm:flex-row gap-3 w-[92%] max-w-sm md:w-auto">
-          <button onClick={goToFleet} className="rounded-full bg-solar px-5 py-3 text-xs md:text-sm font-bold text-brand shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 w-full md:w-auto">
+          <button onClick={goToFleet} className="rounded-full bg-solar px-5 py-3 text-xs md:text-sm font-bold text-brand shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 w-full md:w-auto hidden">
             4-Passenger Features
           </button>
-          <button onClick={goToFleet} className="rounded-full bg-brand/90 backdrop-blur-sm border border-solar/40 px-5 py-3 text-xs md:text-sm font-bold text-dune shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 w-full md:w-auto">
+          <button onClick={goToFleet} className="rounded-full bg-brand/90 backdrop-blur-sm border border-solar/40 px-5 py-3 text-xs md:text-sm font-bold text-dune shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 w-full md:w-auto hidden">
             6-Passenger Features
           </button>
         </div>
