@@ -9,7 +9,7 @@ import GallerySection from '@/components/GallerySection';
 import GolfCartFeaturesSection from '@/components/GolfCartFeaturesSection';
 import ArrivalOptionsSection from '@/components/ArrivalOptionsSection';
 import NoChargingStressSection from '@/components/NoChargingStressSection';
-import WhyParadiseSection from '@/components/WhyParadiseSection';
+
 import ExploreKeyWestSection from '@/components/ExploreKeyWestSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import FaqSection from '@/components/FaqSection';
@@ -181,8 +181,6 @@ export default function Home() {
       <ArrivalOptionsSection />
 
       <NoChargingStressSection />
-
-      <WhyParadiseSection />
 
       <ExploreKeyWestSection />
 
