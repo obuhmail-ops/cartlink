@@ -60,7 +60,7 @@ export default function GallerySection() {
           <button
             key={img.src}
             onClick={() => setActiveIndex(i)}
-            className={`group overflow-hidden rounded-2xl border border-brand/10 ${img.span}`}>
+            className={`group overflow-hidden rounded-2xl border border-brand/10 ${img.span} ${[5, 6, 9, 10].includes(i) ? 'hidden md:block' : ''}`}>
             
               <Image src={img.src} alt={img.alt} fittingType="fill" className="h-full w-full transition duration-500 group-hover:scale-105" />
             </button>
