@@ -48,7 +48,6 @@ export default function GallerySection() {
   return (
     <section id="gallery" className="bg-dune px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto max-w-6xl">
-        <p className="text-moss text-sm font-semibold uppercase tracking-widest mb-3">Section 4 — Gallery</p>
         <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
           Paradise in Motion
         </h2>
