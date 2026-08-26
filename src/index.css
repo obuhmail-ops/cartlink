@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700&family=Architects+Daughter:wght@400&family=Archivo:wght@300;400;500;600;700&family=DM+Serif+Display:wght@400&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Bodoni+Moda:wght@400;500;600;700&family=DM+Serif+Text:wght@400&family=Lexend:wght@300;400;500;600;700&family=Bungee:wght@400&family=Comfortaa:wght@300;400;500;600;700&family=Monoton:wght@400&family=Newsreader:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700&family=Bebas+Neue:wght@400&family=Indie+Flower:wght@400&family=Fraunces:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700&family=Architects+Daughter:wght@400&family=Archivo:wght@300;400;500;600;700&family=DM+Serif+Display:wght@400&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Bodoni+Moda:wght@400;500;600;700&family=DM+Serif+Text:wght@400&family=Lexend:wght@300;400;500;600;700&family=Bungee:wght@400&family=Comfortaa:wght@300;400;500;600;700&family=Monoton:wght@400&family=Newsreader:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700&family=Bebas+Neue:wght@400&family=Indie+Flower:wght@400&family=Fraunces:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,73 +6,72 @@
 
 @layer base {
   :root {
-    /* Palette: #FEFAE0 #E9EDC9 #BC6C25 #606C38 #283618 */
-    --dune: 52 88% 94%;
-    --brand: 88 38% 15%;
-    --solar: 28 67% 44%;
-    --moss: 74 59% 32%;
+    --dune: 44 36% 96%;
+    --brand: 210 73% 14.5%;
+    --solar: 43 100% 50%;
+    --moss: 133 12% 33%;
 
-    --background: 52 88% 94%;
-    --foreground: 88 38% 15%;
-    --card: 66 50% 86%;
-    --card-foreground: 88 38% 15%;
-    --popover: 52 88% 94%;
-    --popover-foreground: 88 38% 15%;
-    --primary: 74 59% 32%;
-    --primary-foreground: 52 88% 94%;
-    --secondary: 66 50% 86%;
-    --secondary-foreground: 88 38% 15%;
-    --muted: 66 50% 86%;
-    --muted-foreground: 74 30% 35%;
-    --accent: 28 67% 44%;
-    --accent-foreground: 52 88% 94%;
-    --destructive: 0 62% 45%;
-    --destructive-foreground: 52 88% 94%;
-    --border: 66 40% 80%;
-    --input: 66 40% 80%;
-    --ring: 74 59% 32%;
+    --background: 44 36% 96%;
+    --foreground: 210 73% 14.5%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 73% 14.5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 73% 14.5%;
+    --primary: 43 100% 50%;
+    --primary-foreground: 210 73% 14.5%;
+    --secondary: 44 28% 90%;
+    --secondary-foreground: 210 73% 14.5%;
+    --muted: 44 25% 92%;
+    --muted-foreground: 210 14% 42%;
+    --accent: 133 12% 33%;
+    --accent-foreground: 44 36% 96%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 44 22% 86%;
+    --input: 44 22% 86%;
+    --ring: 43 100% 50%;
     --radius: 0.75rem;
 
-    --font-heading: 'Merriweather', ui-serif, Georgia, serif;
-    --font-body: 'Lato', ui-sans-serif, system-ui, sans-serif;
-    --font-display: 'Merriweather', ui-serif, Georgia, serif;
+    --font-heading: ui-sans-serif, system-ui, sans-serif;
+    --font-body: ui-sans-serif, system-ui, sans-serif;
+    --font-display: ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-    --sidebar-background: 52 88% 94%;
-    --sidebar-foreground: 88 38% 15%;
-    --sidebar-primary: 74 59% 32%;
-    --sidebar-primary-foreground: 52 88% 94%;
-    --sidebar-accent: 66 50% 86%;
-    --sidebar-accent-foreground: 88 38% 15%;
-    --sidebar-border: 66 40% 80%;
-    --sidebar-ring: 74 59% 32%;
+    --sidebar-background: 44 36% 96%;
+    --sidebar-foreground: 210 73% 14.5%;
+    --sidebar-primary: 210 73% 14.5%;
+    --sidebar-primary-foreground: 44 36% 96%;
+    --sidebar-accent: 44 25% 92%;
+    --sidebar-accent-foreground: 210 73% 14.5%;
+    --sidebar-border: 44 22% 86%;
+    --sidebar-ring: 43 100% 50%;
   }
 
   .dark {
-    --dune: 88 30% 12%;
-    --brand: 52 88% 94%;
-    --solar: 28 67% 54%;
-    --moss: 74 59% 52%;
+    --dune: 210 40% 12%;
+    --brand: 44 36% 96%;
+    --solar: 43 100% 55%;
+    --moss: 133 18% 55%;
 
-    --background: 88 30% 12%;
-    --foreground: 52 88% 94%;
-    --card: 88 25% 18%;
-    --card-foreground: 52 88% 94%;
-    --popover: 88 25% 18%;
-    --popover-foreground: 52 88% 94%;
-    --primary: 74 59% 52%;
-    --primary-foreground: 88 38% 15%;
-    --secondary: 88 20% 24%;
-    --secondary-foreground: 52 88% 94%;
-    --muted: 88 20% 24%;
-    --muted-foreground: 52 30% 75%;
-    --accent: 28 67% 54%;
-    --accent-foreground: 52 88% 94%;
-    --destructive: 0 52% 50%;
-    --destructive-foreground: 52 88% 94%;
-    --border: 88 18% 28%;
-    --input: 88 18% 28%;
-    --ring: 74 59% 52%;
+    --background: 210 40% 12%;
+    --foreground: 44 36% 96%;
+    --card: 210 35% 16%;
+    --card-foreground: 44 36% 96%;
+    --popover: 210 35% 16%;
+    --popover-foreground: 44 36% 96%;
+    --primary: 43 100% 55%;
+    --primary-foreground: 210 73% 14.5%;
+    --secondary: 210 25% 22%;
+    --secondary-foreground: 44 36% 96%;
+    --muted: 210 25% 22%;
+    --muted-foreground: 44 20% 70%;
+    --accent: 133 18% 55%;
+    --accent-foreground: 210 40% 12%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 20% 26%;
+    --input: 210 20% 26%;
+    --ring: 43 100% 55%;
   }
 }
 
@@ -88,7 +87,7 @@
 
   ::selection {
     background: hsl(var(--solar));
-    color: hsl(var(--dune));
+    color: hsl(var(--brand));
   }
 }
 
