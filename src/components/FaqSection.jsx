@@ -16,7 +16,7 @@ export default function FaqSection() {
   const contactParadise = () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="faqs" className="bg-dune px-6 py-24 md:px-10 md:py-32">
+    <section id="faqs" className="hidden md:block bg-dune px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto max-w-4xl">
         <h2 className="font-display text-4xl uppercase text-brand md:text-6xl">Questions?</h2>
         <div className="mt-12 divide-y divide-brand/15 border-y border-brand/15">

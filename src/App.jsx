@@ -13,6 +13,7 @@ import CartDetail from './pages/CartDetail';
 import Checkout from './pages/Checkout';
 import Confirmation from './pages/Confirmation';
 import Admin from './pages/Admin';
+import Faq from './pages/Faq';
 import Login from '@/pages/Login';
 import Register from '@/pages/Register';
 import ForgotPassword from '@/pages/ForgotPassword';
@@ -47,6 +48,7 @@ const AuthenticatedApp = () => {
       <Route path="/confirmation" element={<Confirmation />} />
       <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
         <Route path="/admin" element={<Admin />} />
+      <Route path="/faqs" element={<Faq />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
