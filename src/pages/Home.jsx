@@ -18,6 +18,7 @@ import { Image } from '@/components/ui/image';
 const HERO_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/2de60402f_generated_image.png';
 const HERO_MOBILE_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/628f37336_generated_image.png';
 const HERO_MOBILE_IMAGE_2_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/fd255c606_A6700476.jpg';
+const HERO_MOBILE_IMAGE_3_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/457bf5afe_A6700589.jpg';
 const HERO_DESKTOP_THUMB_1_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/724153794_A6700476.jpg';
 const HERO_DESKTOP_THUMB_2_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/3512606ee_A6700589.jpg';
 const BEST_OF_FLORIDA_BADGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/353f029f7_bestofflorida.webp';
@@ -52,7 +53,10 @@ export default function Home() {
       {/* Hero */}
       <section className="relative h-screen min-h-[900px] md:min-h-[760px] w-full overflow-hidden">
         <img src={HERO_MOBILE_IMAGE_URL} alt="Paradise Rentals golf cart beside a Key West beach" className="absolute inset-0 w-full h-full object-contain object-top md:hidden" />
-        <img src={HERO_MOBILE_IMAGE_2_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="absolute bottom-24 left-1/2 -translate-x-1/2 w-[88%] max-w-xs rounded-2xl object-cover shadow-lg md:hidden" />
+        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2 w-[92%] max-w-md md:hidden">
+          <img src={HERO_MOBILE_IMAGE_2_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-1/2 rounded-2xl object-cover shadow-lg" />
+          <img src={HERO_MOBILE_IMAGE_3_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-1/2 rounded-2xl object-cover shadow-lg" />
+        </div>
         <img src={HERO_IMAGE_URL} alt="Paradise Rentals white electric golf cart parked beside a Key West beach" className="absolute inset-0 w-full h-full object-cover object-right hidden md:block" />
         <div className="absolute bottom-8 left-6 lg:left-10 z-20 hidden md:flex gap-3">
           <img src={HERO_DESKTOP_THUMB_1_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
