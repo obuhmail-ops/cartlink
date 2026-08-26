@@ -46,10 +46,23 @@ export default function ArrivalOptionsSection() {
                   <span className="inline-flex justify-center rounded-full bg-solar px-8 py-3 text-center text-sm font-bold uppercase tracking-wide text-brand shadow-lg group-hover:brightness-110 group-hover:scale-105 transition-all duration-200">{option.button}</span>
                 </div>
                 <div className="flex flex-col p-7">
-                  <p className="font-bold uppercase tracking-[0.18em] text-base text-[hsl(var(--destructive))] text-center">{option.label}</p>
-                  <h3 className="mt-3 font-display text-2xl uppercase leading-tight text-brand text-center">{option.title}</h3>
-                  <p className="mt-4 leading-relaxed text-brand/65">{option.body}</p>
-                  <p className="mt-5 font-semibold text-brand">{option.detail}</p>
+                  {option.id === 'airport-delivery' ? (
+                    <>
+                      <p className="md:hidden text-center text-4xl" aria-hidden="true">✈️</p>
+                      <p className="md:hidden mt-3 text-center font-display text-lg uppercase leading-tight text-brand">Airport golf-cart delivery available.</p>
+                      <p className="hidden md:block font-bold uppercase tracking-[0.18em] text-base text-[hsl(var(--destructive))] text-center">{option.label}</p>
+                      <h3 className="hidden md:block mt-3 font-display text-2xl uppercase leading-tight text-brand text-center">{option.title}</h3>
+                      <p className="hidden md:block mt-4 leading-relaxed text-brand/65">{option.body}</p>
+                      <p className="hidden md:block mt-5 font-semibold text-brand">{option.detail}</p>
+                    </>
+                  ) : (
+                    <>
+                      <p className="font-bold uppercase tracking-[0.18em] text-base text-[hsl(var(--destructive))] text-center">{option.label}</p>
+                      <h3 className="mt-3 font-display text-2xl uppercase leading-tight text-brand text-center">{option.title}</h3>
+                      <p className="mt-4 leading-relaxed text-brand/65">{option.body}</p>
+                      <p className="mt-5 font-semibold text-brand">{option.detail}</p>
+                    </>
+                  )}
                 </div>
               </article>
             </a>
