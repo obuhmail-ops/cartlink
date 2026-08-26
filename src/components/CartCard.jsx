@@ -6,6 +6,7 @@ const rideDetails = {
   four: {
     title: '4-Passenger',
     description: 'Perfect for couples and families.',
+    boldNote: 'ALL FORWARD FACING SEATS',
     features: ['Forward-Facing Seating', 'Premium Electric Cart', 'Lithium Battery', 'Quiet Ride', 'Comfortable Seating', 'Key West Delivery'],
     button: 'Check 4-Seater Availability',
   },
@@ -27,6 +28,9 @@ export default function CartCard({ cart }) {
         <div className="p-6 md:p-8">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-moss">{details.title}</p>
           <h3 className="mt-3 font-display text-2xl text-brand md:text-3xl">{details.description}</h3>
+          {details.boldNote && (
+            <p className="mt-3 font-bold uppercase tracking-wide text-brand">{details.boldNote}</p>
+          )}
           <ul className="mt-6 grid gap-3 text-sm text-brand/70 sm:grid-cols-2">
             {details.features.map((feature) => (
               <li key={feature} className="flex items-start gap-2">
