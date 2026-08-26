@@ -23,12 +23,16 @@ const galleryImages = [
 
 export default function GallerySection() {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [slideIndex, setSlideIndex] = useState(0);
 
   const isOpen = activeIndex !== null;
 
   const close = () => setActiveIndex(null);
   const prev = () => setActiveIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length);
   const next = () => setActiveIndex((i) => (i + 1) % galleryImages.length);
+
+  const slidePrev = () => setSlideIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length);
+  const slideNext = () => setSlideIndex((i) => (i + 1) % galleryImages.length);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -54,12 +58,36 @@ export default function GallerySection() {
         <p className="mt-4 max-w-2xl text-brand/70 hidden">
           Snapshots from happy riders exploring Key West in style with Paradise Rentals.
         </p>
-        <div className="mt-12 grid auto-rows-[200px] grid-cols-2 gap-4 md:grid-cols-4">
+        {/* Mobile slideshow */}
+        <div className="mt-12 md:hidden">
+          <div className="relative overflow-hidden rounded-2xl border border-brand/10">
+            <Image src={galleryImages[slideIndex].src} alt={galleryImages[slideIndex].alt} fittingType="fill" className="aspect-[4/3] w-full" />
+            <button onClick={slidePrev} aria-label="Previous" className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-brand/70 p-2 text-dune backdrop-blur-sm active:scale-95 transition">
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+            <button onClick={slideNext} aria-label="Next" className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-brand/70 p-2 text-dune backdrop-blur-sm active:scale-95 transition">
+              <ChevronRight className="h-6 w-6" />
+            </button>
+          </div>
+          <div className="mt-3 flex justify-center gap-1.5">
+            {galleryImages.map((_, i) =>
+              <button
+                key={i}
+                onClick={() => setSlideIndex(i)}
+                aria-label={`Go to image ${i + 1}`}
+                className={`h-2 rounded-full transition-all ${i === slideIndex ? 'w-5 bg-solar' : 'w-2 bg-brand/20'}`}
+              />
+            )}
+          </div>
+        </div>
+
+        {/* Desktop grid */}
+        <div className="mt-12 hidden auto-rows-[200px] grid-cols-4 gap-4 md:grid">
           {galleryImages.map((img, i) =>
           <button
             key={img.src}
             onClick={() => setActiveIndex(i)}
-            className={`group overflow-hidden rounded-2xl border border-brand/10 ${img.span} ${[5, 6, 9, 10].includes(i) ? 'hidden md:block' : ''}`}>
+            className={`group overflow-hidden rounded-2xl border border-brand/10 ${img.span}`}>
             
               <Image src={img.src} alt={img.alt} fittingType="fill" className="h-full w-full transition duration-500 group-hover:scale-105" />
             </button>
