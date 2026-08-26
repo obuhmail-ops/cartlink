@@ -75,7 +75,8 @@ export default function Home() {
             Explore Key West the paradise way
           </h1>
           <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
-            Your Cart. Your Island. Your Adventure.
+            <span className="block md:inline">Your Cart. Your Island.</span>
+            <span className="block md:inline">Your Adventure.</span>
           </p>
           <ul className="mt-6 grid grid-cols-1 gap-y-2 text-sm md:text-base text-white max-w-md">
             {[
