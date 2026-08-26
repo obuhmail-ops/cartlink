@@ -103,18 +103,18 @@ export default function Home() {
 
             <div className="mt-4 flex gap-2 w-full max-w-md md:hidden">
               <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
-                <img src={HERO_MOBILE_IMAGE_2_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-full object-cover hidden" />
+                
               </button>
               <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
-                <img src={HERO_MOBILE_IMAGE_3_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-full object-cover hidden" />
+                
               </button>
             </div>
 
             {/* Buttons */}
             <div className="mt-6 flex flex-col sm:flex-row gap-4 w-full justify-center md:justify-start">
-              <button onClick={goToFleet} className="px-6 py-3 bg-solar text-brand font-bold rounded-lg shadow-md hover:bg-solar/90 transition hidden">
-                Book Your Cart
-              </button>
+              
+
+              
             </div>
 
           </div>
