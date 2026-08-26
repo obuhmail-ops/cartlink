@@ -129,7 +129,7 @@ export default function Home() {
         <div className="relative w-full aspect-[4/3] md:absolute md:inset-0 md:h-full z-0">
           <picture className="w-full h-full">
             <source media="(max-width: 767px)" srcSet={heroCartImage || HERO_MOBILE_IMAGE_URL} />
-            <img src={heroCartImage || HERO_IMAGE_URL} alt={carts[0]?.name ? `${carts[0].name} in Key West` : 'Paradise Golf Cart Rental in Key West'} className="w-full h-full object-cover object-center md:object-right rounded-none opacity-100" />
+            <img src={heroCartImage || HERO_IMAGE_URL} alt={carts[0]?.name ? `${carts[0].name} in Key West` : 'Paradise Golf Cart Rental in Key West'} className="w-full h-full object-cover object-center md:object-right rounded-none opacity-100 hidden" />
           </picture>
 
           {/* Optional Mobile Subtle Top Fade to smooth out hard image edges */}
