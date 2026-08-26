@@ -20,6 +20,7 @@ const HERO_MOBILE_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2
 const HERO_MOBILE_IMAGE_2_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/fd255c606_A6700476.jpg';
 const HERO_DESKTOP_THUMB_1_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/724153794_A6700476.jpg';
 const HERO_DESKTOP_THUMB_2_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/3512606ee_A6700589.jpg';
+const BEST_OF_FLORIDA_BADGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/353f029f7_bestofflorida.webp';
 
 function HeroField({ icon, label, children }) {
   return (
@@ -91,6 +92,9 @@ export default function Home() {
             )}
           </ul>
         </div>
+
+        {/* Best of Florida badge */}
+        <img src={BEST_OF_FLORIDA_BADGE_URL} alt="Best of Florida Awards badge" className="absolute bottom-28 right-4 z-20 w-20 md:w-24 lg:w-28 drop-shadow-lg" />
 
         {/* Hero action buttons */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 md:left-auto md:right-6 md:translate-x-0 lg:right-10 z-20 flex flex-col sm:flex-row gap-3 w-[92%] max-w-sm md:w-auto">
