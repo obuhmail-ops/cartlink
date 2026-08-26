@@ -73,9 +73,9 @@ export default function Home() {
               </div>
             </div>
 
-            
-
-            
+            <h1 className="hidden self-center md:self-start leading-[1.04] text-center md:text-left capitalize [font-family:'Poppins',_sans-serif] font-bold md:block text-[hsl(var(--background))] text-3xl md:text-3xl lg:text-3xl">
+              Explore Key West the paradise way
+            </h1>
 
             <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
               <span className="block md:inline [font-family:'Kalam',_system-ui]">Your Cart. Your Island.</span>
@@ -90,7 +90,7 @@ export default function Home() {
               {[
               'Free Delivery & Pickup',
               'Forward-Facing 4-Seaters',
-              'Airport & Cruise Port Service',
+              'Airport & Cruise Port FREE DELIVERY',
               'Long-Range Lithium Battery up to 60 Miles',
               'No Place to Charge? We Swap Your Cart'].
               map((benefit, i) =>
@@ -124,17 +124,7 @@ export default function Home() {
         {/* Hidden on mobile because text doesn't overlap the image */}
         <div className="hidden md:block absolute inset-0 z-10 bg-gradient-to-r from-brand/90 via-brand/40 to-transparent pointer-events-none" />
 
-        {/* 3. HERO IMAGE CONTAINER */}
-        {/* Mobile: Relative height aspect-ratio container sitting below text | Desktop: Absolute full fill */}
-        <div className="relative w-full aspect-[4/3] md:absolute md:inset-0 md:h-full z-0">
-          <picture className="w-full h-full">
-            <source media="(max-width: 767px)" srcSet={heroCartImage || HERO_MOBILE_IMAGE_URL} />
-            
-          </picture>
-
-          {/* Optional Mobile Subtle Top Fade to smooth out hard image edges */}
-          <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-brand to-transparent md:hidden" />
-        </div>
+        {/* Hero image removed */}
 
         {/* Desktop thumbnails */}
         <div className="absolute bottom-8 left-6 lg:left-10 z-20 hidden md:flex gap-3">
