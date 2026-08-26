@@ -55,44 +55,96 @@ export default function Home() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative w-full min-h-[90vh] flex flex-col justify-between p-6 bg-brand overflow-hidden">
-        {/* Background Image & Soft Gradient */}
-        <img
-          src={heroCartImage || HERO_IMAGE_URL}
-          alt={carts[0]?.name ? `${carts[0].name} in Key West` : 'Paradise Golf Cart Rental in Key West'}
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/70" />
+      <section className="relative w-full bg-brand flex flex-col justify-start md:block md:h-screen md:min-h-[760px] overflow-hidden">
 
-        {/* Top Header & Copy */}
-        <div className="relative z-10 pt-8 text-center max-w-xs mx-auto">
-          <span className="inline-block px-3 py-1 mb-3 text-[11px] font-bold tracking-wider uppercase text-solar bg-brand/90 border border-solar/30 rounded-full shadow-sm backdrop-blur-sm">
-            FREE AIRPORT & CRUISE PORT DELIVERY
-          </span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white uppercase tracking-tight leading-none drop-shadow-md">
-            Your Cart. Your Island. <br />
-            <span className="text-solar">Your Adventure.</span>
-          </h1>
-          <p className="mt-3 text-xs sm:text-sm text-dune/95 leading-relaxed font-medium drop-shadow">
-            Premium 4 & 6-passenger electric golf carts delivered straight to your airport terminal, cruise dock, or resort.
-          </p>
+        {/* 1. TEXT CONTAINER */}
+        {/* Mobile: Normal flex item (pt-16 pb-8) | Desktop: Absolute z-20 overlay */}
+        <div className="relative z-20 w-full max-w-6xl mx-auto px-6 pt-16 pb-8 md:absolute md:inset-0 md:px-10 md:pt-28 md:pb-40 md:flex md:flex-col md:justify-center">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left max-w-xl mx-auto md:mx-0">
+
+            {/* Badge */}
+            <div className="self-center md:self-start">
+              <div className="md:rounded-full md:px-10 md:py-3 md:bg-brand/40 md:backdrop-blur-sm md:border md:border-solar/50 md:shadow-[0_0_30px_hsl(43_100%_50%/0.6),inset_0_0_20px_hsl(43_100%_50%/0.3)]">
+                <p className="text-solar font-semibold tracking-[0.25em] uppercase text-center md:text-left text-[26px] md:text-[42px] no-underline drop-shadow-[0_0_12px_hsl(43_100%_50%/0.8)]">
+                  <span className="block md:inline">Key West</span>
+                  <span className="hidden md:inline" aria-hidden="true">&nbsp;</span>
+                  <span className="block md:inline text-[20px] md:text-[42px]">Golf Cart Rentals</span>
+                </p>
+              </div>
+            </div>
+
+            <h1 className="hidden self-center md:self-start leading-[1.04] text-center md:text-left capitalize [font-family:'Poppins',_sans-serif] font-bold text-4xl md:block md:text-4xl lg:text-4xl text-[hsl(var(--background))]">
+              Explore Key West the paradise way
+            </h1>
+
+            <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
+              <span className="block md:inline">Your Cart. Your Island.</span>
+              <span className="block md:inline">Your Adventure.</span>
+            </p>
+
+            <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left px-1 mt-1 text-[hsl(var(--solar))] text-lg md:text-xl [font-family:'Sora',_sans-serif] font-bold">
+              Premium 4 &amp; 6 Passenger Electric Golf Carts
+            </p>
+
+            <ul className="mt-6 grid grid-cols-1 gap-y-2 text-sm md:text-base text-white max-w-md">
+              {[
+              'Free Delivery & Pickup',
+              'Forward-Facing 4-Seaters',
+              'Airport & Cruise Port Service',
+              'Long-Range Lithium Battery up to 60 Miles',
+              'No Place to Charge? We Swap Your Cart'].
+              map((benefit, i) =>
+              <li key={benefit} style={{ animation: `hero-benefit-rise 0.7s ease-out ${0.15 + i * 0.12}s both` }} className="flex items-center gap-2 [font-family:'Sora',_sans-serif] font-semibold text-xl my-1">
+                <span className="text-solar font-bold" aria-hidden="true">✓</span>
+                {benefit}
+              </li>
+              )}
+            </ul>
+
+            <div className="mt-4 flex gap-2 w-full max-w-md md:hidden">
+              <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
+                
+              </button>
+              <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
+                
+              </button>
+            </div>
+
+            {/* Buttons */}
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 w-full justify-center md:justify-start">
+              
+
+              
+            </div>
+
+          </div>
         </div>
 
-        {/* Bottom Call to Action */}
-        <div className="relative z-10 pb-6 w-full max-w-xs mx-auto text-center">
-          <button
-            onClick={goToFleet}
-            className="block w-full py-4 px-6 bg-solar text-brand font-black text-lg tracking-wider rounded-xl shadow-lg active:scale-95 transition"
-          >
-            RENT YOUR CART NOW
-          </button>
-          <span className="block mt-2 text-xs text-white/80 font-medium tracking-wide">
-            INSTANT BOOKING & FREE DELIVERY
-          </span>
+        {/* 2. GRADIENT OVERLAY (Desktop Only) */}
+        {/* Hidden on mobile because text doesn't overlap the image */}
+        <div className="hidden md:block absolute inset-0 z-10 bg-gradient-to-r from-brand/90 via-brand/40 to-transparent pointer-events-none" />
+
+        {/* 3. HERO IMAGE CONTAINER */}
+        {/* Mobile: Relative height aspect-ratio container sitting below text | Desktop: Absolute full fill */}
+        <div className="relative w-full aspect-[4/3] md:absolute md:inset-0 md:h-full z-0">
+          <picture className="w-full h-full">
+            <source media="(max-width: 767px)" srcSet={heroCartImage || HERO_MOBILE_IMAGE_URL} />
+            <img src={heroCartImage || HERO_IMAGE_URL} alt={carts[0]?.name ? `${carts[0].name} in Key West` : 'Paradise Golf Cart Rental in Key West'} className="w-full h-full object-cover object-center md:object-right" />
+          </picture>
+
+          {/* Optional Mobile Subtle Top Fade to smooth out hard image edges */}
+          <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-brand to-transparent md:hidden" />
+        </div>
+
+        {/* Desktop thumbnails */}
+        <div className="absolute bottom-8 left-6 lg:left-10 z-20 hidden md:flex gap-3">
+          <img src={HERO_DESKTOP_THUMB_1_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
+          <img src={HERO_DESKTOP_THUMB_2_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
         </div>
 
         {/* Best of Florida badge */}
-        <img src={BEST_OF_FLORIDA_BADGE_URL} alt="Best of Florida Awards badge" className="absolute top-4 right-4 z-30 w-16 md:w-20 lg:w-24 drop-shadow-lg" />
+        <img src={BEST_OF_FLORIDA_BADGE_URL} alt="Best of Florida Awards badge" className="absolute bottom-4 right-4 z-30 w-20 md:w-24 lg:w-28 drop-shadow-lg" />
+
       </section>
 
       <SocialProofSection />
