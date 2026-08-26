@@ -54,8 +54,39 @@ export default function Home() {
     <div className="min-h-screen bg-dune">
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative w-full bg-brand flex flex-col justify-start md:block md:h-screen md:min-h-[760px] overflow-hidden">
+      {/* Mobile full-bleed hero */}
+      <section className="relative w-full min-h-[90vh] flex flex-col justify-between p-6 bg-brand overflow-hidden md:hidden">
+        <img
+          src={heroCartImage || HERO_MOBILE_IMAGE_URL}
+          alt={carts[0]?.name ? `${carts[0].name} in Key West` : 'Paradise Golf Cart Rental in Key West'}
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/70" />
+
+        <div className="relative z-10 pt-8 text-center">
+          <h1 className="text-4xl font-extrabold text-white uppercase tracking-tight drop-shadow-md">
+            Your Adventure, <br /><span className="text-solar">Your Cart.</span>
+          </h1>
+          <p className="mt-3 text-sm text-dune/90 max-w-xs mx-auto drop-shadow">
+            Explore Key West on your terms. From electric runabouts to luxury six-seaters, we deliver right to your resort.
+          </p>
+        </div>
+
+        <div className="relative z-10 pb-6 w-full max-w-xs mx-auto text-center">
+          <button
+            onClick={goToFleet}
+            className="block w-full py-4 px-6 bg-solar text-brand font-black text-lg tracking-wider rounded-xl shadow-lg active:scale-95 transition"
+          >
+            RENT YOUR CART NOW
+          </button>
+          <span className="block mt-2 text-xs text-white/80 font-medium tracking-wide">
+            INSTANT BOOKING & FREE DELIVERY
+          </span>
+        </div>
+      </section>
+
+      {/* Desktop hero */}
+      <section className="hidden md:block relative w-full bg-brand md:h-screen md:min-h-[760px] overflow-hidden">
 
         {/* 1. TEXT CONTAINER */}
         {/* Mobile: Normal flex item (pt-16 pb-8) | Desktop: Absolute z-20 overlay */}
