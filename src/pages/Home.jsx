@@ -112,7 +112,7 @@ export default function Home() {
 
             {/* Buttons */}
             <div className="mt-6 flex flex-col sm:flex-row gap-4 w-full justify-center md:justify-start">
-              <button onClick={goToFleet} className="px-6 py-3 bg-solar text-brand font-bold rounded-lg shadow-md hover:bg-solar/90 transition">
+              <button onClick={goToFleet} className="px-6 py-3 bg-solar text-brand font-bold rounded-lg shadow-md hover:bg-solar/90 transition hidden">
                 Book Your Cart
               </button>
             </div>
