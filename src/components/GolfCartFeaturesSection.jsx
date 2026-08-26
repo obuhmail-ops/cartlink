@@ -3,8 +3,8 @@ import { Image } from '@/components/ui/image';
 import { Volume2, Navigation, BatteryCharging, Gauge, Music, Smartphone } from 'lucide-react';
 
 const features = [
-{ icon: Volume2, title: 'Premium Soundbar', body: 'DENAGO overhead soundbar with blue LED accents for island-wide beats.' },
 { icon: Navigation, title: 'Apple CarPlay & Android Auto', body: 'Built-in CarPlay and Android Auto display with Maps, Music and hands-free calls.' },
+{ icon: Volume2, title: 'Premium Soundbar', body: 'DENAGO overhead soundbar with blue LED accents for island-wide beats.' },
 { icon: BatteryCharging, title: 'Long-Range Battery', body: 'All-day electric range with on-demand battery swaps — no charging stress.' },
 { icon: Gauge, title: 'Street-Legal Speed', body: 'Smooth, street-legal top speed to explore Key West at your pace.' },
 { icon: Music, title: 'Bluetooth Audio', body: 'Stream your favorite playlists straight from your phone.' },
