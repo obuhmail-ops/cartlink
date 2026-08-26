@@ -173,6 +173,8 @@ export default function Home() {
         </div>
       </section>
 
+      <SocialProofSection />
+
       <NoChargingStressSection />
 
       <DeliverySection />
@@ -190,8 +192,6 @@ export default function Home() {
       <FaqSection />
 
       <FinalBookingCta />
-
-      <SocialProofSection />
 
       <Footer />
 
