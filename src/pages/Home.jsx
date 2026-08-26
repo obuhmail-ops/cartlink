@@ -61,7 +61,7 @@ export default function Home() {
           <img src={HERO_DESKTOP_THUMB_1_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
           <img src={HERO_DESKTOP_THUMB_2_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-brand/90 via-brand/50 to-brand/80 md:bg-gradient-to-r md:from-brand/70 md:via-brand/30 md:to-transparent" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-brand/95 via-brand/50 to-brand/5 from-0% via-45% to-80% md:bg-gradient-to-r md:from-brand/90 md:via-brand/40 md:to-transparent pointer-events-none" />
         <div className="relative z-10 w-full h-full max-w-6xl mx-auto px-6 pt-20 pb-16 md:px-10 md:pt-28 md:pb-40 flex flex-col items-center text-center md:items-start md:text-left justify-center">
           {/* Headline Block */}
           <div className="flex flex-col items-center md:items-start max-w-xl">
