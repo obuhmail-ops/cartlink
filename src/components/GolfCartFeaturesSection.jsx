@@ -1,12 +1,12 @@
 import React from 'react';
 import { Image } from '@/components/ui/image';
-import { Volume2, Navigation, BatteryCharging, Gauge, Music } from 'lucide-react';
+import { Volume2, Navigation, BatteryCharging, Armchair, Music } from 'lucide-react';
 
 const features = [
 { icon: Navigation, title: 'Apple CarPlay & Android Auto', body: 'Maps, music & hands-free connectivity' },
 { icon: Volume2, title: 'Premium Audio', body: 'Soundbar + Bluetooth' },
 { icon: BatteryCharging, title: 'Long-Range Lithium Battery', body: 'Built for a full Key West day' },
-{ icon: Gauge, title: 'Forward-Facing Seating', body: 'Available on our 4-passenger carts' },
+{ icon: Armchair, title: 'Forward-Facing Seating', body: 'Available on our 4-passenger carts' },
 { icon: Music, title: 'No Charging Stress', body: 'Cart swap service available' }];
 
 
