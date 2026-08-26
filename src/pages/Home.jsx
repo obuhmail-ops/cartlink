@@ -79,12 +79,10 @@ export default function Home() {
           </p>
           <ul className="mt-6 grid grid-cols-1 gap-y-2 text-sm md:text-base text-white max-w-md">
             {[
-            'FREE Hotel Delivery',
-            'FREE Airbnb & Vacation Rental Delivery',
-            'Airport Delivery Available',
-            'Cruise Ship Delivery',
-            'Long-Range Electric Carts',
-            'Easy Online Booking'].
+            'Free Delivery & Pickup',
+            'Forward-Facing 4-Seaters',
+            'Airport & Cruise Port Service',
+            'No Place to Charge? We Swap Your Cart'].
             map((benefit, i) =>
             <li key={benefit} style={{ animation: `hero-benefit-rise 0.7s ease-out ${0.15 + i * 0.12}s both` }} className="flex items-center gap-2 [font-family:'Sora',_sans-serif] font-semibold text-xl my-1">
                 <span className="text-solar font-bold" aria-hidden="true">✓</span>
