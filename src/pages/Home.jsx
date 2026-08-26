@@ -178,9 +178,9 @@ export default function Home() {
 
       <ArrivalOptionsSection />
 
-      <GallerySection />
-
       <GolfCartFeaturesSection />
+
+      <GallerySection />
 
       <ExploreKeyWestSection />
 
