@@ -172,6 +172,8 @@ export default function Home() {
         </div>
       </section>
 
+      <NoChargingStressSection />
+
       <DeliverySection />
 
       <GallerySection />
@@ -179,8 +181,6 @@ export default function Home() {
       <GolfCartFeaturesSection />
 
       <ArrivalOptionsSection />
-
-      <NoChargingStressSection />
 
       <ExploreKeyWestSection />
 
