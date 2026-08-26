@@ -13,7 +13,6 @@ export default function DeliverySection() {
     <section id="delivery" className="bg-brand px-6 py-20 text-dune md:px-10 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1.05fr_0.95fr] md:items-center">
         <div>
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-solar">Your big difference</p>
           <h2 className="max-w-xl font-display text-4xl leading-tight text-balance md:text-6xl">
             Don’t come to us.<br />We come to you. 🌴
           </h2>
