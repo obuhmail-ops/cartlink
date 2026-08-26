@@ -52,40 +52,39 @@ export default function Home() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative w-full h-auto min-h-[650px] md:h-screen md:min-h-[760px] overflow-hidden bg-brand">
-        <picture className="absolute inset-0 w-full h-full">
-          <source media="(max-width: 767px)" srcSet={HERO_MOBILE_IMAGE_URL} />
-          <img src={HERO_IMAGE_URL} alt="Paradise Rentals white electric golf cart parked beside a Key West beach" className="absolute inset-0 w-full h-full object-cover object-center md:object-cover md:object-right" />
-        </picture>
-        <div className="absolute bottom-8 left-6 lg:left-10 z-20 hidden md:flex gap-3">
-          <img src={HERO_DESKTOP_THUMB_1_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
-          <img src={HERO_DESKTOP_THUMB_2_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
-        </div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-brand/95 via-brand/50 to-brand/5 from-0% via-45% to-80% md:bg-gradient-to-r md:from-brand/90 md:via-brand/40 md:to-transparent pointer-events-none" />
-        <div className="relative z-10 w-full h-full max-w-6xl mx-auto px-6 pt-20 pb-16 md:px-10 md:pt-28 md:pb-40 flex flex-col items-center text-center md:items-start md:text-left justify-center">
-          {/* Headline Block */}
-          <div className="flex flex-col items-center md:items-start max-w-xl">
-          <div className="mt-0 md:mt-0 self-center md:self-start">
-            <div className="md:rounded-full md:px-10 md:py-3 md:bg-brand/40 md:backdrop-blur-sm md:border md:border-solar/50 md:shadow-[0_0_30px_hsl(43_100%_50%/0.6),inset_0_0_20px_hsl(43_100%_50%/0.3)]">
-              <p className="text-solar font-semibold tracking-[0.25em] uppercase text-center md:text-left text-[26px] md:text-[42px] no-underline drop-shadow-[0_0_12px_hsl(43_100%_50%/0.8)]">
-                <span className="block md:inline">Key West</span>
-                <span className="hidden md:inline" aria-hidden="true">&nbsp;</span>
-                <span className="block md:inline text-[20px] md:text-[42px]">Golf Cart Rentals</span>
-              </p>
+      <section className="relative w-full bg-brand flex flex-col justify-start md:block md:h-screen md:min-h-[760px] overflow-hidden">
+
+        {/* 1. TEXT CONTAINER */}
+        {/* Mobile: Normal flex item (pt-16 pb-8) | Desktop: Absolute z-20 overlay */}
+        <div className="relative z-20 w-full max-w-6xl mx-auto px-6 pt-16 pb-8 md:absolute md:inset-0 md:px-10 md:pt-28 md:pb-40 md:flex md:flex-col md:justify-center">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left max-w-xl mx-auto md:mx-0">
+
+            {/* Badge */}
+            <div className="self-center md:self-start">
+              <div className="md:rounded-full md:px-10 md:py-3 md:bg-brand/40 md:backdrop-blur-sm md:border md:border-solar/50 md:shadow-[0_0_30px_hsl(43_100%_50%/0.6),inset_0_0_20px_hsl(43_100%_50%/0.3)]">
+                <p className="text-solar font-semibold tracking-[0.25em] uppercase text-center md:text-left text-[26px] md:text-[42px] no-underline drop-shadow-[0_0_12px_hsl(43_100%_50%/0.8)]">
+                  <span className="block md:inline">Key West</span>
+                  <span className="hidden md:inline" aria-hidden="true">&nbsp;</span>
+                  <span className="block md:inline text-[20px] md:text-[42px]">Golf Cart Rentals</span>
+                </p>
+              </div>
             </div>
-          </div>
-          <h1 className="hidden self-center md:self-start leading-[1.04] text-center md:text-left capitalize [font-family:'Poppins',_sans-serif] font-bold text-4xl md:block md:text-4xl lg:text-4xl text-[hsl(var(--background))]">
-            Explore Key West the paradise way
-          </h1>
-          <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
-            <span className="block md:inline">Your Cart. Your Island.</span>
-            <span className="block md:inline">Your Adventure.</span>
-          </p>
-          <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left px-1 mt-1 text-[hsl(var(--solar))] text-lg md:text-xl [font-family:'Sora',_sans-serif] font-bold">
-            Premium 4 &amp; 6 Passenger Electric Golf Carts
-          </p>
-          <ul className="mt-6 grid grid-cols-1 gap-y-2 text-sm md:text-base text-white max-w-md">
-            {[
+
+            <h1 className="hidden self-center md:self-start leading-[1.04] text-center md:text-left capitalize [font-family:'Poppins',_sans-serif] font-bold text-4xl md:block md:text-4xl lg:text-4xl text-[hsl(var(--background))]">
+              Explore Key West the paradise way
+            </h1>
+
+            <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
+              <span className="block md:inline">Your Cart. Your Island.</span>
+              <span className="block md:inline">Your Adventure.</span>
+            </p>
+
+            <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left px-1 mt-1 text-[hsl(var(--solar))] text-lg md:text-xl [font-family:'Sora',_sans-serif] font-bold">
+              Premium 4 &amp; 6 Passenger Electric Golf Carts
+            </p>
+
+            <ul className="mt-6 grid grid-cols-1 gap-y-2 text-sm md:text-base text-white max-w-md">
+              {[
               'Free Delivery & Pickup',
               'Forward-Facing 4-Seaters',
               'Airport & Cruise Port Service',
@@ -97,57 +96,52 @@ export default function Home() {
                 {benefit}
               </li>
               )}
-          </ul>
-          <div className="mt-4 flex gap-2 w-full max-w-md md:hidden">
-            <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
-              <img src={HERO_MOBILE_IMAGE_2_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-full object-cover" />
-            </button>
-            <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
-              <img src={HERO_MOBILE_IMAGE_3_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-full object-cover" />
-            </button>
+            </ul>
+
+            <div className="mt-4 flex gap-2 w-full max-w-md md:hidden">
+              <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
+                <img src={HERO_MOBILE_IMAGE_2_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-full object-cover" />
+              </button>
+              <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
+                <img src={HERO_MOBILE_IMAGE_3_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-full object-cover" />
+              </button>
+            </div>
+
+            {/* Buttons */}
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 w-full justify-center md:justify-start">
+              <button onClick={goToFleet} className="px-6 py-3 bg-solar text-brand font-bold rounded-lg shadow-md hover:bg-solar/90 transition">
+                Book Your Cart
+              </button>
+            </div>
+
           </div>
-          </div>
+        </div>
+
+        {/* 2. GRADIENT OVERLAY (Desktop Only) */}
+        {/* Hidden on mobile because text doesn't overlap the image */}
+        <div className="hidden md:block absolute inset-0 z-10 bg-gradient-to-r from-brand/90 via-brand/40 to-transparent pointer-events-none" />
+
+        {/* 3. HERO IMAGE CONTAINER */}
+        {/* Mobile: Relative height aspect-ratio container sitting below text | Desktop: Absolute full fill */}
+        <div className="relative w-full h-[320px] sm:h-[420px] md:absolute md:inset-0 md:h-full z-0">
+          <picture className="w-full h-full">
+            <source media="(max-width: 767px)" srcSet={HERO_MOBILE_IMAGE_URL} />
+            <img src={HERO_IMAGE_URL} alt="Paradise Golf Cart Rental in Key West" className="w-full h-full object-cover object-center md:object-right" />
+          </picture>
+
+          {/* Optional Mobile Subtle Top Fade to smooth out hard image edges */}
+          <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-brand to-transparent md:hidden" />
+        </div>
+
+        {/* Desktop thumbnails */}
+        <div className="absolute bottom-8 left-6 lg:left-10 z-20 hidden md:flex gap-3">
+          <img src={HERO_DESKTOP_THUMB_1_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
+          <img src={HERO_DESKTOP_THUMB_2_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
         </div>
 
         {/* Best of Florida badge */}
-        <img src={BEST_OF_FLORIDA_BADGE_URL} alt="Best of Florida Awards badge" className="absolute bottom-28 right-4 z-20 w-20 md:w-24 lg:w-28 drop-shadow-lg" />
+        <img src={BEST_OF_FLORIDA_BADGE_URL} alt="Best of Florida Awards badge" className="absolute bottom-4 right-4 z-30 w-20 md:w-24 lg:w-28 drop-shadow-lg" />
 
-        {/* Hero action buttons */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 md:left-auto md:right-6 md:translate-x-0 lg:right-10 z-20 flex flex-col sm:flex-row gap-3 w-[92%] max-w-sm md:w-auto">
-          <button onClick={goToFleet} className="rounded-full bg-solar px-5 py-3 text-xs md:text-sm font-bold text-brand shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 w-full md:w-auto hidden">
-            4-Passenger Features
-          </button>
-          <button onClick={goToFleet} className="rounded-full bg-brand/90 backdrop-blur-sm border border-solar/40 px-5 py-3 text-xs md:text-sm font-bold text-dune shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 w-full md:w-auto hidden">
-            6-Passenger Features
-          </button>
-        </div>
-
-        {/* Floating glass island search */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[92%] max-w-3xl z-20">
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </div>
       </section>
 
       <SocialProofSection />
