@@ -14,6 +14,7 @@ import ExploreKeyWestSection from '@/components/ExploreKeyWestSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import FaqSection from '@/components/FaqSection';
 import FinalBookingCta from '@/components/FinalBookingCta';
+import MobileBookingBar from '@/components/MobileBookingBar';
 import { Image } from '@/components/ui/image';
 
 const HERO_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/bfc00a16b_generated_image.png';
@@ -193,6 +194,9 @@ export default function Home() {
       <FinalBookingCta />
 
       <Footer />
+
+      <MobileBookingBar />
+      <div className="h-24 md:hidden" aria-hidden="true" />
 
     </div>);
 
