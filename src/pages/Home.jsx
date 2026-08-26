@@ -148,7 +148,6 @@ export default function Home() {
       {/* Fleet */}
       <section id="fleet" className="py-24 md:py-32">
         <div className="px-6 md:px-10 max-w-6xl mx-auto">
-          <p className="text-moss text-sm font-semibold uppercase tracking-widest mb-3">Section 3 — Choose Your Ride</p>
           <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
             Find the Perfect Golf Cart
           </h2>
