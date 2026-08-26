@@ -13,7 +13,7 @@ const rideDetails = {
   six: {
     title: '6-Passenger',
     description: 'Bring the whole crew.',
-    features: ['Seats Up to 6', 'Premium Electric Cart', 'Spacious Seating', 'Long-Range Lithium Battery', 'Perfect for Families & Groups', 'Key West Delivery'],
+    features: ['Seats Up to 6', 'Premium Electric Cart', 'Spacious Seating', 'Long-Range Lithium Battery', 'Perfect for Families & Groups'],
     button: 'Check 6-Seater Availability',
   },
 };
