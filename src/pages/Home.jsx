@@ -53,8 +53,10 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative h-screen min-h-[900px] md:min-h-[760px] w-full overflow-hidden">
-        <img src={HERO_IMAGE_URL} alt="Paradise Rentals golf cart with a tourist riding in Key West" className="absolute inset-0 w-full h-full object-contain object-top md:hidden" />
-        <img src={HERO_IMAGE_URL} alt="Paradise Rentals white electric golf cart parked beside a Key West beach" className="absolute inset-0 w-full h-full object-cover object-right hidden md:block" />
+        <picture>
+          <source media="(max-width: 767px)" srcSet={HERO_MOBILE_IMAGE_URL} />
+          <img src={HERO_IMAGE_URL} alt="Paradise Rentals white electric golf cart parked beside a Key West beach" className="absolute inset-0 w-full h-full object-contain object-top md:object-cover md:object-right" />
+        </picture>
         <div className="absolute bottom-8 left-6 lg:left-10 z-20 hidden md:flex gap-3">
           <img src={HERO_DESKTOP_THUMB_1_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
           <img src={HERO_DESKTOP_THUMB_2_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
