@@ -5,7 +5,7 @@ import { Volume2, Navigation, BatteryCharging, Gauge, Music } from 'lucide-react
 const features = [
 { icon: Navigation, title: 'Apple CarPlay & Android Auto', body: 'Maps, music & hands-free connectivity' },
 { icon: Volume2, title: 'Premium Audio', body: 'Soundbar + Bluetooth' },
-{ icon: BatteryCharging, title: 'Long-Range Battery', body: 'All-day electric range with on-demand battery swaps — no charging stress.' },
+{ icon: BatteryCharging, title: 'Long-Range Lithium Battery', body: 'All-day electric range with on-demand battery swaps — no charging stress.' },
 { icon: Gauge, title: 'Street-Legal Speed', body: 'Smooth, street-legal top speed to explore Key West at your pace.' },
 { icon: Music, title: 'Bluetooth Audio', body: 'Stream your favorite playlists straight from your phone.' }];
 
