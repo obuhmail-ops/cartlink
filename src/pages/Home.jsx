@@ -124,17 +124,7 @@ export default function Home() {
         {/* Hidden on mobile because text doesn't overlap the image */}
         <div className="hidden md:block absolute inset-0 z-10 bg-gradient-to-r from-brand/90 via-brand/40 to-transparent pointer-events-none" />
 
-        {/* 3. HERO IMAGE CONTAINER */}
-        {/* Mobile: Relative height aspect-ratio container sitting below text | Desktop: Absolute full fill */}
-        <div className="relative w-full aspect-[4/3] md:absolute md:inset-0 md:h-full z-0">
-          <picture className="w-full h-full">
-            <source media="(max-width: 767px)" srcSet={heroCartImage || HERO_MOBILE_IMAGE_URL} />
-            <img src={heroCartImage || HERO_IMAGE_URL} alt={carts[0]?.name ? `${carts[0].name} in Key West` : 'Paradise Golf Cart Rental in Key West'} className="w-full h-full object-cover object-center md:object-right rounded-none opacity-100" />
-          </picture>
-
-          {/* Optional Mobile Subtle Top Fade to smooth out hard image edges */}
-          <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-brand to-transparent md:hidden" />
-        </div>
+        {/* Hero image removed */}
 
         {/* Desktop thumbnails */}
         <div className="absolute bottom-8 left-6 lg:left-10 z-20 hidden md:flex gap-3">
