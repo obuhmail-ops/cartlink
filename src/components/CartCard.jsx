@@ -7,7 +7,7 @@ const rideDetails = {
     title: '4-Passenger',
     description: 'Perfect for couples and families.',
     boldNote: 'ALL FORWARD-FACING SEATS',
-    features: ['Forward-Facing Seating', 'Premium Electric Cart', 'Lithium Battery', 'Quiet Ride', 'Comfortable Seating', 'Key West Delivery'],
+    features: ['Forward-Facing Seating', 'Premium Electric Cart', 'Long-Range Lithium Battery', 'Quiet Ride', 'Comfortable Seating', 'Key West Delivery'],
     button: 'Check 4-Seater Availability',
   },
   six: {
