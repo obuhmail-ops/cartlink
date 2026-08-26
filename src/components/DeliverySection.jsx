@@ -2,8 +2,7 @@ import React from 'react';
 
 const destinations = [
 ['🏨', 'Hotel'],
-['🏡', 'Airbnb'],
-['🌴', 'Vacation Rental'],
+['🏡', 'Airbnb / Vacation Rental'],
 ['✈️', 'Key West Airport'],
 ['🚢', 'Cruise Arrival']];
 
