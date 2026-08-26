@@ -60,7 +60,7 @@ export default function Home() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-brand/55 via-brand/15 to-transparent md:from-brand/50 md:via-brand/10 md:to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-brand/40 via-transparent to-brand/55" />
-        <div className="relative z-10 h-full flex flex-col justify-start items-center md:items-start pt-24 md:justify-start md:pt-28 pb-40 px-6 md:px-10 max-w-6xl mx-auto opacity-100 bg-[hsl(var(--dune))]">
+        <div className="relative z-10 h-full flex flex-col justify-start items-center md:items-start pt-24 md:justify-start md:pt-28 pb-40 px-6 md:px-10 max-w-6xl mx-auto opacity-100">
           <div className="mt-0 md:mt-0 self-center md:self-start">
             <div className="md:rounded-full md:px-10 md:py-3 md:bg-brand/40 md:backdrop-blur-sm md:border md:border-solar/50 md:shadow-[0_0_30px_hsl(43_100%_50%/0.6),inset_0_0_20px_hsl(43_100%_50%/0.3)]">
               <p className="text-solar font-semibold tracking-[0.25em] uppercase text-center md:text-left text-[26px] md:text-[42px] no-underline drop-shadow-[0_0_12px_hsl(43_100%_50%/0.8)]">
