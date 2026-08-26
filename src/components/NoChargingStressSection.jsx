@@ -24,7 +24,7 @@ export default function NoChargingStressSection() {
             Running low on battery? Just give us a call. We'll come to you and swap your cart.
           </p>
           <p className="mt-6 font-display text-2xl uppercase text-solar md:text-3xl">EASY. SIMPLE. PARADISE. 🌴</p>
-          <a href="#fleet" className="mt-9 inline-flex rounded-lg bg-solar px-6 py-3 text-sm font-bold uppercase tracking-wide text-brand">Book Your Cart</a>
+
         </div>
       </div>
     </section>);
