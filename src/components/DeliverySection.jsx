@@ -36,8 +36,7 @@ export default function DeliverySection() {
             )}
           </ul>
           <div className="mt-8 border-t border-dune/15 pt-7">
-            <p className="font-display text-2xl text-solar">Free delivery &amp; pickup</p>
-            <p className="mt-2 text-dune/70">to hotels, Airbnbs and vacation rentals in Key West.</p>
+            <p className="font-display text-2xl text-solar">FREE delivery &amp; pickup throughout Key West*</p>
 
           </div>
         </div>
