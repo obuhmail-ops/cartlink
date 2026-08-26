@@ -174,13 +174,13 @@ export default function Home() {
 
       <NoChargingStressSection />
 
+      <ArrivalOptionsSection />
+
       <DeliverySection />
 
       <GallerySection />
 
       <GolfCartFeaturesSection />
-
-      <ArrivalOptionsSection />
 
       <ExploreKeyWestSection />
 
