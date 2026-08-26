@@ -174,9 +174,9 @@ export default function Home() {
 
       <NoChargingStressSection />
 
-      <ArrivalOptionsSection />
-
       <DeliverySection />
+
+      <ArrivalOptionsSection />
 
       <GallerySection />
 
