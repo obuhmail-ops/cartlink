@@ -143,6 +143,8 @@ export default function Home() {
         </div>
       </section>
 
+      <SocialProofSection />
+
       {/* Fleet */}
       <section id="fleet" className="py-24 md:py-32">
         <div className="px-6 md:px-10 max-w-6xl mx-auto">
@@ -175,8 +177,6 @@ export default function Home() {
       <GallerySection />
 
       <GolfCartFeaturesSection />
-
-      <SocialProofSection />
 
       <ArrivalOptionsSection />
 
