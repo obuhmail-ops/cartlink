@@ -78,6 +78,9 @@ export default function Home() {
             <span className="block md:inline">Your Cart. Your Island.</span>
             <span className="block md:inline">Your Adventure.</span>
           </p>
+          <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left px-1 mt-1 text-[hsl(var(--solar))] text-lg md:text-xl [font-family:'Sora',_sans-serif] font-bold">
+            Premium 4 &amp; 6 Passenger Electric Golf Carts
+          </p>
           <ul className="mt-6 grid grid-cols-1 gap-y-2 text-sm md:text-base text-white max-w-md">
             {[
             'Free Delivery & Pickup',
