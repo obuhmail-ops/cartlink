@@ -103,10 +103,10 @@ export default function Home() {
 
             <div className="mt-4 flex gap-2 w-full max-w-md md:hidden">
               <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
-                <img src={HERO_MOBILE_IMAGE_2_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-full object-cover" />
+                <img src={HERO_MOBILE_IMAGE_2_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-full object-cover hidden" />
               </button>
               <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
-                <img src={HERO_MOBILE_IMAGE_3_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-full object-cover" />
+                <img src={HERO_MOBILE_IMAGE_3_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-full object-cover hidden" />
               </button>
             </div>
 
