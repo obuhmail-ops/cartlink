@@ -79,7 +79,7 @@ export default function Home() {
 
             <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
               <span className="block md:inline [font-family:'Kalam',_system-ui]">Your Cart. Your Island.</span>
-              <span className="block md:inline">Your Adventure.</span>
+              <span className="block md:inline text-[hsl(var(--destructive))]">Your Adventure.</span>
             </p>
 
             <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left px-1 mt-1 text-[hsl(var(--solar))] text-lg md:text-xl [font-family:'Sora',_sans-serif] font-bold">
