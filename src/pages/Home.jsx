@@ -52,18 +52,19 @@ export default function Home() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative h-screen min-h-[900px] md:min-h-[760px] w-full overflow-hidden">
-        <picture>
+      <section className="relative w-full h-auto min-h-[650px] md:h-screen md:min-h-[760px] overflow-hidden bg-brand">
+        <picture className="absolute inset-0 w-full h-full">
           <source media="(max-width: 767px)" srcSet={HERO_MOBILE_IMAGE_URL} />
-          <img src={HERO_IMAGE_URL} alt="Paradise Rentals white electric golf cart parked beside a Key West beach" className="absolute inset-0 w-full h-full object-contain object-top md:object-cover md:object-right" />
+          <img src={HERO_IMAGE_URL} alt="Paradise Rentals white electric golf cart parked beside a Key West beach" className="absolute inset-0 w-full h-full object-cover object-center md:object-cover md:object-right" />
         </picture>
         <div className="absolute bottom-8 left-6 lg:left-10 z-20 hidden md:flex gap-3">
           <img src={HERO_DESKTOP_THUMB_1_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
           <img src={HERO_DESKTOP_THUMB_2_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-brand/55 via-brand/15 to-transparent md:from-brand/50 md:via-brand/10 md:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand/40 via-transparent to-brand/55" />
-        <div className="relative z-10 h-full flex flex-col justify-start items-center md:items-start pt-24 md:justify-start md:pt-28 pb-40 px-6 md:px-10 max-w-6xl mx-auto opacity-100">
+        <div className="absolute inset-0 bg-gradient-to-b from-brand/90 via-brand/50 to-brand/80 md:bg-gradient-to-r md:from-brand/70 md:via-brand/30 md:to-transparent" />
+        <div className="relative z-10 w-full h-full max-w-6xl mx-auto px-6 pt-20 pb-16 md:px-10 md:pt-28 md:pb-40 flex flex-col items-center text-center md:items-start md:text-left justify-center">
+          {/* Headline Block */}
+          <div className="flex flex-col items-center md:items-start max-w-xl">
           <div className="mt-0 md:mt-0 self-center md:self-start">
             <div className="md:rounded-full md:px-10 md:py-3 md:bg-brand/40 md:backdrop-blur-sm md:border md:border-solar/50 md:shadow-[0_0_30px_hsl(43_100%_50%/0.6),inset_0_0_20px_hsl(43_100%_50%/0.3)]">
               <p className="text-solar font-semibold tracking-[0.25em] uppercase text-center md:text-left text-[26px] md:text-[42px] no-underline drop-shadow-[0_0_12px_hsl(43_100%_50%/0.8)]">
@@ -104,6 +105,7 @@ export default function Home() {
             <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
               <img src={HERO_MOBILE_IMAGE_3_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-full object-cover" />
             </button>
+          </div>
           </div>
         </div>
 
