@@ -6,6 +6,7 @@ import CartCard from '@/components/CartCard';
 import DeliverySection from '@/components/DeliverySection';
 import SocialProofSection from '@/components/SocialProofSection';
 import GallerySection from '@/components/GallerySection';
+import GolfCartFeaturesSection from '@/components/GolfCartFeaturesSection';
 import ArrivalOptionsSection from '@/components/ArrivalOptionsSection';
 import NoChargingStressSection from '@/components/NoChargingStressSection';
 import WhyParadiseSection from '@/components/WhyParadiseSection';
@@ -172,6 +173,8 @@ export default function Home() {
       <DeliverySection />
 
       <GallerySection />
+
+      <GolfCartFeaturesSection />
 
       <SocialProofSection />
 
