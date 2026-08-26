@@ -36,7 +36,7 @@ export default function ArrivalOptionsSection() {
     <section id="arrival-options" className="scroll-mt-24 bg-dune px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto max-w-6xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-moss">Delivery & Arrival Options</p>
-        <h2 className="mt-4 max-w-3xl font-display text-3xl uppercase leading-tight text-brand md:text-5xl">Start Exploring Key West Your Way</h2>
+        <h2 className="mt-4 max-w-3xl font-display text-3xl uppercase leading-tight text-brand md:text-5xl">Arriving in Key West? We've Got Your Ride.</h2>
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {options.map((option) =>
           <a href="#fleet" key={option.id} className="group block scroll-mt-24 overflow-hidden rounded-2xl bg-card shadow-sm transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
