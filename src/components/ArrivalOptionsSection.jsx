@@ -48,7 +48,7 @@ export default function ArrivalOptionsSection() {
                 <div className="flex flex-col p-7">
                   {option.id === 'airport-delivery' ? (
                     <>
-                      <p className="md:hidden text-center text-3xl" aria-hidden="true">✈️ flying in?</p>
+                      <p className="md:hidden text-center text-3xl" aria-hidden="true">✈️ FLYING IN?</p>
                       <p className="md:hidden mt-3 text-center font-display text-lg uppercase leading-tight text-brand">Airport golf-cart delivery available.</p>
                       <p className="hidden md:block font-bold uppercase tracking-[0.18em] text-base text-[hsl(var(--destructive))] text-center">{option.label}</p>
                       <h3 className="hidden md:block mt-3 font-display text-2xl uppercase leading-tight text-brand text-center">{option.title}</h3>
