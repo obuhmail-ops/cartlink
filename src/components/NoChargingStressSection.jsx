@@ -16,8 +16,7 @@ export default function NoChargingStressSection() {
           
         </div>
         <div className="order-1 md:order-2">
-          <p className="text-sm font-semibold uppercase tracking-widest text-moss">Section 8 — No Charging Stress</p>
-          <h2 className="mt-5 font-display text-3xl uppercase leading-tight text-brand md:text-5xl">🔋 No Place to Charge? We've Got You.</h2>
+          <h2 className="font-display text-3xl uppercase leading-tight text-brand md:text-5xl">🔋 No Place to Charge? We've Got You.</h2>
           <p className="mt-5 leading-relaxed text-brand/65">
             Our electric golf carts are made for exploring Key West.
           </p>
