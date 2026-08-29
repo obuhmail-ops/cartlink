@@ -154,15 +154,15 @@ export default function Home() {
           src={FLOATING_CART_URL}
           alt="Paradise Rentals premium 4-passenger golf cart"
           className="w-[44rem] md:w-[57rem] lg:w-[78rem] drop-shadow-2xl"
-          style={{ mixBlendMode: 'screen', filter: 'sepia(1) saturate(20) hue-rotate(-30deg) brightness(1.05) contrast(1.05)' }} />
+          style={{ mixBlendMode: 'screen' }} />
         
       </div>
 
       <section id="fleet" className="-mt-32 pb-24 md:-mt-24 md:pb-32">
         <div className="px-6 md:px-10 max-w-6xl mx-auto">
-          
-
-          
+          <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight hidden">
+            Find the Perfect Golf Cart
+          </h2>
 
           {loading ?
           <div className="mt-12 grid gap-8 md:grid-cols-2">
