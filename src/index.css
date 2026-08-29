@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600;700&family=Architects+Daughter:wght@400&family=Archivo:wght@300;400;500;600;700&family=DM+Serif+Display:wght@400&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Bodoni+Moda:wght@400;500;600;700&family=DM+Serif+Text:wght@400&family=Lexend:wght@300;400;500;600;700&family=Bungee:wght@400&family=Comfortaa:wght@300;400;500;600;700&family=Monoton:wght@400&family=Newsreader:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700&family=Bebas+Neue:wght@400&family=Indie+Flower:wght@400&family=Fraunces:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600;700&family=Rubik+Mono+One:wght@400&family=Kalam:wght@300;400;700&display=swap');
+/* base44-workspace-fonts:start */
+@font-face {
+  font-family: 'Helvetica Bold';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://media.base44.com/files/public/builder-assets/wix-fonts/helvetica-700-normal.woff2') format('woff2');
+}
+/* base44-workspace-fonts:end */
 
 @tailwind base;
 @tailwind components;
