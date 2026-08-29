@@ -20,6 +20,7 @@ import { Image } from '@/components/ui/image';
 const HERO_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/bfc00a16b_generated_image.png';
 const HERO_MOBILE_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/628f37336_generated_image.png';
 const HERO_MOBILE_PHOTO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/13db7f113_Gemini_Generated_Image_fx9qh6fx9qh6fx9q.jpeg';
+const FLOATING_CART_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/5dde5f4ee_Untitleddesign.png';
 const HERO_MOBILE_IMAGE_2_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/fd255c606_A6700476.jpg';
 const HERO_MOBILE_IMAGE_3_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/457bf5afe_A6700589.jpg';
 const HERO_DESKTOP_THUMB_1_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/724153794_A6700476.jpg';
@@ -142,6 +143,16 @@ export default function Home() {
         <img src={BEST_OF_FLORIDA_BADGE_URL} alt="Best of Florida Awards badge" className="absolute bottom-4 right-4 z-30 w-20 md:w-24 lg:w-28 drop-shadow-lg" />
 
       </section>
+
+      {/* Floating 3D cart straddling the hero/fleet boundary */}
+      <div className="pointer-events-none relative z-30 -mt-24 md:-mt-40 flex justify-center md:justify-end md:pr-16">
+        <img
+          src={FLOATING_CART_URL}
+          alt="Paradise Rentals premium 4-passenger golf cart"
+          className="w-64 md:w-80 lg:w-[26rem] drop-shadow-2xl"
+          style={{ mixBlendMode: 'screen' }}
+        />
+      </div>
 
       {/* Fleet */}
       <section id="fleet" className="py-24 md:py-32">
