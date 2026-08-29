@@ -129,7 +129,7 @@ export default function Home() {
         {/* Mobile hero photo (dimmed) with extended sky */}
         <div className="md:hidden absolute inset-0 z-0 flex flex-col">
           <div className="h-40 bg-gradient-to-b from-[#3A96E0] via-[#85C2F1] to-transparent" />
-          <img src={HERO_MOBILE_PHOTO_URL} alt="Southernmost Point Buoy in Key West" className="flex-1 w-full object-cover object-top" />
+          <img src={HERO_MOBILE_PHOTO_URL} alt="Southernmost Point Buoy in Key West" className="flex-1 w-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/30" />
         </div>
 
