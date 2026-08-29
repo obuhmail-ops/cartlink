@@ -60,7 +60,7 @@ export default function Home() {
 
         {/* 1. TEXT CONTAINER */}
         {/* Mobile: Normal flex item (pt-16 pb-8) | Desktop: Absolute z-20 overlay */}
-        <div className="relative z-20 w-full max-w-6xl mx-auto px-6 pt-16 pb-8 md:absolute md:inset-0 md:px-10 md:pt-28 md:pb-40 md:flex md:flex-col md:justify-center">
+        <div className="relative z-20 w-full max-w-6xl mx-auto px-6 pt-16 pb-8 md:absolute md:inset-0 md:px-10 md:pt-28 md:pb-40 md:flex md:flex-col md:justify-center opacity-100">
           <div className="flex flex-col items-center text-center md:items-start md:text-left max-w-xl mx-auto md:mx-0">
 
             {/* Badge */}
