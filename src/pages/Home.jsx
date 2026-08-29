@@ -19,6 +19,7 @@ import { Image } from '@/components/ui/image';
 
 const HERO_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/bfc00a16b_generated_image.png';
 const HERO_MOBILE_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/628f37336_generated_image.png';
+const HERO_MOBILE_PHOTO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/4f3972395_A6700430.jpg';
 const HERO_MOBILE_IMAGE_2_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/fd255c606_A6700476.jpg';
 const HERO_MOBILE_IMAGE_3_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/457bf5afe_A6700589.jpg';
 const HERO_DESKTOP_THUMB_1_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/724153794_A6700476.jpg';
@@ -124,7 +125,11 @@ export default function Home() {
         {/* Hidden on mobile because text doesn't overlap the image */}
         <div className="hidden md:block absolute inset-0 z-10 bg-gradient-to-r from-brand/90 via-brand/40 to-transparent pointer-events-none" />
 
-        {/* Hero image removed */}
+        {/* Mobile hero photo (dimmed) */}
+        <div className="md:hidden absolute inset-0 z-0">
+          <img src={HERO_MOBILE_PHOTO_URL} alt="Paradise Rentals golf carts lined up in Key West" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
 
         {/* Desktop thumbnails */}
         <div className="absolute bottom-8 left-6 lg:left-10 z-20 hidden md:flex gap-3">
