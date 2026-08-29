@@ -96,9 +96,9 @@ export default function Home() {
               'Long-Range Lithium Battery up to 60 Miles',
               'No Place to Charge? We Swap Your Cart'].
               map((benefit, i) =>
-              <li key={benefit} style={{ animation: `hero-benefit-rise 0.7s ease-out ${0.15 + i * 0.12}s both` }} className="flex items-center gap-2 [font-family:'Sora',_sans-serif] font-semibold my-1 text-base">
-                <span className="text-solar font-bold" aria-hidden="true">✓</span>
-                {benefit}
+              <li key={benefit} style={{ animation: `hero-benefit-rise 0.7s ease-out ${0.15 + i * 0.12}s both` }} className="flex items-start gap-2 [font-family:'Sora',_sans-serif] font-semibold my-1 text-base leading-snug">
+                <span className="text-solar font-bold leading-snug" aria-hidden="true">✓</span>
+                <span>{benefit}</span>
               </li>
               )}
             </ul>
