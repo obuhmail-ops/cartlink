@@ -9,7 +9,7 @@ const destinations = [
 
 export default function DeliverySection() {
   return (
-    <section id="delivery" className="bg-brand px-6 py-20 text-dune md:px-10 md:py-28">
+    <section id="delivery" className="bg-brand px-6 pt-10 pb-20 text-dune md:px-10 md:pt-12 md:pb-28">
       <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1.05fr_0.95fr] md:items-center">
         <div>
           <h2 className="max-w-xl font-display text-4xl leading-tight text-balance md:text-6xl">
