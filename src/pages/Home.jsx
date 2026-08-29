@@ -99,7 +99,7 @@ export default function Home() {
               map((benefit, i) =>
               <li key={benefit} style={{ animation: `hero-benefit-rise 0.7s ease-out ${0.15 + i * 0.12}s both` }} className="flex items-start gap-2 [font-family:'Sora',_sans-serif] font-semibold my-1 text-base leading-snug">
                 <span className="text-solar font-bold leading-snug" aria-hidden="true">✓</span>
-                <span>{benefit}</span>
+                <span>{benefit.split(/(free delivery)/i).map((part, j) => /free delivery/i.test(part) ? <span key={j} className="text-solar">{part}</span> : part)}</span>
               </li>
               )}
             </ul>
