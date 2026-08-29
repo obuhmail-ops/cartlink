@@ -154,8 +154,7 @@ export default function Home() {
         />
       </div>
 
-      {/* Fleet */}
-      <section id="fleet" className="pt-0 pb-24 md:pt-8 md:pb-32">
+      <section id="fleet" className="-mt-8 pb-24 md:-mt-4 md:pb-32">
         <div className="px-6 md:px-10 max-w-6xl mx-auto">
           <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
             Find the Perfect Golf Cart
