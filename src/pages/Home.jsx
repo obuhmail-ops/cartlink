@@ -155,7 +155,7 @@ export default function Home() {
       </div>
 
       {/* Fleet */}
-      <section id="fleet" className="py-24 md:py-32">
+      <section id="fleet" className="pt-10 pb-24 md:pt-20 md:pb-32">
         <div className="px-6 md:px-10 max-w-6xl mx-auto">
           <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
             Find the Perfect Golf Cart
