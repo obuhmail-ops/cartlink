@@ -56,7 +56,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative w-full bg-brand flex flex-col justify-start md:block md:h-screen md:min-h-[760px] overflow-hidden">
+      <section className="relative w-full bg-brand flex flex-col justify-start min-h-[640px] md:block md:h-screen md:min-h-[760px] overflow-hidden">
 
         {/* 1. TEXT CONTAINER */}
         {/* Mobile: Normal flex item (pt-16 pb-8) | Desktop: Absolute z-20 overlay */}
@@ -125,9 +125,10 @@ export default function Home() {
         {/* Hidden on mobile because text doesn't overlap the image */}
         <div className="hidden md:block absolute inset-0 z-10 bg-gradient-to-r from-brand/90 via-brand/40 to-transparent pointer-events-none" />
 
-        {/* Mobile hero photo (dimmed) */}
-        <div className="md:hidden absolute inset-0 z-0">
-          <img src={HERO_MOBILE_PHOTO_URL} alt="Paradise Rentals golf cart at the Southernmost Point buoy in Key West" className="w-full h-full object-cover" />
+        {/* Mobile hero photo (dimmed) with extended sky */}
+        <div className="md:hidden absolute inset-0 z-0 flex flex-col">
+          <div className="h-40 bg-gradient-to-b from-[#3A96E0] via-[#85C2F1] to-transparent" />
+          <img src={HERO_MOBILE_PHOTO_URL} alt="Paradise Rentals golf cart at the Southernmost Point buoy in Key West" className="flex-1 w-full object-cover object-top" />
           <div className="absolute inset-0 bg-black/30" />
         </div>
 
