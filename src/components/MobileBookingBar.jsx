@@ -1,8 +1,7 @@
 import React from 'react';
+import { FAREHARBOR_URL } from '@/lib/booking';
 
 export default function MobileBookingBar() {
-  const goToFleet = () => document.getElementById('fleet')?.scrollIntoView({ behavior: 'smooth' });
-
   return (
     <div className="fixed bottom-0 inset-x-0 z-50 md:hidden bg-brand/95 backdrop-blur-md border-t border-white/10 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
       <div className="flex items-center justify-between gap-3 max-w-md mx-auto">
@@ -16,15 +15,17 @@ export default function MobileBookingBar() {
           <span>Call Us</span>
         </a>
 
-        <button
-          onClick={goToFleet}
+        <a
+          href={FAREHARBOR_URL}
+          target="_blank"
+          rel="noreferrer"
           className="flex-1 flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-solar text-brand font-bold text-sm tracking-wide shadow-md active:scale-[0.98] transition"
         >
           <span>Check Availability</span>
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
           </svg>
-        </button>
+        </a>
       </div>
     </div>
   );

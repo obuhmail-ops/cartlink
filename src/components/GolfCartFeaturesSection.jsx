@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image } from '@/components/ui/image';
 import { Volume2, Navigation, BatteryCharging, Armchair, RefreshCw } from 'lucide-react';
+import { FAREHARBOR_URL } from '@/lib/booking';
 
 const features = [
 { icon: Navigation, title: 'Apple CarPlay & Android Auto', body: 'Maps, music & hands-free connectivity' },
@@ -14,8 +15,6 @@ const FEATURE_IMAGE_1 = 'https://media.base44.com/images/public/6a7e5db2c2620868
 const FEATURE_IMAGE_2 = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/3512606ee_A6700589.jpg';
 
 export default function GolfCartFeaturesSection() {
-  const goToFleet = () => document.getElementById('fleet')?.scrollIntoView({ behavior: 'smooth' });
-
   return (
     <section id="cart-features" className="scroll-mt-24 px-6 pt-10 pb-10 text-dune md:px-10 md:pt-12 md:pb-12 bg-[hsl(var(--secondary-foreground))]">
       <div className="mx-auto max-w-6xl">
@@ -44,9 +43,9 @@ export default function GolfCartFeaturesSection() {
         </div>
 
         <div className="mt-12 text-center">
-          <button onClick={goToFleet} className="rounded-full bg-solar px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-brand shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
+          <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" className="inline-block rounded-full bg-solar px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-brand shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
             See Our Fleet
-          </button>
+          </a>
         </div>
       </div>
     </section>);

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, Phone, X } from 'lucide-react';
 import CartDropdown from '@/components/CartDropdown';
 import ArrivalDropdown from '@/components/ArrivalDropdown';
+import { FAREHARBOR_URL } from '@/lib/booking';
 
 const LOGO_VIDEO_URL = 'https://media.base44.com/videos/public/6a7e5db2c2620868d1046179/f22b7c6ba_gemini_generated_video_9fd05d99.mp4';
 
@@ -127,9 +128,9 @@ export default function Navbar() {
             <a href="tel:+13053371815" className="flex items-center gap-1.5 px-2 py-2 text-xs text-brand whitespace-nowrap [font-family:'Sora',_sans-serif] font-bold hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200">
               <Phone className="w-4 h-4" /> Call
             </a>
-            <button onClick={() => scrollTo('fleet')} className="rounded-lg bg-solar px-4 py-2.5 text-xs font-bold text-brand whitespace-nowrap shadow hover:brightness-110 hover:scale-105 hover:drop-shadow-[0_0_14px_hsl(43_100%_60%)] active:scale-95 transition-all duration-200">
+            <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" className="rounded-lg bg-solar px-4 py-2.5 text-xs font-bold text-brand whitespace-nowrap shadow hover:brightness-110 hover:scale-105 hover:drop-shadow-[0_0_14px_hsl(43_100%_60%)] active:scale-95 transition-all duration-200">
               Book Now
-            </button>
+            </a>
           </div>
         </div>
 

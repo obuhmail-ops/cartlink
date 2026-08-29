@@ -1,4 +1,5 @@
 import React from 'react';
+import { FAREHARBOR_URL } from '@/lib/booking';
 
 const steps = [
   { number: '1', title: 'Choose', text: 'Select a 4- or 6-passenger golf cart.' },
@@ -9,8 +10,6 @@ const steps = [
 ];
 
 export default function HowItWorksSection() {
-  const checkAvailability = () => document.getElementById('fleet')?.scrollIntoView({ behavior: 'smooth' });
-
   return (
     <section id="how" className="bg-card px-6 pt-10 pb-10 md:px-10 md:pt-12 md:pb-12">
       <div className="mx-auto max-w-6xl">
@@ -24,7 +23,7 @@ export default function HowItWorksSection() {
             </article>
           ))}
         </div>
-        <button onClick={checkAvailability} className="mt-12 rounded-lg bg-solar px-6 py-3 text-sm font-bold uppercase tracking-wide text-brand">Check Availability</button>
+        <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" className="mt-12 inline-block rounded-lg bg-solar px-6 py-3 text-sm font-bold uppercase tracking-wide text-brand">Check Availability</a>
       </div>
     </section>
   );
