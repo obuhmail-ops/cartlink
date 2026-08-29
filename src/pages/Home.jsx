@@ -80,8 +80,8 @@ export default function Home() {
             </h1>
 
             <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
-              <span className="block md:inline [font-family:'Kalam',_system-ui]">Your Cart. Your Island.</span>
-              <span className="block md:inline text-[hsl(var(--sidebar-border))] [font-family:'Kalam',_system-ui] font-bold">Your Adventure.</span>
+              <span className="block md:inline [font-family:'Helvetica_Bold',_sans-serif] font-bold">Your Cart. Your Island.</span>
+              <span className="block md:inline text-[hsl(var(--sidebar-border))] font-bold [font-family:'Helvetica_Bold',_sans-serif]">Your Adventure.</span>
             </p>
 
             <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left px-1 mt-1 text-[hsl(var(--solar))] text-lg md:text-xl [font-family:'Sora',_sans-serif] font-bold">
@@ -150,8 +150,8 @@ export default function Home() {
           src={FLOATING_CART_URL}
           alt="Paradise Rentals premium 4-passenger golf cart"
           className="w-[44rem] md:w-[57rem] lg:w-[78rem] drop-shadow-2xl"
-          style={{ mixBlendMode: 'screen' }}
-        />
+          style={{ mixBlendMode: 'screen' }} />
+        
       </div>
 
       <section id="fleet" className="-mt-8 pb-24 md:-mt-4 md:pb-32">
