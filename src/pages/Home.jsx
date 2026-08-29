@@ -19,7 +19,7 @@ import { Image } from '@/components/ui/image';
 
 const HERO_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/bfc00a16b_generated_image.png';
 const HERO_MOBILE_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/628f37336_generated_image.png';
-const HERO_MOBILE_PHOTO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/41e059e25_kll.jpeg';
+const HERO_MOBILE_PHOTO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/13db7f113_Gemini_Generated_Image_fx9qh6fx9qh6fx9q.jpeg';
 const HERO_MOBILE_IMAGE_2_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/fd255c606_A6700476.jpg';
 const HERO_MOBILE_IMAGE_3_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/457bf5afe_A6700589.jpg';
 const HERO_DESKTOP_THUMB_1_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/724153794_A6700476.jpg';
@@ -128,7 +128,7 @@ export default function Home() {
         {/* Mobile hero photo (dimmed) with extended sky */}
         <div className="md:hidden absolute inset-0 z-0 flex flex-col">
           <div className="h-40 bg-gradient-to-b from-[#3A96E0] via-[#85C2F1] to-transparent" />
-          <img src={HERO_MOBILE_PHOTO_URL} alt="Paradise Rentals golf cart at the Southernmost Point buoy in Key West" className="flex-1 w-full object-cover object-top" />
+          <img src={HERO_MOBILE_PHOTO_URL} alt="Southernmost Point Buoy in Key West" className="flex-1 w-full object-cover object-top" />
           <div className="absolute inset-0 bg-black/30" />
         </div>
 
