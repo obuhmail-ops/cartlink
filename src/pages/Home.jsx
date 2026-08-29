@@ -65,7 +65,7 @@ export default function Home() {
           <div className="flex flex-col items-center text-center md:items-start md:text-left max-w-xl mx-auto md:mx-0">
 
             {/* Badge */}
-            <div className="self-center md:self-start">
+            <div className="self-center md:self-start mt-6">
               <div>
                 <p className="text-solar font-semibold tracking-[0.25em] uppercase text-center md:text-left text-[26px] md:text-[42px] no-underline">
                   <span className="block md:inline">Key West</span>
