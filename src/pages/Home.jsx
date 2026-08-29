@@ -26,6 +26,7 @@ const HERO_MOBILE_IMAGE_3_URL = 'https://media.base44.com/images/public/6a7e5db2
 const HERO_DESKTOP_THUMB_1_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/724153794_A6700476.jpg';
 const HERO_DESKTOP_THUMB_2_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/3512606ee_A6700589.jpg';
 const BEST_OF_FLORIDA_BADGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/353f029f7_bestofflorida.webp';
+const GOOGLE_REVIEWS_BADGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/1598156a8_Google-Reviews-1024x493.jpg';
 
 function HeroField({ icon, label, children }) {
   return (
@@ -134,13 +135,16 @@ export default function Home() {
         </div>
 
         {/* Desktop thumbnails */}
-        <div className="absolute bottom-8 left-6 lg:left-10 z-20 hidden md:flex gap-3">
+        <div className="absolute bottom-44 left-6 lg:left-10 z-20 hidden md:flex gap-3">
           <img src={HERO_DESKTOP_THUMB_1_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
           <img src={HERO_DESKTOP_THUMB_2_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
         </div>
 
         {/* Best of Florida badge */}
         <img src={BEST_OF_FLORIDA_BADGE_URL} alt="Best of Florida Awards badge" className="absolute bottom-4 right-4 z-30 w-20 md:w-24 lg:w-28 drop-shadow-lg" />
+
+        {/* Google Reviews badge */}
+        <img src={GOOGLE_REVIEWS_BADGE_URL} alt="Google Reviews 5.0 star rating" className="absolute bottom-4 left-4 z-30 w-28 md:w-40 lg:w-48 drop-shadow-lg rounded-lg" />
 
       </section>
 
