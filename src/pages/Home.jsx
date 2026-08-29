@@ -21,6 +21,7 @@ const HERO_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d
 const HERO_MOBILE_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/628f37336_generated_image.png';
 const HERO_MOBILE_PHOTO_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/13db7f113_Gemini_Generated_Image_fx9qh6fx9qh6fx9q.jpeg';
 const FLOATING_CART_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/5dde5f4ee_Untitleddesign.png';
+const BEACH_BG_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/37488c8b5_generated_image.png';
 const HERO_MOBILE_IMAGE_2_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/fd255c606_A6700476.jpg';
 const HERO_MOBILE_IMAGE_3_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/457bf5afe_A6700589.jpg';
 const HERO_DESKTOP_THUMB_1_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/724153794_A6700476.jpg';
@@ -147,11 +148,17 @@ export default function Home() {
       {/* Floating 3D cart straddling the hero/fleet boundary */}
       <div className="pointer-events-none relative z-30 -mt-40 md:-mt-56 flex justify-center md:justify-end md:pr-16">
         <img
+          src={BEACH_BG_URL}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 w-full h-full object-cover opacity-90"
+        />
+        <img
           src={FLOATING_CART_URL}
           alt="Paradise Rentals premium 4-passenger golf cart"
-          className="w-[44rem] md:w-[57rem] lg:w-[78rem] drop-shadow-2xl"
+          className="relative w-[44rem] md:w-[57rem] lg:w-[78rem] drop-shadow-2xl"
           style={{ mixBlendMode: 'screen' }} />
-        
+
       </div>
 
       <section id="fleet" className="-mt-8 pb-24 md:-mt-4 md:pb-32">
