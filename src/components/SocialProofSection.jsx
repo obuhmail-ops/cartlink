@@ -11,7 +11,7 @@ const GOOGLE_REVIEWS_URL = 'https://www.google.com/search?q=Paradise+Rentals+Key
 
 export default function SocialProofSection() {
   return (
-    <section className="bg-brand px-6 py-24 text-dune md:px-10 md:py-32">
+    <section className="bg-brand px-6 pt-10 pb-24 text-dune md:px-10 md:pt-12 md:pb-32">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <h2 className="max-w-3xl font-display text-3xl uppercase leading-tight md:text-5xl">One of Key West’s Favorite Ways to Ride</h2>
