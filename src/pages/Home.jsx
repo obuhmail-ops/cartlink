@@ -160,7 +160,7 @@ export default function Home() {
 
       <section id="fleet" className="-mt-32 pb-24 md:-mt-24 md:pb-32">
         <div className="px-6 md:px-10 max-w-6xl mx-auto">
-          <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
+          <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight hidden">
             Find the Perfect Golf Cart
           </h2>
 
