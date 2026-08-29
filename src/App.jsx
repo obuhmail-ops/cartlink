@@ -17,7 +17,6 @@ import Login from '@/pages/Login';
 import Register from '@/pages/Register';
 import ForgotPassword from '@/pages/ForgotPassword';
 import ResetPassword from '@/pages/ResetPassword';
-import GithubMonitor from './pages/GithubMonitor';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -43,7 +42,6 @@ const AuthenticatedApp = () => {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password" element={<ResetPassword />} />
       <Route path="/" element={<Home />} />
-      <Route path="/github-monitor" element={<GithubMonitor />} />
       <Route path="/cart/:id" element={<CartDetail />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/confirmation" element={<Confirmation />} />
