@@ -145,11 +145,11 @@ export default function Home() {
       </section>
 
       {/* Floating 3D cart straddling the hero/fleet boundary */}
-      <div className="pointer-events-none relative z-30 -mt-56 md:-mt-72 flex justify-center md:justify-end md:pr-16">
+      <div className="pointer-events-none relative z-30 -mt-40 md:-mt-56 flex justify-center md:justify-end md:pr-16">
         <img
           src={FLOATING_CART_URL}
           alt="Paradise Rentals premium 4-passenger golf cart"
-          className="w-96 md:w-[30rem] lg:w-[40rem] drop-shadow-2xl"
+          className="w-[30rem] md:w-[38rem] lg:w-[52rem] drop-shadow-2xl"
           style={{ mixBlendMode: 'screen' }}
         />
       </div>
