@@ -11,7 +11,10 @@ import {
 } from 'recharts';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Loader2, GitCommitVertical } from 'lucide-react';
+import { Textarea } from '@/components/ui/textarea';
+import { Switch } from '@/components/ui/switch';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Loader2, GitCommitVertical, Plus } from 'lucide-react';
 
 export default function GithubMonitor() {
   const [repo, setRepo] = useState('');
@@ -19,6 +22,13 @@ export default function GithubMonitor() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [createName, setCreateName] = useState('');
+  const [createDescription, setCreateDescription] = useState('');
+  const [createPrivate, setCreatePrivate] = useState(true);
+  const [createAutoInit, setCreateAutoInit] = useState(true);
+  const [creating, setCreating] = useState(false);
+  const [createError, setCreateError] = useState(null);
+  const [createdRepo, setCreatedRepo] = useState(null);
 
   const run = async (e) => {
     e.preventDefault();
@@ -36,6 +46,29 @@ export default function GithubMonitor() {
       setError(err.response?.data?.error || err.message || 'Failed to load');
     } finally {
       setLoading(false);
+    }
+  };
+
+  const createRepo = async (e) => {
+    e.preventDefault();
+    if (!createName.trim()) return;
+    setCreating(true);
+    setCreateError(null);
+    setCreatedRepo(null);
+    try {
+      const res = await base44.functions.invoke('githubCreateRepo', {
+        name: createName.trim(),
+        description: createDescription.trim(),
+        private: createPrivate,
+        autoInit: createAutoInit,
+      });
+      setCreatedRepo(res.data);
+      setCreateName('');
+      setCreateDescription('');
+    } catch (err) {
+      setCreateError(err.response?.data?.error || err.message || 'Failed to create');
+    } finally {
+      setCreating(false);
     }
   };
 
@@ -175,6 +208,74 @@ export default function GithubMonitor() {
             </section>
           </div>
         )}
+
+        <section className="mt-10 rounded-2xl border border-border bg-card p-5">
+          <div className="mb-4 flex items-center gap-2">
+            <Plus className="h-5 w-5 text-solar" />
+            <h2 className="font-display text-xl text-brand">Create New Repository</h2>
+          </div>
+          <form onSubmit={createRepo} className="space-y-4">
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-brand">
+                Repository name
+              </label>
+              <Input
+                value={createName}
+                onChange={(e) => setCreateName(e.target.value)}
+                placeholder="my-new-repo"
+              />
+            </div>
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-brand">
+                Description
+              </label>
+              <Textarea
+                value={createDescription}
+                onChange={(e) => setCreateDescription(e.target.value)}
+                placeholder="Optional description"
+                rows={2}
+              />
+            </div>
+            <div className="flex flex-wrap items-center gap-6">
+              <label className="flex items-center gap-2 text-sm text-brand">
+                <Switch checked={createPrivate} onCheckedChange={setCreatePrivate} />
+                Private
+              </label>
+              <label className="flex items-center gap-2 text-sm text-brand">
+                <Checkbox
+                  checked={createAutoInit}
+                  onCheckedChange={(v) => setCreateAutoInit(!!v)}
+                />
+                Initialize with README
+              </label>
+            </div>
+            {createError && (
+              <p className="text-sm text-destructive">{createError}</p>
+            )}
+            {createdRepo && (
+              <p className="text-sm text-accent">
+                Created{' '}
+                <a
+                  href={createdRepo.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline"
+                >
+                  {createdRepo.name}
+                </a>
+              </p>
+            )}
+            <Button type="submit" disabled={creating}>
+              {creating ? (
+                <>
+                  <Loader2 className="h-4 w-4 animate-spin" /> Creating
+                </>
+              ) : (
+                'Create Repository'
+              )}
+            </Button>
+          </form>
+        </section>
       </div>
     </div>
   );
