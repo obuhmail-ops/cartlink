@@ -17,7 +17,7 @@ export default function GolfCartFeaturesSection() {
   const goToFleet = () => document.getElementById('fleet')?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="cart-features" className="scroll-mt-24 px-6 pt-10 pb-24 text-dune md:px-10 md:pt-12 md:pb-32 bg-[hsl(var(--secondary-foreground))]">
+    <section id="cart-features" className="scroll-mt-24 px-6 pt-10 pb-10 text-dune md:px-10 md:pt-12 md:pb-12 bg-[hsl(var(--secondary-foreground))]">
       <div className="mx-auto max-w-6xl">
         <h2 className="max-w-3xl font-display text-3xl uppercase leading-tight md:text-5xl">Loaded With Island-Ready Features</h2>
         <p className="mt-4 max-w-2xl text-lg text-dune/70">Every Paradise Rentals cart is built for comfort, convenience and fun — so your only job is enjoying the ride.</p>

@@ -12,7 +12,7 @@ export default function HowItWorksSection() {
   const checkAvailability = () => document.getElementById('fleet')?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="how" className="bg-card px-6 pt-10 pb-24 md:px-10 md:pt-12 md:pb-32">
+    <section id="how" className="bg-card px-6 pt-10 pb-10 md:px-10 md:pt-12 md:pb-12">
       <div className="mx-auto max-w-6xl">
         <h2 className="font-display text-3xl uppercase leading-tight text-brand md:text-5xl">Renting Is Easy</h2>
         <div className="mt-14 grid gap-6 md:grid-cols-5">

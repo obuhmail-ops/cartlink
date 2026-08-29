@@ -33,7 +33,7 @@ const options = [
 
 export default function ArrivalOptionsSection() {
   return (
-    <section id="arrival-options" className="scroll-mt-24 bg-dune px-6 pt-10 pb-24 md:px-10 md:pt-12 md:pb-32">
+    <section id="arrival-options" className="scroll-mt-24 bg-dune px-6 pt-10 pb-10 md:px-10 md:pt-12 md:pb-12">
       <div className="mx-auto max-w-6xl">
         
         <h2 className="mt-4 max-w-3xl font-display text-3xl uppercase leading-tight text-brand md:text-5xl">Arriving in Key West? We've Got Your Ride.</h2>

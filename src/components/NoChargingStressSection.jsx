@@ -5,7 +5,7 @@ const BATTERY_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c26208
 
 export default function NoChargingStressSection() {
   return (
-    <section id="no-charging-stress" className="bg-card px-6 pt-10 pb-24 md:px-10 md:pt-12 md:pb-32">
+    <section id="no-charging-stress" className="bg-card px-6 pt-10 pb-10 md:px-10 md:pt-12 md:pb-12">
       <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2 md:gap-16">
         <div className="order-2 overflow-hidden rounded-2xl border border-brand/10 bg-dune md:order-1">
           <Image

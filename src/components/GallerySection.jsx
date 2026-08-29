@@ -50,7 +50,7 @@ export default function GallerySection() {
   }, [isOpen]);
 
   return (
-    <section id="gallery" className="bg-dune px-6 pt-10 pb-24 md:px-10 md:pt-12 md:pb-32">
+    <section id="gallery" className="bg-dune px-6 pt-10 pb-10 md:px-10 md:pt-12 md:pb-12">
       <div className="mx-auto max-w-6xl">
         <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
           Paradise in Motion
