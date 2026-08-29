@@ -149,7 +149,7 @@ export default function Home() {
         <img
           src={FLOATING_CART_URL}
           alt="Paradise Rentals premium 4-passenger golf cart"
-          className="w-[30rem] md:w-[38rem] lg:w-[52rem] drop-shadow-2xl"
+          className="w-[34rem] md:w-[44rem] lg:w-[60rem] drop-shadow-2xl"
           style={{ mixBlendMode: 'screen' }}
         />
       </div>
