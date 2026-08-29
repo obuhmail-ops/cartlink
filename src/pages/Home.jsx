@@ -136,8 +136,8 @@ export default function Home() {
 
         {/* Desktop thumbnails */}
         <div className="absolute bottom-44 left-6 lg:left-10 z-20 hidden md:flex gap-3">
-          <img src={HERO_DESKTOP_THUMB_1_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
-          <img src={HERO_DESKTOP_THUMB_2_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30" />
+          <img src={HERO_DESKTOP_THUMB_1_URL} alt="DENAGO golf cart soundbar with blue LED accents" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30 hidden" />
+          <img src={HERO_DESKTOP_THUMB_2_URL} alt="Apple CarPlay dashboard display in the golf cart" className="w-40 lg:w-52 rounded-xl object-cover shadow-lg ring-1 ring-white/30 hidden" />
         </div>
 
         {/* Best of Florida badge */}
