@@ -6,7 +6,7 @@ export default function MobileBookingBar() {
     <div className="fixed bottom-0 inset-x-0 z-50 md:hidden bg-brand/95 backdrop-blur-md border-t border-white/10 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
       <div className="flex items-center justify-between gap-3 max-w-md mx-auto">
         <a
-          href="tel:3055550199"
+          href="tel:+13053371815"
           className="flex flex-col items-center justify-center px-4 py-2.5 rounded-xl bg-white/10 text-white font-medium text-xs border border-white/10 active:scale-95 transition"
         >
           <svg className="w-5 h-5 mb-0.5 text-solar" fill="none" stroke="currentColor" viewBox="0 0 24 24">
