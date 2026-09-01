@@ -15,7 +15,8 @@ const rideDetails = {
     title: '6-Passenger',
     description: 'Bring the whole crew.',
     features: ['Seats Up to 6', 'Premium Electric Cart', 'Spacious Seating', 'Long-Range Lithium Battery', 'Perfect for Families & Groups'],
-    button: 'Check 6-Seater Availability'
+    button: 'Check 6-Seater Availability',
+    url: 'https://fareharbor.com/embeds/book/paradiserentalskw/items/420452/calendar/?full-items=yes'
   }
 };
 
