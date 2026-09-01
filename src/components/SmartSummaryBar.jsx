@@ -5,7 +5,7 @@ export default function SmartSummaryBar({ cart, rateType, totalPrice, start, end
   const fmt = (d) => (d ? new Date(d).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : '—');
 
   return (
-    <div className="fixed bottom-0 inset-x-0 z-30 border-t border-brand/10 bg-dune/85 backdrop-blur-xl">
+    <div className="fixed bottom-0 inset-x-0 z-30 border-t border-brand/10 bg-dune/85 backdrop-blur-xl pb-[env(safe-area-inset-bottom)]">
       <div className="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between gap-4">
         <div className="flex items-center gap-3 md:gap-6 text-sm text-brand overflow-hidden">
           <span className="font-display text-base truncate">{cart?.name}</span>

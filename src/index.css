@@ -89,9 +89,33 @@
     @apply border-border outline-ring/50;
   }
 
+  html,
+  body {
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
     @apply bg-background text-foreground font-body antialiased;
     line-height: 1.6;
+  }
+
+  button,
+  nav,
+  a,
+  header,
+  footer,
+  [role="button"] {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  input,
+  textarea,
+  [contenteditable="true"],
+  [contenteditable=""] {
+    -webkit-user-select: text;
+    user-select: text;
   }
 
   ::selection {

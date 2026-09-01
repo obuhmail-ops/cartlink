@@ -75,7 +75,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`fixed top-3 inset-x-3 md:inset-x-6 z-40 transition-all duration-300 rounded-full ${scrolled ? 'bg-dune/95 backdrop-blur-md shadow-lg border border-brand/10' : 'bg-dune/80 backdrop-blur-sm'}`}>
+      <header className={`fixed top-[calc(0.75rem+env(safe-area-inset-top))] inset-x-3 md:inset-x-6 z-40 transition-all duration-300 rounded-full ${scrolled ? 'bg-dune/95 backdrop-blur-md shadow-lg border border-brand/10' : 'bg-dune/80 backdrop-blur-sm'}`}>
         <div className="hidden lg:grid h-24 max-w-7xl mx-auto grid-cols-3 items-center px-6 lg:px-10">
           <nav className="flex items-center justify-start gap-4 lg:gap-6 text-brand">
             <Link to="/" className="hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">

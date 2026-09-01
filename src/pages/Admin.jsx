@@ -4,6 +4,7 @@ import { base44 } from '@/api/base44Client';
 import Navbar from '@/components/Navbar';
 import { Image } from '@/components/ui/image';
 import { Plus, Pencil, Trash2, X, Users, CalendarDays, Wallet, Mail } from 'lucide-react';
+import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from '@/components/ui/select';
 
 const EMPTY = {
   name: '', description: '', image_url: '', seats: 4,
@@ -189,13 +190,18 @@ export default function Admin() {
                 <I label="Battery range" value={editing.battery_range} onChange={(v) => setEditing({ ...editing, battery_range: v })} />
                 <I label="Top speed" value={editing.top_speed} onChange={(v) => setEditing({ ...editing, top_speed: v })} />
               </div>
-              <label className="flex flex-col gap-1.5">
+              <div className="flex flex-col gap-1.5">
                 <span className="text-xs font-medium uppercase tracking-wider text-brand/50">Status</span>
-                <select value={editing.status} onChange={(e) => setEditing({ ...editing, status: e.target.value })} className="rounded-xl bg-white border border-brand/10 text-brand text-sm px-4 py-3 outline-none focus:ring-2 ring-solar">
-                  <option value="available">available</option>
-                  <option value="maintenance">maintenance</option>
-                </select>
-              </label>
+                <Select value={editing.status} onValueChange={(v) => setEditing({ ...editing, status: v })}>
+                  <SelectTrigger className="rounded-xl bg-white border border-brand/10 text-brand text-sm h-11">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="available">available</SelectItem>
+                    <SelectItem value="maintenance">maintenance</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
               <div className="flex gap-3 pt-2">
                 <button type="button" onClick={() => setEditing(null)} className="flex-1 rounded-full border border-brand/15 text-brand py-3 text-sm font-semibold hover:bg-brand/5 transition">Cancel</button>
                 <button type="submit" className="flex-1 rounded-full bg-solar text-brand py-3 text-sm font-semibold hover:brightness-105 transition">Save</button>
