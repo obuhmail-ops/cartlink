@@ -160,9 +160,12 @@ export default function Home() {
 
       <section id="fleet" className="-mt-32 pb-10 md:-mt-24 md:pb-12">
         <div className="px-6 md:px-10 max-w-6xl mx-auto">
-          <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight hidden">
-            Find the Perfect Golf Cart
+          <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
+            Choose Your Ride
           </h2>
+          <p className="mt-3 max-w-2xl text-lg text-brand/70 leading-relaxed">
+            Premium electric golf carts built for Key West — forward-facing 4 and 6 passenger models with long-range lithium batteries, free delivery, and free pickup.
+          </p>
 
           {loading ?
           <div className="mt-12 grid gap-8 md:grid-cols-2">
