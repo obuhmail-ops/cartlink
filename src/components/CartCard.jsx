@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image } from '@/components/ui/image';
+import { base44 } from '@/api/base44Client';
 import { FAREHARBOR_URL } from '@/lib/booking';
 
 const rideDetails = {
@@ -22,9 +23,21 @@ const rideDetails = {
 
 export default function CartCard({ cart }) {
   const details = cart.seats >= 6 ? rideDetails.six : rideDetails.four;
+  const rideType = cart.seats >= 6 ? '6-passenger' : '4-passenger';
+
+  const handleClick = () => {
+    const eventName = cart.seats >= 6 ? 'fareharbor_cta_click_6' : 'fareharbor_cta_click_4';
+    base44.analytics.track({
+      eventName,
+      properties: { ride_type: rideType, cart_name: cart.name },
+    });
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, { ride_type: rideType, cart_name: cart.name });
+    }
+  };
 
   return (
-    <a href={details.url || FAREHARBOR_URL} target="_blank" rel="noreferrer" className="block group focus:outline-none">
+    <a href={details.url || FAREHARBOR_URL} target="_blank" rel="noreferrer" onClick={handleClick} className="block group focus:outline-none">
       <article className="overflow-hidden rounded-2xl border border-brand/10 bg-card shadow-sm transition-all duration-200 group-hover:shadow-lg group-hover:-translate-y-1 group-focus-visible:ring-2 group-focus-visible:ring-solar">
         <Image src={cart.image_url} alt={`${details.title} electric golf cart`} fittingType="fill" className="aspect-[4/3] w-full" />
         <div className="p-6 md:p-8">

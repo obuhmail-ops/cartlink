@@ -12,6 +12,23 @@ export default async function(req) {
 
     const { accessToken } = await base44.asServiceRole.connectors.getConnection('google_analytics');
 
+    if (action === 'streams') {
+      const propertyId = body.propertyId;
+      if (!propertyId) return Response.json({ error: 'propertyId is required' }, { status: 400 });
+      const res = await fetch(`https://analyticsadmin.googleapis.com/v1alpha/properties/${propertyId}/dataStreams`, {
+        headers: { Authorization: `Bearer ${accessToken}` },
+      });
+      const data = await res.json();
+      if (!res.ok) return Response.json({ error: data.error?.message || 'Failed to list streams' }, { status: res.status });
+      const streams = (data.dataStreams || []).map((s) => ({
+        name: s.name,
+        type: s.type,
+        measurementId: s.webStreamData?.measurementId || null,
+        streamId: s.webStreamData?.streamId || null,
+      }));
+      return Response.json({ streams });
+    }
+
     if (action === 'properties') {
       const res = await fetch('https://analyticsadmin.googleapis.com/v1alpha/accountSummaries?pageSize=200', {
         headers: { Authorization: `Bearer ${accessToken}` },
@@ -26,6 +43,46 @@ export default async function(req) {
         }))
       );
       return Response.json({ properties });
+    }
+
+    if (action === 'events') {
+      const propertyId = body.propertyId;
+      if (!propertyId) return Response.json({ error: 'propertyId is required' }, { status: 400 });
+      const eventName = body.eventName || 'fareharbor_cta_click';
+      const days = Math.min(Math.max(parseInt(body.days || '30', 10) || 30, 1), 365);
+      const end = new Date();
+      const start = new Date();
+      start.setDate(end.getDate() - days);
+      const fmt = (d) => d.toISOString().slice(0, 10);
+      const startDate = body.startDate || fmt(start);
+      const endDate = body.endDate || fmt(end);
+
+      const res = await fetch(`https://analyticsdata.googleapis.com/v1beta/properties/${propertyId}:runReport`, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${accessToken}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          dateRanges: [{ startDate, endDate }],
+          dimensions: [{ name: 'eventName' }],
+          metrics: [{ name: 'eventCount' }],
+          dimensionFilter: {
+            orGroup: {
+              expressions: [
+                { filter: { fieldName: 'eventName', stringFilter: { value: 'fareharbor_cta_click_4', matchType: 'EXACT' } } },
+                { filter: { fieldName: 'eventName', stringFilter: { value: 'fareharbor_cta_click_6', matchType: 'EXACT' } } },
+              ],
+            },
+          },
+          orderBys: [{ dimension: { orderType: 'ALPHANUMERIC', dimensionName: 'eventName' } }],
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) return Response.json({ error: data.error?.message || 'Failed to run events report' }, { status: res.status });
+      const clicks = (data.rows || []).map((row) => ({
+        ride_type: row.dimensionValues[0].value.endsWith('_6') ? '6-passenger' : '4-passenger',
+        clicks: parseInt(row.metricValues[0].value, 10) || 0,
+      }));
+      const total = clicks.reduce((sum, r) => sum + r.clicks, 0);
+      return Response.json({ clicks, total, startDate, endDate });
     }
 
     // action === 'report'

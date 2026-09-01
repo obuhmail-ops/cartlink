@@ -27,6 +27,7 @@ export default function Analytics() {
   const [selectedProperty, setSelectedProperty] = useState('');
   const [days, setDays] = useState(30);
   const [data, setData] = useState(null);
+  const [clicks, setClicks] = useState(null);
   const [loadingProps, setLoadingProps] = useState(true);
   const [loadingReport, setLoadingReport] = useState(false);
   const [error, setError] = useState('');
@@ -50,11 +51,16 @@ export default function Analytics() {
     setLoadingReport(true);
     setError('');
     try {
-      const res = await base44.functions.invoke('getAnalyticsData', { action: 'report', propertyId: selectedProperty, days });
-      setData(res.data);
+      const [reportRes, clicksRes] = await Promise.all([
+        base44.functions.invoke('getAnalyticsData', { action: 'report', propertyId: selectedProperty, days }),
+        base44.functions.invoke('getAnalyticsData', { action: 'events', propertyId: selectedProperty, days }),
+      ]);
+      setData(reportRes.data);
+      setClicks(clicksRes.data);
     } catch (e) {
       setError(e.response?.data?.error || e.message || 'Failed to load report');
       setData(null);
+      setClicks(null);
     } finally {
       setLoadingReport(false);
     }
@@ -133,6 +139,26 @@ export default function Analytics() {
               <StatCard icon={MousePointerClick} label="Sessions" value={data.totals.sessions} accent="text-moss" />
               <StatCard icon={Eye} label="Pageviews" value={data.totals.pageviews} accent="text-solar" />
             </div>
+
+            {clicks && (
+              <div className="mt-6 rounded-2xl bg-white border border-brand/5 p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="font-display text-lg text-brand">FareHarbor Button Clicks</h2>
+                  <span className="text-sm text-brand/50">{clicks.total.toLocaleString()} total</span>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="rounded-xl bg-dune p-4">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-brand/50">4-Passenger</p>
+                    <p className="mt-1 font-display text-2xl text-brand">{(clicks.clicks.find((c) => c.ride_type === '4-passenger')?.clicks || 0).toLocaleString()}</p>
+                  </div>
+                  <div className="rounded-xl bg-dune p-4">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-brand/50">6-Passenger</p>
+                    <p className="mt-1 font-display text-2xl text-brand">{(clicks.clicks.find((c) => c.ride_type === '6-passenger')?.clicks || 0).toLocaleString()}</p>
+                  </div>
+                </div>
+                <p className="mt-3 text-xs text-brand/40">Click tracking started today — counts appear as GA4 processes the events (first data may take up to 24 hours).</p>
+              </div>
+            )}
 
             <div className="mt-6 rounded-2xl bg-white border border-brand/5 p-6">
               <div className="flex items-center justify-between mb-4">
