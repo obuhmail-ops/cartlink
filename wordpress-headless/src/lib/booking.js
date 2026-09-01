@@ -1,0 +1,1 @@
+export const FAREHARBOR_URL = 'https://fareharbor.com/embeds/book/paradiserentalskw/?full-items=yes';
