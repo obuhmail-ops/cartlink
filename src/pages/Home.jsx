@@ -160,9 +160,15 @@ export default function Home() {
 
       <section id="fleet" className="-mt-32 pb-10 md:-mt-24 md:pb-12">
         <div className="px-6 md:px-10 max-w-6xl mx-auto">
-          <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight hidden">
-            Find the Perfect Golf Cart
+          <p className="text-solar font-semibold tracking-[0.25em] uppercase text-sm md:text-base [font-family:'Sora',_sans-serif]">
+            Our Fleet
+          </p>
+          <h2 className="mt-2 font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
+            Choose Your Ride
           </h2>
+          <p className="mt-4 max-w-2xl text-lg text-brand/70 leading-relaxed [font-family:'Lexend',_sans-serif]">
+            Premium forward-facing electric golf carts — pick the size that fits your crew and we'll deliver it free anywhere in Key West.
+          </p>
 
           {loading ?
           <div className="mt-12 grid gap-8 md:grid-cols-2">
