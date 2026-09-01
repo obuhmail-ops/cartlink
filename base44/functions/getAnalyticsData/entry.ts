@@ -52,7 +52,7 @@ export default async function(req) {
           { name: 'screenPageViews' },
           { name: 'newUsers' },
         ],
-        orderBys: [{ dimension: { orderType: 'DIMENSION_AS_INTEGER', dimensionName: 'date' } }],
+        orderBys: [{ dimension: { orderType: 'ALPHANUMERIC', dimensionName: 'date' } }],
       }),
     });
     const data = await res.json();
