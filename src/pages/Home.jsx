@@ -160,17 +160,9 @@ export default function Home() {
 
           <section id="fleet" className="-mt-32 pb-10 md:-mt-24 md:pb-12">
         <div className="px-6 md:px-10 max-w-6xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto">
-            <p className="text-solar font-semibold tracking-[0.2em] uppercase text-sm md:text-base">
-              Our Fleet
-            </p>
-            <h2 className="mt-3 font-display text-3xl md:text-5xl text-brand text-balance leading-tight">
-              Choose Your Ride
-            </h2>
-            <p className="mt-4 text-lg md:text-xl text-brand/70 leading-relaxed">
-              Premium street-legal electric golf carts, delivered free anywhere in Key West. Pick the size that fits your crew.
-            </p>
-          </div>
+          <h2 className="font-display text-3xl md:text-5xl text-brand text-balance leading-tight hidden">
+            Find the Perfect Golf Cart
+          </h2>
 
           {loading ?
           <div className="mt-12 grid gap-8 md:grid-cols-2">
