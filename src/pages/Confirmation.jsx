@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import { Image } from '@/components/ui/image';
-import { Check, CalendarDays, Clock, Wallet, Mail, User, Phone, Map } from 'lucide-react';
+import { Check, CalendarDays, Clock, Wallet, Mail, User, Phone } from 'lucide-react';
 
 export default function Confirmation() {
   const { state } = useLocation();
@@ -79,9 +79,6 @@ export default function Confirmation() {
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <Link to="/" className="rounded-full bg-brand text-dune px-6 py-3 text-sm font-semibold hover:bg-brand/90 transition text-center">Book another cart</Link>
           <button onClick={() => window.print()} className="rounded-full border border-brand/15 text-brand px-6 py-3 text-sm font-semibold hover:bg-brand/5 transition">Save ticket</button>
-          <Link to="/itinerary" className="rounded-full bg-solar text-brand px-6 py-3 text-sm font-semibold hover:brightness-110 transition text-center flex items-center gap-2">
-            <Map className="w-4 h-4" /> Plan my itinerary
-          </Link>
         </div>
       </div>
     </div>

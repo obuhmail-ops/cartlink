@@ -17,7 +17,6 @@ import Login from '@/pages/Login';
 import Register from '@/pages/Register';
 import ForgotPassword from '@/pages/ForgotPassword';
 import ResetPassword from '@/pages/ResetPassword';
-import ItineraryAdvisor from './pages/ItineraryAdvisor';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -48,7 +47,6 @@ const AuthenticatedApp = () => {
       <Route path="/confirmation" element={<Confirmation />} />
       <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
         <Route path="/admin" element={<Admin />} />
-      <Route path="/itinerary" element={<ItineraryAdvisor />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
