@@ -2,6 +2,7 @@ import React from 'react';
 import { Phone } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 import { FAREHARBOR_URL } from '@/lib/booking';
+import { trackEvent } from '@/lib/track';
 
 const TROPICAL_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/7d3ec60b1_generated_image.png';
 
@@ -13,9 +14,9 @@ export default function FinalBookingCta() {
       <div className="relative z-10 flex min-h-[620px] flex-col items-center justify-center px-6 py-24 text-center text-card">
         <h2 className="max-w-4xl font-display text-4xl uppercase leading-tight md:text-6xl">Ready to Explore Key West?</h2>
         <p className="mt-5 text-lg text-card/85 md:text-xl">Your Paradise ride is only a few clicks away.</p>
-        <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" className="mt-9 inline-block rounded-lg bg-solar px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-brand">Check Availability</a>
+        <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" onClick={() => trackEvent('check_availability_click', { location: 'final_cta' })} className="mt-9 inline-block rounded-lg bg-solar px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-brand">Check Availability</a>
         <span className="my-4 text-sm uppercase tracking-widest text-card/60">or</span>
-        <a href="tel:+13053371815" className="inline-flex items-center gap-2 text-xl font-semibold text-card"><Phone className="h-5 w-5 text-solar" />305-337-1815</a>
+        <a href="tel:+13053371815" onClick={() => trackEvent('call_click', { location: 'final_cta' })} className="inline-flex items-center gap-2 text-xl font-semibold text-card"><Phone className="h-5 w-5 text-solar" />305-337-1815</a>
         <p className="mt-12 font-display text-lg uppercase tracking-[0.18em] text-card">Explore Key West the Paradise Way <span aria-hidden="true">🌴</span></p>
       </div>
     </section>

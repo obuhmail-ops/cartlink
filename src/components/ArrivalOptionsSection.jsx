@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image } from '@/components/ui/image';
 import { FAREHARBOR_URL } from '@/lib/booking';
+import { trackEvent } from '@/lib/track';
 
 const options = [
 {
@@ -40,7 +41,7 @@ export default function ArrivalOptionsSection() {
         <h2 className="mt-4 max-w-3xl font-display text-3xl uppercase leading-tight text-brand md:text-5xl">Arriving in Key West? We've Got Your Ride.</h2>
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {options.map((option) =>
-          <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" key={option.id} className="group block scroll-mt-24 overflow-hidden rounded-2xl bg-card shadow-sm transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+          <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" key={option.id} onClick={() => trackEvent('check_availability_click', { location: 'arrival_options', option: option.id })} className="group block scroll-mt-24 overflow-hidden rounded-2xl bg-card shadow-sm transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
               <article id={option.id}>
                 <Image src={option.image} alt={option.label} fittingType="fill" className="aspect-[4/3] w-full" />
                 <div className="flex justify-center -mt-6 relative z-10">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FAREHARBOR_URL } from '@/lib/booking';
+import { trackEvent } from '@/lib/track';
 
 const steps = [
   { number: '1', title: 'Choose', text: 'Select a 4- or 6-passenger golf cart.' },
@@ -23,7 +24,7 @@ export default function HowItWorksSection() {
             </article>
           ))}
         </div>
-        <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" className="mt-12 inline-block rounded-lg bg-solar px-6 py-3 text-sm font-bold uppercase tracking-wide text-brand">Check Availability</a>
+        <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" onClick={() => trackEvent('check_availability_click', { location: 'how_it_works' })} className="mt-12 inline-block rounded-lg bg-solar px-6 py-3 text-sm font-bold uppercase tracking-wide text-brand">Check Availability</a>
       </div>
     </section>
   );

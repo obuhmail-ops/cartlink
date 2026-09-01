@@ -2,6 +2,7 @@ import React from 'react';
 import { Image } from '@/components/ui/image';
 import { Volume2, Navigation, BatteryCharging, Armchair, RefreshCw } from 'lucide-react';
 import { FAREHARBOR_URL } from '@/lib/booking';
+import { trackEvent } from '@/lib/track';
 
 const features = [
 { icon: Navigation, title: 'Apple CarPlay & Android Auto', body: 'Maps, music & hands-free connectivity' },
@@ -43,7 +44,7 @@ export default function GolfCartFeaturesSection() {
         </div>
 
         <div className="mt-12 text-center">
-          <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" className="inline-block rounded-full bg-solar px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-brand shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
+          <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" onClick={() => trackEvent('check_availability_click', { location: 'features' })} className="inline-block rounded-full bg-solar px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-brand shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
             See Our Fleet
           </a>
         </div>

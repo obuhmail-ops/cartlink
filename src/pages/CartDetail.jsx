@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { base44 } from '@/api/base44Client';
 import Navbar from '@/components/Navbar';
 import SmartSummaryBar from '@/components/SmartSummaryBar';
+import { trackEvent } from '@/lib/track';
 import { Image } from '@/components/ui/image';
 import { Users, Battery, Gauge, ArrowLeft, AlertCircle, Check } from 'lucide-react';
 
@@ -62,6 +63,7 @@ export default function CartDetail() {
 
   const handleBook = () => {
     if (!canBook) return;
+    trackEvent('check_availability_click', { location: 'cart_detail', cart_name: cart.name });
     navigate('/checkout', { state: { cart, start, end, rateType, totalPrice, units } });
   };
 

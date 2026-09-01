@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Instagram, MapPin, Phone, Star } from 'lucide-react';
+import { trackEvent } from '@/lib/track';
 
 const quickLinks = [
   ['Golf Carts', '#fleet'],
@@ -33,7 +34,7 @@ export default function Footer() {
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wider text-dune/50">Contact</h3>
           <div className="mt-5 space-y-3 text-dune/80">
-            <a href="tel:+13053371815" className="flex items-center gap-2 transition hover:text-solar"><Phone className="h-4 w-4 text-solar" />305-337-1815</a>
+            <a href="tel:+13053371815" onClick={() => trackEvent('call_click', { location: 'footer' })} className="flex items-center gap-2 transition hover:text-solar"><Phone className="h-4 w-4 text-solar" />305-337-1815</a>
             <p className="flex items-center gap-2"><MapPin className="h-4 w-4 text-solar" />Key West, Florida</p>
           </div>
           <div className="mt-7 flex flex-wrap gap-4 text-sm text-dune/80">

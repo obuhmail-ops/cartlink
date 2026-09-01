@@ -1,5 +1,6 @@
 import React from 'react';
 import { FAREHARBOR_URL } from '@/lib/booking';
+import { trackEvent } from '@/lib/track';
 
 export default function MobileBookingBar() {
   return (
@@ -7,6 +8,7 @@ export default function MobileBookingBar() {
       <div className="flex items-center justify-between gap-3 max-w-md mx-auto">
         <a
           href="tel:+13053371815"
+          onClick={() => trackEvent('call_click', { location: 'mobile_booking_bar' })}
           className="flex flex-col items-center justify-center px-4 py-2.5 rounded-xl bg-white/10 text-white font-medium text-xs border border-white/10 active:scale-95 transition"
         >
           <svg className="w-5 h-5 mb-0.5 text-solar" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -19,6 +21,7 @@ export default function MobileBookingBar() {
           href={FAREHARBOR_URL}
           target="_blank"
           rel="noreferrer"
+          onClick={() => trackEvent('check_availability_click', { location: 'mobile_booking_bar' })}
           className="flex-1 flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-solar text-brand font-bold text-sm tracking-wide shadow-md active:scale-[0.98] transition"
         >
           <span>Check Availability</span>

@@ -33,6 +33,7 @@ export default function CartCard({ cart }) {
     });
     if (typeof window.gtag === 'function') {
       window.gtag('event', eventName, { ride_type: rideType, cart_name: cart.name });
+      window.gtag('event', 'check_availability_click', { ride_type: rideType, cart_name: cart.name, location: 'cart_card' });
     }
   };
 
