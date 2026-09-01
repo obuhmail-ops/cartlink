@@ -174,7 +174,7 @@ export default function Home() {
             )}
             </div> :
           carts.length === 0 ?
-          <p className="mt-12 text-brand/50">No carts available right now. Check back soon.</p> :
+<p className="mt-12 text-brand/50">No carts available right now. Check back soon.</p> :
 
           <div className="mt-12 grid gap-8 md:grid-cols-2">
               {carts.map((cart) => <CartCard key={cart.id} cart={cart} />)}
