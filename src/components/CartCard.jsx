@@ -8,7 +8,8 @@ const rideDetails = {
     description: 'Perfect for couples and families.',
     boldNote: 'ALL FORWARD-FACING SEATS',
     features: ['Forward-Facing Seating', 'Premium Electric Cart', 'Long-Range Lithium Battery', 'Apple CarPlay and Android Auto', 'Premium Soundbar'],
-    button: 'Check 4-Seater Availability'
+    button: 'Check 4-Seater Availability',
+    url: 'https://fareharbor.com/embeds/book/paradiserentalskw/items/420448/calendar/?full-items=yes'
   },
   six: {
     title: '6-Passenger',
@@ -22,7 +23,7 @@ export default function CartCard({ cart }) {
   const details = cart.seats >= 6 ? rideDetails.six : rideDetails.four;
 
   return (
-    <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" className="block group focus:outline-none">
+    <a href={details.url || FAREHARBOR_URL} target="_blank" rel="noreferrer" className="block group focus:outline-none">
       <article className="overflow-hidden rounded-2xl border border-brand/10 bg-card shadow-sm transition-all duration-200 group-hover:shadow-lg group-hover:-translate-y-1 group-focus-visible:ring-2 group-focus-visible:ring-solar">
         <Image src={cart.image_url} alt={`${details.title} electric golf cart`} fittingType="fill" className="aspect-[4/3] w-full" />
         <div className="p-6 md:p-8">
