@@ -14,9 +14,9 @@ env:
   NODE_VERSION: 22
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
@@ -39,14 +39,44 @@ jobs:
         env:
           NODE_ENV: production
 
-      - name: Deploy via FTP
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          retention-days: 1
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        include:
+          - name: paradiserentalskw.com
+            remote_dir: /home/paradisere/domains/paradiserentalskw.com/public_html/
+          - name: keywestgolfcars.com
+            remote_dir: /home/paradisere/domains/keywestgolfcars.com/public_html/
+          - name: keywestgolfcar.com
+            remote_dir: /home/paradisere/domains/keywestgolfcar.com/public_html/
+
+    name: Deploy to ${{ matrix.name }}
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - name: Deploy to ${{ matrix.name }}
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
+          server-dir: ${{ matrix.remote_dir }}
           dangerous-clean-slate: false
           exclude: |
             **/.git*
