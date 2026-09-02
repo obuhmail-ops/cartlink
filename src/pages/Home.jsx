@@ -71,7 +71,7 @@ export default function Home() {
               </div>
             </div>
 
-            <h1 className="hidden self-center md:self-start leading-[1.04] text-center md:text-left capitalize [font-family:'Poppins',_sans-serif] font-bold md:block text-[hsl(var(--background))] text-3xl md:text-3xl lg:text-3xl">
+            <h1 className="hidden self-center md:self-start leading-[1.04] text-center md:text-left capitalize [font-family:'Poppins',_sans-serif] font-bold md:block text-3xl md:text-3xl lg:text-3xl">
               Explore Key West the paradise way
             </h1>
 
