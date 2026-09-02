@@ -30,3 +30,7 @@ dist-ssr
 .env
 .vite
 base44/.app.jsonc
+
+# Fetched media assets (downloaded by scripts/fetch-images.js before build)
+public/images
+public/videos

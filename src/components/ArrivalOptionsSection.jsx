@@ -2,11 +2,12 @@ import React from 'react';
 import { Image } from '@/components/ui/image';
 import { FAREHARBOR_URL } from '@/lib/booking';
 import { trackEvent } from '@/lib/track';
+import { imageUrl } from '@/lib/images';
 
 const options = [
 {
   id: 'airport-delivery',
-  image: 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/fa9f7a8c5_generated_image.png',
+  image: imageUrl('fa9f7a8c5_generated_image.png'),
   label: 'Airport Delivery',
   title: 'Land. Grab Your Bags. Start Your Vacation.',
   body: 'Skip the rental-car counter with convenient golf-cart delivery for arrivals at Key West International Airport.',
@@ -15,7 +16,7 @@ const options = [
 },
 {
   id: 'key-west-express',
-  image: 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/6b280111a_generated_image.png',
+  image: imageUrl('6b280111a_generated_image.png'),
   label: 'Key West Express',
   title: 'Make the Most of Every Island Hour.',
   body: 'Qualifying rentals of 24 hours or longer for Key West Express arrivals can receive extra island time.',
@@ -24,7 +25,7 @@ const options = [
 },
 {
   id: 'cruise-visitors',
-  image: 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/b4b242b62_generated_image.png',
+  image: imageUrl('b4b242b62_generated_image.png'),
   label: 'Cruise Rentals',
   title: 'Cruising Into Key West?',
   body: 'Reserve before your cruise and enjoy convenient pickup arrangements, then return your cart before heading back to your ship.',

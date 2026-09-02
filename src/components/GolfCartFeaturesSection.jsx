@@ -3,6 +3,7 @@ import { Image } from '@/components/ui/image';
 import { Volume2, Navigation, BatteryCharging, Armchair, RefreshCw } from 'lucide-react';
 import { FAREHARBOR_URL } from '@/lib/booking';
 import { trackEvent } from '@/lib/track';
+import { imageUrl } from '@/lib/images';
 
 const features = [
 { icon: Navigation, title: 'Apple CarPlay & Android Auto', body: 'Maps, music & hands-free connectivity' },
@@ -12,8 +13,8 @@ const features = [
 { icon: RefreshCw, title: 'No Charging Stress', body: 'Cart swap service available' }];
 
 
-const FEATURE_IMAGE_1 = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/724153794_A6700476.jpg';
-const FEATURE_IMAGE_2 = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/3512606ee_A6700589.jpg';
+const FEATURE_IMAGE_1 = imageUrl('724153794_A6700476.jpg');
+const FEATURE_IMAGE_2 = imageUrl('3512606ee_A6700589.jpg');
 
 export default function GolfCartFeaturesSection() {
   return (

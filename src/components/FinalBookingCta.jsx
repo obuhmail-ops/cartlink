@@ -3,8 +3,9 @@ import { Phone } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 import { FAREHARBOR_URL } from '@/lib/booking';
 import { trackEvent } from '@/lib/track';
+import { imageUrl } from '@/lib/images';
 
-const TROPICAL_IMAGE_URL = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/7d3ec60b1_generated_image.png';
+const TROPICAL_IMAGE_URL = imageUrl('7d3ec60b1_generated_image.png');
 
 export default function FinalBookingCta() {
   return (

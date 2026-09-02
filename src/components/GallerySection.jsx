@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Image } from '@/components/ui/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-
-const BASE = 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/';
+import { IMAGE_BASE as BASE } from '@/lib/images';
 
 const galleryImages = [
 { src: BASE + '483bf8dfe_A6700446.jpg', alt: 'Four Paradise Rentals golf carts parked by the beach', span: 'md:col-span-2 md:row-span-2' },

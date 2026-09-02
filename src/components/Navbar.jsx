@@ -5,8 +5,9 @@ import CartDropdown from '@/components/CartDropdown';
 import ArrivalDropdown from '@/components/ArrivalDropdown';
 import { FAREHARBOR_URL } from '@/lib/booking';
 import { trackEvent } from '@/lib/track';
+import { videoUrl } from '@/lib/images';
 
-const LOGO_VIDEO_URL = 'https://media.base44.com/videos/public/6a7e5db2c2620868d1046179/f22b7c6ba_gemini_generated_video_9fd05d99.mp4';
+const LOGO_VIDEO_URL = videoUrl('f22b7c6ba_gemini_generated_video_9fd05d99.mp4');
 
 const leftLinks = [
 { label: 'Home', type: 'link', to: '/' },
