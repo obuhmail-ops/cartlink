@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 
-const ELFSIGHT_WIDGET_ID = '8336f879-b9a6-4d17-94d0-13cdc0fbd04b';
+// Replace with your Elfsight widget ID after creating the widget at
+// https://elfsight.com/google-reviews-widget/create/
+const ELFSIGHT_WIDGET_ID = 'REPLACE_WITH_YOUR_WIDGET_ID';
 
-const ELFSIGHT_SCRIPT_SRC = 'https://elfsightcdn.com/platform.js';
+const ELFSIGHT_SCRIPT_SRC = 'https://static.elfsight.com/platform/platform.js';
 
 export default function GoogleReviewsWidget() {
   useEffect(() => {
@@ -16,5 +18,13 @@ export default function GoogleReviewsWidget() {
     }
   }, []);
 
-  return <div className={`elfsight-app-${ELFSIGHT_WIDGET_ID}`} data-elfsight-app-lazy />;
+  if (ELFSIGHT_WIDGET_ID === 'REPLACE_WITH_YOUR_WIDGET_ID') {
+    return (
+      <div className="rounded-2xl border border-dune/10 bg-dune/5 p-8 text-center text-dune/60">
+        Live Google Reviews will appear here once you add your Elfsight widget ID.
+      </div>
+    );
+  }
+
+  return <div className={`elfsight-app-${ELFSIGHT_WIDGET_ID}`} />;
 }
