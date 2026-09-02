@@ -118,8 +118,18 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Desktop / tablet hero photo — same image as mobile */}
+        <img
+          src={HERO_MOBILE_PHOTO_URL}
+          alt="Southernmost Point Buoy in Key West"
+          className="hidden md:block absolute inset-0 z-0 w-full h-full object-cover object-center"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+
         {/* 2. GRADIENT OVERLAY (Desktop Only) */}
-        {/* Hidden on mobile because text doesn't overlap the image */}
+        {/* Darkens the left side so the hero text stays readable over the photo */}
         <div className="hidden md:block absolute inset-0 z-10 bg-gradient-to-r from-brand/90 via-brand/40 to-transparent pointer-events-none" />
 
         {/* Mobile hero photo (dimmed) with extended sky */}
