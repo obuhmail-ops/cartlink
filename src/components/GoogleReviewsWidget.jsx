@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 // Replace with your Elfsight widget ID after creating the widget at
 // https://elfsight.com/google-reviews-widget/create/
-const ELFSIGHT_WIDGET_ID = 'REPLACE_WITH_YOUR_WIDGET_ID';
+const ELFSIGHT_WIDGET_ID = '8336f879-b9a6-4d17-94d0-13cdc0fbd04b';
 
 const ELFSIGHT_SCRIPT_SRC = 'https://static.elfsight.com/platform/platform.js';
 
