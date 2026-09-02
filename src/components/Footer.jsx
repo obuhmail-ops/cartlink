@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Instagram, MapPin, Phone, Star } from 'lucide-react';
 import { trackEvent } from '@/lib/track';
 
 const quickLinks = [
   ['Golf Carts', '#fleet'],
   ['4 Passenger', '#fleet'],
-  ['6 Passenger', '#fleet'],
+  ['6 Passenger', '/6-passenger'],
   ['Airport Delivery', '#airport-delivery'],
   ['Cruise Rentals', '#cruise-visitors'],
   ['Key West Express', '#key-west-express'],
@@ -27,7 +28,13 @@ export default function Footer() {
           <h3 className="text-sm font-semibold uppercase tracking-wider text-dune/50">Quick Links</h3>
           <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-dune/80">
             {quickLinks.map(([label, href]) => (
-              <li key={label}><a href={href} className="transition hover:text-solar">{label}</a></li>
+              <li key={label}>
+                {href.startsWith('/') ? (
+                  <Link to={href} className="transition hover:text-solar">{label}</Link>
+                ) : (
+                  <a href={href} className="transition hover:text-solar">{label}</a>
+                )}
+              </li>
             ))}
           </ul>
         </div>
