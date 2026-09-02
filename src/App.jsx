@@ -8,6 +8,7 @@ import { AuthProvider } from '@/lib/AuthContext';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Rentals from './pages/Rentals';
+import Gallery from './pages/Gallery';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -15,6 +16,7 @@ const AuthenticatedApp = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/rentals" element={<Rentals />} />
+      <Route path="/gallery" element={<Gallery />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
