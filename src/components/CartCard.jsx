@@ -40,7 +40,7 @@ export default function CartCard({ cart }) {
   return (
     <a href={details.url || FAREHARBOR_URL} target="_blank" rel="noreferrer" onClick={handleClick} className="block group focus:outline-none">
       <article className="overflow-hidden rounded-2xl border border-brand/10 bg-card shadow-sm transition-all duration-200 group-hover:shadow-lg group-hover:-translate-y-1 group-focus-visible:ring-2 group-focus-visible:ring-solar">
-        <Image src={cart.image_url} alt={`${details.title} electric golf cart`} fittingType="fill" className="aspect-[4/3] w-full" />
+        <Image src={cart.image_url} alt={`${details.title} electric golf cart`} fittingType="fill" className="aspect-[4/3] w-full object-cover" />
         <div className="p-6 md:p-8">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-moss">{details.title}</p>
           {details.boldNote &&
