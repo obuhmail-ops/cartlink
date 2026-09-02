@@ -15,6 +15,7 @@ import FourPassenger from './pages/FourPassenger';
 import SixPassenger from './pages/SixPassenger';
 import AirportRental from './pages/AirportRental';
 import CruiseRental from './pages/CruiseRental';
+import ExploreKeyWest from './pages/ExploreKeyWest';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -29,6 +30,7 @@ const AuthenticatedApp = () => {
       <Route path="/6-passenger" element={<SixPassenger />} />
       <Route path="/airport-rental" element={<AirportRental />} />
       <Route path="/cruise-rental" element={<CruiseRental />} />
+      <Route path="/explore-key-west" element={<ExploreKeyWest />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
