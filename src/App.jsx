@@ -20,6 +20,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
+import CancellationPolicy from './pages/CancellationPolicy';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -39,6 +40,7 @@ const AuthenticatedApp = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms-and-conditions" element={<TermsConditions />} />
+      <Route path="/cancellation-policy" element={<CancellationPolicy />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
