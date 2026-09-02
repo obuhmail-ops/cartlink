@@ -17,6 +17,7 @@ import MobileBookingBar from '@/components/MobileBookingBar';
 import { Image } from '@/components/ui/image';
 import { imageUrl } from '@/lib/images';
 
+// Static site — fleet data hardcoded, no DB calls
 const HERO_IMAGE_URL = imageUrl('bfc00a16b_generated_image.png');
 const HERO_MOBILE_IMAGE_URL = imageUrl('628f37336_generated_image.png');
 const HERO_MOBILE_PHOTO_URL = imageUrl('13db7f113_Gemini_Generated_Image_fx9qh6fx9qh6fx9q.jpeg');
