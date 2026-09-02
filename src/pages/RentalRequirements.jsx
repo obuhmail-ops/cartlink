@@ -18,7 +18,7 @@ const REQUIREMENTS = [
   {
     icon: '🎂',
     title: 'Minimum Age',
-    body: 'The primary renter must be at least 21 years of age. All operators of the golf cart must hold a valid driver\'s license regardless of age.',
+    body: 'The primary renter must be at least 22 years of age. All operators of the golf cart must hold a valid driver\'s license regardless of age.',
   },
   {
     icon: '💳',

@@ -25,7 +25,7 @@ const SECTIONS = [
       'To rent a golf cart from Paradise Rentals Key West, you must:',
     ],
     list: [
-      'Be at least 21 years of age with a valid driver\'s license',
+      'Be at least 22 years of age with a valid driver\'s license',
       'Provide a valid credit card for the security deposit',
       'Possess a valid, government-issued driver\'s license at the time of rental',
     ],
