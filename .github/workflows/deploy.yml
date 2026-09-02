@@ -55,10 +55,10 @@ jobs:
         include:
           - name: paradiserentalskw.com
             remote_dir: /home/paradisere/domains/paradiserentalskw.com/public_html/
-          - name: keywestgolfcars.com
-            remote_dir: /home/paradisere/domains/keywestgolfcars.com/public_html/
-          - name: keywestgolfcar.com
-            remote_dir: /home/paradisere/domains/keywestgolfcar.com/public_html/
+          # - name: keywestgolfcars.com
+          #   remote_dir: /home/paradisere/domains/keywestgolfcars.com/public_html/
+          # - name: keywestgolfcar.com
+          #   remote_dir: /home/paradisere/domains/keywestgolfcar.com/public_html/
 
     name: Deploy to ${{ matrix.name }}
 
