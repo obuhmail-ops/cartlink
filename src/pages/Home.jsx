@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { base44 } from '@/api/base44Client';
+import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CartCard from '@/components/CartCard';
@@ -39,19 +38,13 @@ function HeroField({ icon, label, children }) {
 
 }
 
+const STATIC_CARTS = [
+  { id: 'static-4p', name: 'Coastal Cruiser', seats: 4, image_url: 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/7e17732d6_generated_image.png' },
+  { id: 'static-6p', name: 'Family Voyager', seats: 6, image_url: 'https://media.base44.com/images/public/6a7e5db2c2620868d1046179/6acf6e567_generated_image.png' },
+];
+
 export default function Home() {
-  const [carts, setCarts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    base44.entities.Cart.list('-created_date', 50).
-    then(setCarts).
-    finally(() => setLoading(false));
-  }, []);
-
-  const goToFleet = () => document.getElementById('fleet')?.scrollIntoView({ behavior: 'smooth' });
-
-  const heroCartImage = carts[0]?.image_url;
+  const carts = STATIC_CARTS;
 
   return (
     <div className="min-h-screen bg-dune">
@@ -164,22 +157,9 @@ export default function Home() {
             Find the Perfect Golf Cart
           </h2>
 
-          {loading ?
           <div className="mt-12 grid gap-8 md:grid-cols-2">
-              {[0, 1].map((i) =>
-            <div key={i} className="overflow-hidden rounded-2xl border border-brand/10 bg-card">
-                  <div className="aspect-[4/3] animate-pulse bg-brand/5" />
-                  <div className="p-8"><div className="h-7 w-1/2 animate-pulse rounded bg-brand/5" /></div>
-                </div>
-            )}
-            </div> :
-          carts.length === 0 ?
-<p className="mt-12 text-brand/50">No carts available right now. Check back soon.</p> :
-
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-              {carts.map((cart) => <CartCard key={cart.id} cart={cart} />)}
-            </div>
-          }
+            {carts.map((cart) => <CartCard key={cart.id} cart={cart} />)}
+          </div>
         </div>
       </section>
 
