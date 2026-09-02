@@ -125,7 +125,7 @@ export default function Home() {
         {/* Mobile hero photo (dimmed) with extended sky */}
         <div className="md:hidden absolute inset-0 z-0 flex flex-col">
           <div className="h-40 bg-gradient-to-b from-[#3A96E0] via-[#85C2F1] to-transparent" />
-          <img src={HERO_MOBILE_PHOTO_URL} alt="Southernmost Point Buoy in Key West" className="flex-1 w-full object-cover object-center" />
+          <img src={HERO_MOBILE_PHOTO_URL} alt="Southernmost Point Buoy in Key West" className="flex-1 w-full object-cover object-center" loading="eager" fetchpriority="high" decoding="async" />
           <div className="absolute inset-0 bg-black/30" />
         </div>
 
@@ -136,10 +136,10 @@ export default function Home() {
         </div>
 
         {/* Best of Florida badge */}
-        <img src={BEST_OF_FLORIDA_BADGE_URL} alt="Best of Florida Awards badge" className="absolute bottom-4 right-4 z-30 w-20 md:w-24 lg:w-28 drop-shadow-lg" />
+        <img src={BEST_OF_FLORIDA_BADGE_URL} alt="Best of Florida Awards badge" className="absolute bottom-4 right-4 z-30 w-20 md:w-24 lg:w-28 drop-shadow-lg" loading="lazy" decoding="async" />
 
         {/* Google Reviews badge */}
-        <img src={GOOGLE_REVIEWS_BADGE_URL} alt="Google Reviews 5.0 star rating" className="absolute bottom-4 left-4 z-30 w-28 md:w-40 lg:w-48 drop-shadow-lg rounded-lg" />
+        <img src={GOOGLE_REVIEWS_BADGE_URL} alt="Google Reviews 5.0 star rating" className="absolute bottom-4 left-4 z-30 w-28 md:w-40 lg:w-48 drop-shadow-lg rounded-lg" loading="lazy" decoding="async" />
 
       </section>
 
@@ -149,7 +149,10 @@ export default function Home() {
           src={FLOATING_CART_URL}
           alt="Paradise Rentals premium 4-passenger golf cart"
           className="w-[44rem] md:w-[57rem] lg:w-[78rem] drop-shadow-2xl"
-          style={{ mixBlendMode: 'screen' }} />
+          style={{ mixBlendMode: 'screen' }}
+          loading="eager"
+          fetchpriority="high"
+          decoding="async" />
         
       </div>
 

@@ -110,7 +110,9 @@ export default function GallerySection() {
           src={galleryImages[activeIndex].src}
           alt={galleryImages[activeIndex].alt}
           onClick={(e) => e.stopPropagation()}
-          className="max-h-[85vh] max-w-[90vw] rounded-lg object-contain" />
+          className="max-h-[85vh] max-w-[90vw] rounded-lg object-contain"
+          loading="lazy"
+          decoding="async" />
         
           <button
           onClick={(e) => {e.stopPropagation();next();}}
