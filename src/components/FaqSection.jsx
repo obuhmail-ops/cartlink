@@ -2,7 +2,7 @@ import React from 'react';
 import { ChevronDown } from 'lucide-react';
 
 const faqs = [
-  ['How old do I need to be?', 'Drivers must meet Paradise Rentals’ rental requirements.'],
+  ['How old do I need to be?', 'Drivers must be 22 years of age or older to rent a golf cart.'],
   ['Do I need a driver’s license?', 'Yes.'],
   ['Do you deliver to hotels?', 'Yes. Paradise Rentals offers delivery to hotels in Key West.'],
   ['Do you deliver to Airbnbs and vacation rentals?', 'Yes.'],
