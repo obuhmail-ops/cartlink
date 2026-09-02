@@ -10,7 +10,7 @@ export default function ExploreKeyWestSection() {
   return (
     <section id="explore" className="bg-brand px-6 pt-10 pb-10 text-card md:block md:px-10 md:pt-12 md:pb-12">
       <div className="mx-auto max-w-6xl">
-        <p className="text-sm font-semibold uppercase tracking-widest text-solar">Section 10 — Explore Key West</p>
+        <p className="text-sm font-semibold uppercase tracking-widest text-solar hidden">Section 10 — Explore Key West</p>
         <h2 className="mt-4 max-w-4xl font-display text-3xl uppercase leading-tight md:text-6xl">Your Cart. Your Island. Your Adventure.</h2>
         <p className="mt-6 max-w-3xl text-base leading-relaxed text-card/75 md:text-lg">Use our interactive Paradise Rentals map to plan your Key West golf cart adventure, from iconic Old Town landmarks to the island’s best beaches and waterfront views.</p>
 
@@ -20,16 +20,16 @@ export default function ExploreKeyWestSection() {
           target="_blank"
           rel="noreferrer"
           aria-label="Open Key West map in your maps app"
-          className="mt-8 block md:hidden relative overflow-hidden rounded-2xl border border-card/15 bg-card/5 aspect-[16/10] group active:scale-[0.99] transition"
-        >
+          className="mt-8 block md:hidden relative overflow-hidden rounded-2xl border border-card/15 bg-card/5 aspect-[16/10] group active:scale-[0.99] transition">
+          
           <div
             className="absolute inset-0 opacity-25"
             style={{
               backgroundImage:
-                'linear-gradient(hsl(var(--card)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--card)) 1px, transparent 1px)',
-              backgroundSize: '32px 32px',
-            }}
-          />
+              'linear-gradient(hsl(var(--card)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--card)) 1px, transparent 1px)',
+              backgroundSize: '32px 32px'
+            }} />
+          
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
             <div className="flex items-center justify-center h-14 w-14 rounded-full bg-solar/15 border border-solar/40">
               <MapPin className="h-7 w-7 text-solar" />
@@ -48,17 +48,17 @@ export default function ExploreKeyWestSection() {
         </div>
 
         <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-          {landmarks.map((landmark) => (
-            <div key={landmark} className="flex items-center gap-2 rounded-lg border border-card/10 px-4 py-3 text-sm text-card/80">
+          {landmarks.map((landmark) =>
+          <div key={landmark} className="flex items-center gap-2 rounded-lg border border-card/10 px-4 py-3 text-sm text-card/80">
               <MapPin className="h-4 w-4 shrink-0 text-solar" />
               <span>{landmark}</span>
             </div>
-          ))}
+          )}
         </div>
         <a href={GUIDE_URL} target="_blank" rel="noreferrer" className="mt-10 inline-flex items-center gap-2 rounded-lg bg-solar px-6 py-3 text-sm font-bold uppercase tracking-wide text-brand">
           View Our Key West Golf Cart Guide <ExternalLink className="h-4 w-4" />
         </a>
       </div>
-    </section>
-  );
+    </section>);
+
 }
