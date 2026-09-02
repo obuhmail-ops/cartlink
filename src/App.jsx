@@ -7,12 +7,14 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider } from '@/lib/AuthContext';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
+import Rentals from './pages/Rentals';
 // Add page imports here
 
 const AuthenticatedApp = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/rentals" element={<Rentals />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
