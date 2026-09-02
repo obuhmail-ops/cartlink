@@ -10,7 +10,6 @@ export default function ExploreKeyWestSection() {
   return (
     <section id="explore" className="bg-brand px-6 pt-10 pb-10 text-card md:block md:px-10 md:pt-12 md:pb-12">
       <div className="mx-auto max-w-6xl">
-        
         <h2 className="mt-4 max-w-4xl font-display text-3xl uppercase leading-tight md:text-6xl">Your Cart. Your Island. Your Adventure.</h2>
         <p className="mt-6 max-w-3xl text-base leading-relaxed text-card/75 md:text-lg">Use our interactive Paradise Rentals map to plan your Key West golf cart adventure, from iconic Old Town landmarks to the island’s best beaches and waterfront views.</p>
 
