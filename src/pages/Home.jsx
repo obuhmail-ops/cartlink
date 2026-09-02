@@ -41,9 +41,9 @@ function HeroField({ icon, label, children }) {
 }
 
 const STATIC_CARTS = [
-  { id: 'static-4p', name: 'Coastal Cruiser', seats: 4, image_url: imageUrl('7e17732d6_generated_image.png') },
-  { id: 'static-6p', name: 'Family Voyager', seats: 6, image_url: imageUrl('6acf6e567_generated_image.png') },
-];
+{ id: 'static-4p', name: 'Coastal Cruiser', seats: 4, image_url: imageUrl('7e17732d6_generated_image.png') },
+{ id: 'static-6p', name: 'Family Voyager', seats: 6, image_url: imageUrl('6acf6e567_generated_image.png') }];
+
 
 export default function Home() {
   const carts = STATIC_CARTS;
@@ -77,7 +77,7 @@ export default function Home() {
 
             <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
               <span className="block md:inline [font-family:'Helvetica_Bold',_sans-serif] font-bold text-3xl">Your Cart. Your Island.</span>
-              <span className="block md:inline text-[hsl(var(--sidebar-border))] font-bold [font-family:'Helvetica_Bold',_sans-serif] text-4xl">Your Adventure.</span>
+              <span className="block md:inline font-bold [font-family:'Helvetica_Bold',_sans-serif] text-4xl">Your Adventure.</span>
             </p>
 
             <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left px-1 mt-1 text-[hsl(var(--solar))] text-lg md:text-xl [font-family:'Sora',_sans-serif] font-bold">
@@ -125,8 +125,8 @@ export default function Home() {
           className="hidden md:block absolute inset-0 z-0 w-full h-full object-cover object-center"
           loading="eager"
           fetchpriority="high"
-          decoding="async"
-        />
+          decoding="async" />
+        
 
         {/* 2. GRADIENT OVERLAY (Desktop Only) */}
         {/* Darkens the left side so the hero text stays readable over the photo */}
