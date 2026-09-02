@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import DeliverySection from '@/components/DeliverySection';
 import MobileBookingBar from '@/components/MobileBookingBar';
 
-const SEO_TITLE = 'Free Golf Cart Delivery in Key West | Paradise Rentals';
+const SEO_TITLE = 'Golf Cart Delivery Key West | Free Delivery & Pickup | Paradise Rentals';
 const SEO_DESCRIPTION =
   'Free golf cart delivery and pickup throughout Key West — to your hotel, Airbnb, vacation rental, Key West Airport, or cruise port. Skip the rental counter and start your vacation instantly.';
 
