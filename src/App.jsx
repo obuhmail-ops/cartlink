@@ -12,6 +12,7 @@ import Gallery from './pages/Gallery';
 import Delivery from './pages/Delivery';
 import Faq from './pages/Faq';
 import FourPassenger from './pages/FourPassenger';
+import SixPassenger from './pages/SixPassenger';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -23,6 +24,7 @@ const AuthenticatedApp = () => {
       <Route path="/delivery" element={<Delivery />} />
       <Route path="/faq" element={<Faq />} />
       <Route path="/4-passenger" element={<FourPassenger />} />
+      <Route path="/6-passenger" element={<SixPassenger />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
