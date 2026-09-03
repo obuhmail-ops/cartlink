@@ -5,6 +5,7 @@ import { trackEvent } from '@/lib/track';
 
 const quickLinks = [
   ['Golf Carts', '#fleet'],
+  ['Rentals', '/rentals'],
   ['4 Passenger', '/4-passenger'],
   ['6 Passenger', '/6-passenger'],
   ['Airport Delivery', '/airport-rental'],
