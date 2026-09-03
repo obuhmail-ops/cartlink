@@ -7,7 +7,6 @@ const quickLinks = [
   ['Golf Carts', '/rentals'],
   ['Rentals', '/rentals'],
   ['4 Passenger', '/4-passenger'],
-  ['6 Passenger', '/6-passenger'],
   ['4-Passenger Golf Cart Rentals', '/4-passenger-golf-cart-rentals-key-west'],
   ['6-Passenger Golf Cart Rentals', '/6-passenger-golf-cart-rentals-key-west'],
   ['Airport Delivery', '/airport-rental'],
