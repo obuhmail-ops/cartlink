@@ -109,7 +109,7 @@ export default function Navbar() {
               onMouseLeave={scheduleCloseArrival}
             >
               <button
-                onClick={() => goTo('arrival-options', '/airport-rental')}
+                onClick={() => goTo('arrival-options', '/key-west-airport-golf-cart-rentals')}
                 className="flex items-center gap-1 hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap"
               >
                 Airport &amp; Cruise
@@ -163,7 +163,7 @@ export default function Navbar() {
             <button onClick={() => goTo('fleet', '/rentals')}>Golf Carts</button>
             <button onClick={() => goTo('gallery', '/gallery')}>Gallery</button>
             <button onClick={() => goTo('delivery', '/golf-cart-delivery-key-west')}>Delivery</button>
-            <button onClick={() => goTo('arrival-options', '/airport-rental')}>Airport &amp; Cruise</button>
+            <button onClick={() => goTo('arrival-options', '/key-west-airport-golf-cart-rentals')}>Airport &amp; Cruise</button>
             <button onClick={() => goTo('faqs', '/faq')}>FAQs</button>
             <button onClick={() => goTo('contact', '/contact')}>Contact</button>
           </nav>
