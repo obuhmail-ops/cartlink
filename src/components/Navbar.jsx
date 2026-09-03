@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, Phone, X } from 'lucide-react';
 import CartDropdown from '@/components/CartDropdown';
 import ArrivalDropdown from '@/components/ArrivalDropdown';
@@ -18,9 +18,9 @@ const leftLinks = [
 
 
 const rightLinks = [
-{ label: 'Explore Key West', type: 'scroll', target: 'explore' },
-{ label: 'FAQs', type: 'scroll', target: 'faqs' },
-{ label: 'Contact', type: 'scroll', target: 'contact' }];
+{ label: 'Explore Key West', target: 'explore', path: '/explore-key-west' },
+{ label: 'FAQs', target: 'faqs', path: '/faq' },
+{ label: 'Contact', target: 'contact', path: '/contact' }];
 
 
 export default function Navbar() {
@@ -30,6 +30,8 @@ export default function Navbar() {
   const [arrivalDropdown, setArrivalDropdown] = useState(false);
   const closeTimer = useRef(null);
   const arrivalCloseTimer = useRef(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -59,18 +61,17 @@ export default function Navbar() {
     arrivalCloseTimer.current = setTimeout(() => setArrivalDropdown(false), 600);
   };
 
-  const scrollTo = (id) => {
+  const goTo = (target, path) => {
     setOpen(false);
-    setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }), 60);
+    if (location.pathname === '/' && target) {
+      setTimeout(() => document.getElementById(target)?.scrollIntoView({ behavior: 'smooth' }), 60);
+    } else {
+      navigate(path);
+    }
   };
 
   const renderLink = (link) =>
-  link.type === 'link' ?
-  <Link key={link.label} to={link.to} className="hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
-        {link.label}
-      </Link> :
-
-  <button key={link.label} onClick={() => scrollTo(link.target)} className="hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+  <button key={link.label} onClick={() => goTo(link.target, link.path)} className="hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
         {link.label}
       </button>;
 
@@ -89,17 +90,17 @@ export default function Navbar() {
               onMouseLeave={scheduleCloseCart}
             >
               <button
-                onClick={() => scrollTo('fleet')}
+                onClick={() => goTo('fleet', '/rentals')}
                 className="flex items-center gap-1 hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap"
               >
                 Rentals
               </button>
               <CartDropdown open={cartDropdown} onClose={() => setCartDropdown(false)} onMouseEnter={openCart} onMouseLeave={scheduleCloseCart} />
             </div>
-            <button onClick={() => scrollTo('gallery')} className="hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+            <button onClick={() => goTo('gallery', '/gallery')} className="hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
               Gallery
             </button>
-            <button onClick={() => scrollTo('delivery')} className="hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
+            <button onClick={() => goTo('delivery', '/golf-cart-delivery-key-west')} className="hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap">
               Delivery
             </button>
             <div
@@ -108,7 +109,7 @@ export default function Navbar() {
               onMouseLeave={scheduleCloseArrival}
             >
               <button
-                onClick={() => scrollTo('arrival-options')}
+                onClick={() => goTo('arrival-options', '/airport-rental')}
                 className="flex items-center gap-1 hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200 [font-family:'Sora',_sans-serif] font-semibold text-sm whitespace-nowrap"
               >
                 Airport &amp; Cruise
@@ -159,12 +160,12 @@ export default function Navbar() {
           </div>
           <nav className="flex flex-col items-center justify-center gap-6 flex-1 text-2xl font-display text-brand">
             <Link to="/" onClick={() => setOpen(false)}>Home</Link>
-            <button onClick={() => scrollTo('fleet')}>Golf Carts</button>
-            <button onClick={() => scrollTo('gallery')}>Gallery</button>
-            <button onClick={() => scrollTo('delivery')}>Delivery</button>
-            <button onClick={() => scrollTo('arrival-options')}>Airport &amp; Cruise</button>
-            <button onClick={() => scrollTo('faqs')}>FAQs</button>
-            <button onClick={() => scrollTo('contact')}>Contact</button>
+            <button onClick={() => goTo('fleet', '/rentals')}>Golf Carts</button>
+            <button onClick={() => goTo('gallery', '/gallery')}>Gallery</button>
+            <button onClick={() => goTo('delivery', '/golf-cart-delivery-key-west')}>Delivery</button>
+            <button onClick={() => goTo('arrival-options', '/airport-rental')}>Airport &amp; Cruise</button>
+            <button onClick={() => goTo('faqs', '/faq')}>FAQs</button>
+            <button onClick={() => goTo('contact', '/contact')}>Contact</button>
           </nav>
         </div>
       }

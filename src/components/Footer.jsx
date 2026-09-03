@@ -4,14 +4,19 @@ import { Facebook, Instagram, MapPin, Phone, Star } from 'lucide-react';
 import { trackEvent } from '@/lib/track';
 
 const quickLinks = [
-  ['Golf Carts', '#fleet'],
+  ['Golf Carts', '/rentals'],
   ['Rentals', '/rentals'],
   ['4 Passenger', '/4-passenger'],
   ['6 Passenger', '/6-passenger'],
+  ['4-Passenger Golf Cart Rentals', '/4-passenger-golf-cart-rentals-key-west'],
+  ['6-Passenger Golf Cart Rentals', '/6-passenger-golf-cart-rentals-key-west'],
   ['Airport Delivery', '/airport-rental'],
+  ['Key West Airport Rentals', '/key-west-airport-golf-cart-rentals'],
   ['Cruise Rentals', '/cruise-rental'],
+  ['Key West Cruise Port Rentals', '/key-west-cruise-port-golf-cart-rentals'],
   ['Key West Express', '/key-west-express-golf-cart-rentals'],
   ['Explore Key West', '/explore-key-west'],
+  ['About', '/about'],
   ['FAQs', '/faq'],
   ['Contact', '/contact'],
   ['Book Now', '/rentals'],
