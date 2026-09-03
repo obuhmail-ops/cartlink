@@ -11,7 +11,7 @@ const quickLinks = [
   ['Cruise Rentals', '/cruise-rental'],
   ['Key West Express', '#key-west-express'],
   ['Explore Key West', '/explore-key-west'],
-  ['FAQs', '#faqs'],
+  ['FAQs', '/faq'],
   ['Contact', '#contact'],
   ['Book Now', '#fleet'],
 ];
