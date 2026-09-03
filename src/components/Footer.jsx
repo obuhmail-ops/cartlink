@@ -13,7 +13,7 @@ const quickLinks = [
   ['Explore Key West', '/explore-key-west'],
   ['FAQs', '/faq'],
   ['Contact', '/contact'],
-  ['Book Now', '#fleet'],
+  ['Book Now', '/rentals'],
   ['Privacy', '/privacy-policy'],
   ['Terms', '/terms-and-conditions'],
   ['Cancellation', '/cancellation-policy'],
