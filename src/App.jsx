@@ -22,6 +22,11 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
 import CancellationPolicy from './pages/CancellationPolicy';
 import RentalRequirements from './pages/RentalRequirements';
+import FourPassengerRentals from './pages/FourPassengerRentals';
+import SixPassengerRentals from './pages/SixPassengerRentals';
+import KeyWestAirportGolfCartRentals from './pages/KeyWestAirportGolfCartRentals';
+import KeyWestCruisePortGolfCartRentals from './pages/KeyWestCruisePortGolfCartRentals';
+import KeyWestExpressGolfCartRentals from './pages/KeyWestExpressGolfCartRentals';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -43,6 +48,11 @@ const AuthenticatedApp = () => {
       <Route path="/terms-and-conditions" element={<TermsConditions />} />
       <Route path="/cancellation-policy" element={<CancellationPolicy />} />
       <Route path="/rental-requirements" element={<RentalRequirements />} />
+      <Route path="/4-passenger-golf-cart-rentals-key-west" element={<FourPassengerRentals />} />
+      <Route path="/6-passenger-golf-cart-rentals-key-west" element={<SixPassengerRentals />} />
+      <Route path="/key-west-airport-golf-cart-rentals" element={<KeyWestAirportGolfCartRentals />} />
+      <Route path="/key-west-cruise-port-golf-cart-rentals" element={<KeyWestCruisePortGolfCartRentals />} />
+      <Route path="/key-west-express-golf-cart-rentals" element={<KeyWestExpressGolfCartRentals />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
