@@ -9,7 +9,7 @@ const quickLinks = [
   ['6 Passenger', '/6-passenger'],
   ['Airport Delivery', '/airport-rental'],
   ['Cruise Rentals', '/cruise-rental'],
-  ['Key West Express', '#key-west-express'],
+  ['Key West Express', '/key-west-express-golf-cart-rentals'],
   ['Explore Key West', '/explore-key-west'],
   ['FAQs', '/faq'],
   ['Contact', '/contact'],
