@@ -25,7 +25,7 @@ export default function GolfCartFeaturesSection() {
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           <div className="overflow-hidden rounded-2xl shadow-lg">
-            <Image src={FEATURE_IMAGE_1} alt="DENAGO golf cart soundbar with blue LED accents" fittingType="fill" className="aspect-[4/3] w-full" />
+            <Image src={FEATURE_IMAGE_1} alt="golf cart soundbar speaker" fittingType="fill" className="aspect-[4/3] w-full" />
           </div>
           <div className="overflow-hidden rounded-2xl shadow-lg">
             <Image src={FEATURE_IMAGE_2} alt="Apple CarPlay dashboard display in the golf cart" fittingType="fill" className="aspect-[4/3] w-full" />
