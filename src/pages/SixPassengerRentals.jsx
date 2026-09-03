@@ -17,17 +17,17 @@ const FAREHARBOR_6P_URL =
   'https://fareharbor.com/embeds/book/paradiserentalskw/items/420452/calendar/?full-items=yes';
 
 const FEATURES = [
-  { icon: '👨‍👩‍👧‍👦', title: 'Seats Up to 6', body: 'Spacious seating for the whole family or a group of friends traveling together.' },
-  { icon: '🔋', title: 'Long-Range Lithium Battery', body: 'Up to 60 miles of range on a single charge — built for a full Key West day.' },
-  { icon: '🚗', title: 'Premium Electric Cart', body: 'Smooth, quiet electric ride with zero emissions and no gas fumes.' },
-  { icon: '📱', title: 'Apple CarPlay & Android Auto', body: 'Maps, music and hands-free connectivity right on the dashboard.' },
-  { icon: '🔊', title: 'Premium Soundbar', body: 'Bluetooth soundbar keeps the island vibes going wherever you ride.' },
-  { icon: '🌴', title: 'Free Delivery & Pickup', body: 'Delivered to your hotel, Airbnb, the airport or the cruise port.' },
+  { icon: '👨‍👩‍👧‍👦', title: 'Seats Up to 6', body: 'Room for the whole family or a group of friends — ride together and never split up.' },
+  { icon: '🔋', title: 'Long-Range Lithium Battery', body: 'Up to 60 miles per charge means more island exploring and less time charging.' },
+  { icon: '🚗', title: 'Premium Electric Cart', body: 'Whisper-quiet, zero-emission electric power for a smooth Key West ride.' },
+  { icon: '📱', title: 'Apple CarPlay & Android Auto', body: 'Plug in for turn-by-turn directions to every Key West hotspot and beach.' },
+  { icon: '🔊', title: 'Premium Soundbar', body: 'A Bluetooth soundbar brings the beach vibes to every mile of your trip.' },
+  { icon: '🌴', title: 'Free Delivery & Pickup', body: 'We bring the cart to your hotel, Airbnb, the airport or the cruise terminal.' },
 ];
 
 const SEO_TITLE = '6 Passenger Golf Cart Rentals Key West | Spacious Electric Cart for Groups';
 const SEO_DESCRIPTION =
-  'Rent a 6 passenger golf cart in Key West from Paradise Rentals. Seats up to 6 with spacious seating, long-range lithium battery, Apple CarPlay, premium soundbar, and free delivery to your hotel, Airbnb, airport or cruise port. Book your 6-seater today.';
+  'Rent a 6 passenger golf cart in Key West and keep your whole group together. Six-seater electric carts with long-range lithium battery, Apple CarPlay, premium soundbar and free delivery to hotels, Airbnbs, the airport and cruise terminal. Reserve your 6 passenger golf cart rental today.';
 
 export default function SixPassengerRentals() {
   useEffect(() => {
@@ -57,9 +57,10 @@ export default function SixPassengerRentals() {
               6 Passenger Golf Cart Rentals in Key West
             </h1>
             <p className="mt-5 text-base md:text-lg text-brand/70 leading-relaxed">
-              Bring the whole crew. Our spacious 6 passenger electric golf cart is perfect for families
-              and groups exploring Key West together. With a long-range lithium battery, Apple CarPlay,
-              a premium soundbar and free island-wide delivery, no one gets left behind.
+              Renting a 6 passenger golf cart in Key West is the easiest way to keep your whole group
+              together. From Old Town sunsets to Smathers Beach runs, our spacious six-seater electric
+              carts deliver a long-range lithium battery, Apple CarPlay, a premium soundbar and free
+              island-wide delivery — so your crew can focus on the adventure, not the logistics.
             </p>
             <a
               href={FAREHARBOR_6P_URL}
@@ -112,19 +113,19 @@ export default function SixPassengerRentals() {
         <section className="px-6 md:px-10 max-w-6xl mx-auto mt-16">
           <div className="rounded-2xl border border-brand/10 bg-card p-8 md:p-12 shadow-sm">
             <h2 className="font-display text-3xl md:text-4xl text-brand text-balance leading-tight">
-              Why a 6 Passenger Cart Is the Perfect Group Ride
+              Why Rent a 6 Passenger Cart in Key West
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 text-brand/70 leading-relaxed">
               <p>
-                A 6 passenger golf cart is the perfect choice for families and groups who want to explore
-                Key West together. With spacious seating for up to six, no one gets left behind — and
-                everyone rides in comfort with premium electric power.
+                When you rent a 6 passenger golf cart in Key West, your whole group travels together —
+                no second cart, no splitting up, no one stuck navigating alone. Six roomy seats and
+                premium electric power make every ride comfortable, quiet and effortless.
               </p>
               <p>
-                The long-range lithium battery delivers up to 60 miles of island adventure on a single
-                charge, while Apple CarPlay and a premium soundbar keep the whole crew entertained. Add
-                free delivery and pickup, and your group's Key West adventure starts the moment you
-                arrive.
+                With up to 60 miles of range on a single charge, Apple CarPlay for easy directions and a
+                Bluetooth soundbar for the soundtrack, your crew can tour the island from Mallory Square
+                to Fort Zachary Taylor in style. Add free delivery and pickup, and your Key West group
+                rental starts the moment you arrive.
               </p>
             </div>
             <a
