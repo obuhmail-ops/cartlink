@@ -7,14 +7,7 @@ export default function SocialProofSection() {
   return (
     <section className="bg-brand px-6 pt-10 pb-10 text-dune md:px-10 md:pt-12 md:pb-12">
       <div className="mx-auto max-w-6xl">
-        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
-          <h2 className="max-w-3xl font-display text-3xl uppercase leading-tight md:text-5xl">One of Key West’s Favorite Ways to Ride</h2>
-          <div className="shrink-0 md:text-right">
-            <p className="text-xl tracking-[0.18em] text-solar">★★★★★</p>
-            <p className="mt-2 font-semibold">4.9 Google Rating</p>
-            <p className="text-sm text-dune/60">272+ Customer Reviews</p>
-          </div>
-        </div>
+        <h2 className="max-w-3xl font-display text-3xl uppercase leading-tight md:text-5xl">One of Key West’s Favorite Ways to Ride</h2>
         <div className="mt-12">
           <GoogleReviewsWidget />
         </div>
