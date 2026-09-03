@@ -61,7 +61,7 @@ export default function ArrivalOptionsSection() {
                 option.id === 'key-west-express' ?
                 <>
                       <p className="md:hidden text-center text-3xl" aria-hidden="true">⛴️ KEY WEST EXPRESS</p>
-                      <p className="md:hidden mt-3 text-center text-sm font-semibold text-brand">24+ hour rental receive 4 complimentary extra hours.*</p>
+                      <p className="md:hidden mt-3 text-center text-sm font-semibold text-brand">24+ hour rentals receive 4 complimentary extra hours.*</p>
                       <p className="hidden md:block font-bold uppercase tracking-[0.18em] text-base text-[hsl(var(--destructive))] text-center">{option.label}</p>
                       <h3 className="hidden md:block mt-3 font-display text-2xl uppercase leading-tight text-brand text-center">{option.title}</h3>
                       <p className="hidden md:block mt-4 leading-relaxed text-brand/65">{option.body}</p>
