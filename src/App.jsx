@@ -11,7 +11,6 @@ import Rentals from './pages/Rentals';
 import Gallery from './pages/Gallery';
 import Delivery from './pages/Delivery';
 import Faq from './pages/Faq';
-import FourPassenger from './pages/FourPassenger';
 import ExploreKeyWest from './pages/ExploreKeyWest';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -34,7 +33,6 @@ const AuthenticatedApp = () => {
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/golf-cart-delivery-key-west" element={<Delivery />} />
       <Route path="/faq" element={<Faq />} />
-      <Route path="/4-passenger" element={<FourPassenger />} />
       <Route path="/explore-key-west" element={<ExploreKeyWest />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />

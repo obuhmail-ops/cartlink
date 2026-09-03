@@ -6,7 +6,6 @@ import { trackEvent } from '@/lib/track';
 const quickLinks = [
   ['Golf Carts', '/rentals'],
   ['Rentals', '/rentals'],
-  ['4 Passenger', '/4-passenger'],
   ['4-Passenger Golf Cart Rentals', '/4-passenger-golf-cart-rentals-key-west'],
   ['6-Passenger Golf Cart Rentals', '/6-passenger-golf-cart-rentals-key-west'],
   ['Key West Airport Rentals', '/key-west-airport-golf-cart-rentals'],
