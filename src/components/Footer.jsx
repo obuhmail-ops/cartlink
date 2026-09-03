@@ -14,6 +14,7 @@ const quickLinks = [
   ['FAQs', '/faq'],
   ['Contact', '/contact'],
   ['Book Now', '#fleet'],
+  ['Privacy', '/privacy-policy'],
 ];
 
 export default function Footer() {
