@@ -12,7 +12,7 @@ const quickLinks = [
   ['Key West Express', '#key-west-express'],
   ['Explore Key West', '/explore-key-west'],
   ['FAQs', '/faq'],
-  ['Contact', '#contact'],
+  ['Contact', '/contact'],
   ['Book Now', '#fleet'],
 ];
 
