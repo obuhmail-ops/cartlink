@@ -2,7 +2,7 @@ import React from 'react';
 import { ExternalLink, MapPin, Navigation } from 'lucide-react';
 
 const MAP_URL = 'https://www.google.com/maps/d/embed?mid=1ehX5kM3oXtsGZPHLSK41x_r4qrYBBkc&ehbc=2E312F';
-const GUIDE_URL = 'https://www.google.com/maps/d/viewer?mid=1ehX5kM3oXtsGZPHLSK41x_r4qrYBBkc';
+const GUIDE_URL = 'https://www.google.com/maps/d/u/0/edit?mid=1ehX5kM3oXtsGZPHLSK41x_r4qrYBBkc&usp=sharing';
 const NATIVE_MAPS_URL = 'https://maps.google.com/?q=Key+West,+FL';
 const landmarks = ['Duval Street', 'Mallory Square', 'Southernmost Point', 'Fort Zachary Taylor Beach', 'Higgs Beach', 'Key West Lighthouse', 'Mile 0', 'Smathers Beach', 'Truman Little White House', 'Key West Harbor'];
 
