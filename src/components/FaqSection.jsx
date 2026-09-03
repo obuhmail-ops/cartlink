@@ -13,8 +13,6 @@ const faqs = [
 ];
 
 export default function FaqSection() {
-  const contactParadise = () => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-
   return (
     <section id="faqs" className="bg-dune px-6 pt-10 pb-10 md:px-10 md:pt-12 md:pb-12">
       <div className="mx-auto max-w-4xl">
@@ -29,7 +27,7 @@ export default function FaqSection() {
             </details>
           ))}
         </div>
-        <button onClick={contactParadise} className="mt-10 rounded-lg bg-solar px-6 py-3 text-sm font-bold uppercase tracking-wide text-brand">Contact Paradise</button>
+
       </div>
     </section>
   );
