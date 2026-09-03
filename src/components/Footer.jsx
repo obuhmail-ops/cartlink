@@ -4,7 +4,7 @@ import { Facebook, Instagram, MapPin, Phone, Star } from 'lucide-react';
 import { trackEvent } from '@/lib/track';
 
 const quickLinks = [
-  ['Golf Carts', '#fleet'],
+  ['Golf Carts', '/#fleet'],
   ['Rentals', '/rentals'],
   ['4 Passenger', '/4-passenger'],
   ['6 Passenger', '/6-passenger'],
