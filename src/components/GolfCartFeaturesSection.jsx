@@ -46,7 +46,7 @@ export default function GolfCartFeaturesSection() {
 
         <div className="mt-12 text-center">
           <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" onClick={() => trackEvent('check_availability_click', { location: 'features' })} className="inline-block rounded-full bg-solar px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-brand shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
-            See Our Fleet
+            Book Now
           </a>
         </div>
       </div>
