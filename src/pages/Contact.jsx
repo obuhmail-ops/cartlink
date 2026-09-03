@@ -89,13 +89,13 @@ export default function Contact() {
             </a>
 
             <a
-              href="mailto:hello@paradiserentalskw.com"
+              href="mailto:contact@paradiserentalskw.com"
               className="rounded-2xl border border-brand/10 bg-card p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200"
             >
               <Mail className="h-7 w-7 text-solar" />
               <h2 className="mt-4 font-display text-xl text-brand">Email Us</h2>
               <p className="mt-2 text-sm text-brand/70">We reply within 24 hours.</p>
-              <p className="mt-3 font-semibold text-brand break-words">hello@paradiserentalskw.com</p>
+              <p className="mt-3 font-semibold text-brand break-words">contact@paradiserentalskw.com</p>
             </a>
 
             <div className="rounded-2xl border border-brand/10 bg-card p-6 shadow-sm">
