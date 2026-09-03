@@ -17,6 +17,7 @@ const quickLinks = [
   ['Privacy', '/privacy-policy'],
   ['Terms', '/terms-and-conditions'],
   ['Cancellation', '/cancellation-policy'],
+  ['Rental Requirements', '/rental-requirements'],
 ];
 
 export default function Footer() {
