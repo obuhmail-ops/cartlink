@@ -39,6 +39,28 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Install WebP converter
+        run: sudo apt-get update && sudo apt-get install -y webp
+
+      - name: Convert images to WebP
+        run: |
+          # Convert JPG/JPEG to WebP (quality 85)
+          find dist -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) -exec sh -c '
+            for img; do
+              cwebp -q 85 "$img" -o "${img%.*}.webp" && rm "$img"
+            done
+          ' _ {} +
+          
+          # Convert PNG to WebP (lossless for transparency)
+          find dist -type f -iname "*.png" -exec sh -c '
+            for img; do
+              cwebp -lossless "$img" -o "${img%.*}.webp" && rm "$img"
+            done
+          ' _ {} +
+          
+          echo "WebP conversion complete!"
+          find dist -name "*.webp" | wc -l | xargs -I {} echo "Converted {} images to WebP"
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
