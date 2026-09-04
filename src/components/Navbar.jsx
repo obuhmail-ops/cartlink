@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu, Phone, X } from 'lucide-react';
 import CartDropdown from '@/components/CartDropdown';
 import ArrivalDropdown from '@/components/ArrivalDropdown';
@@ -32,7 +32,6 @@ export default function Navbar() {
   const closeTimer = useRef(null);
   const arrivalCloseTimer = useRef(null);
   const navigate = useNavigate();
-  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -64,11 +63,7 @@ export default function Navbar() {
 
   const goTo = (target, path) => {
     setOpen(false);
-    if (location.pathname === '/' && target) {
-      setTimeout(() => document.getElementById(target)?.scrollIntoView({ behavior: 'smooth' }), 60);
-    } else {
-      navigate(path);
-    }
+    navigate(path);
   };
 
   const renderLink = (link) =>
