@@ -44,19 +44,18 @@ jobs:
 
       - name: Convert images to WebP
         run: |
-          # Convert JPG/JPEG to WebP (quality 85)
-          find dist -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) -exec sh -c '
-            for img; do
-              cwebp -q 85 "$img" -o "${img%.*}.webp" && rm "$img"
-            done
-          ' _ {} +
+          # Skip these files from WebP conversion (favicon, og:image, etc.)
+          SKIP_FILES="favicon|og-image|apple-touch-icon"
           
-          # Convert PNG to WebP (lossless for transparency)
-          find dist -type f -iname "*.png" -exec sh -c '
-            for img; do
-              cwebp -lossless "$img" -o "${img%.*}.webp" && rm "$img"
-            done
-          ' _ {} +
+          # Convert JPG/JPEG to WebP (quality 85) - skip favicon/og files
+          find dist -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) | grep -vE "$SKIP_FILES" | while read img; do
+            cwebp -q 85 "$img" -o "${img%.*}.webp" && rm "$img"
+          done
+          
+          # Convert PNG to WebP (lossless for transparency) - skip favicon/og files
+          find dist -type f -iname "*.png" | grep -vE "$SKIP_FILES" | while read img; do
+            cwebp -lossless "$img" -o "${img%.*}.webp" && rm "$img"
+          done
           
           echo "WebP conversion complete!"
           find dist -name "*.webp" | wc -l | xargs -I {} echo "Converted {} images to WebP"
@@ -105,6 +104,7 @@ jobs:
             **/.git*/**
             **/node_modules/**
             **/.htaccess
+            **/.ftp-deploy-sync-state.json
             *.md
             *.map
             *.br
