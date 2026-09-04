@@ -1,7 +1,6 @@
 import base44 from "@base44/vite-plugin"
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import compression from 'vite-plugin-compression'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -16,18 +15,7 @@ export default defineConfig({
       visualEditAgent: true
     }),
     react(),
-    // Gzip compression for smaller file sizes
-    compression({
-      algorithm: 'gzip',
-      ext: '.gz',
-      threshold: 1024, // Only compress files > 1KB
-    }),
-    // Brotli compression (better than gzip, ~15-20% smaller)
-    compression({
-      algorithm: 'brotliCompress',
-      ext: '.br',
-      threshold: 1024,
-    }),
+    // Note: Gzip/Brotli compression handled by Apache server via .htaccess
   ],
   build: {
     // Minification with Terser for better compression

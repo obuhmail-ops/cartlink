@@ -82,5 +82,8 @@ jobs:
             **/.git*
             **/.git*/**
             **/node_modules/**
+            **/.htaccess
             *.md
             *.map
+            *.br
+            *.gz
