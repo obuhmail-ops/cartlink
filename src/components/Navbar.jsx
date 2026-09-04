@@ -19,6 +19,7 @@ const leftLinks = [
 
 const rightLinks = [
 { label: 'Explore Key West', target: 'explore', path: '/explore-key-west' },
+{ label: 'About', target: 'about', path: '/about' },
 { label: 'FAQs', target: 'faqs', path: '/faq' },
 { label: 'Contact', target: 'contact', path: '/contact' }];
 
@@ -164,6 +165,8 @@ export default function Navbar() {
             <button onClick={() => goTo('gallery', '/gallery')}>Gallery</button>
             <button onClick={() => goTo('delivery', '/golf-cart-delivery-key-west')}>Delivery</button>
             <button onClick={() => goTo('arrival-options', '/key-west-airport-golf-cart-rentals')}>Airport &amp; Cruise</button>
+            <button onClick={() => goTo('explore', '/explore-key-west')}>Explore Key West</button>
+            <button onClick={() => goTo('about', '/about')}>About</button>
             <button onClick={() => goTo('faqs', '/faq')}>FAQs</button>
             <button onClick={() => goTo('contact', '/contact')}>Contact</button>
           </nav>
