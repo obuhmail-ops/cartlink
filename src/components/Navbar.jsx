@@ -144,9 +144,6 @@ export default function Navbar() {
             <a href="tel:+13053371815" onClick={() => trackEvent('call_click', { location: 'navbar_mobile' })} className="flex items-center gap-1.5 px-2 py-2 text-xs text-brand whitespace-nowrap [font-family:'Sora',_sans-serif] font-bold hover:text-solar hover:-translate-y-0.5 hover:drop-shadow-[0_0_10px_hsl(43_100%_50%)] transition-all duration-200" aria-label="Call">
               <Phone className="w-4 h-4" /> Call
             </a>
-            <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" onClick={() => trackEvent('check_availability_click', { location: 'navbar_mobile' })} className="rounded-lg bg-solar px-3 py-2 text-xs font-bold text-brand whitespace-nowrap shadow hover:brightness-110 hover:scale-105 active:scale-95 transition-all duration-200">
-              Book Now
-            </a>
           </div>
         </div>
       </header>
