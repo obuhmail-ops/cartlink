@@ -73,7 +73,7 @@ export default function Home() {
 
             <h1 className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
               <span className="block md:inline [font-family:'Helvetica_Bold',_sans-serif] font-bold text-3xl">Your Cart. Your Island.</span>
-              <span className="block md:inline font-bold [font-family:'Helvetica_Bold',_sans-serif] text-4xl text-[hsl(var(--brand))]">Your Adventure.</span>
+              <span className="block md:inline font-bold [font-family:'Helvetica_Bold',_sans-serif] text-4xl text-white">Your Adventure.</span>
             </h1>
 
             <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left px-1 mt-1 text-[hsl(var(--solar))] text-lg md:text-xl [font-family:'Sora',_sans-serif] font-bold">
