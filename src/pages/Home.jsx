@@ -16,9 +16,6 @@ import FinalBookingCta from '@/components/FinalBookingCta';
 import MobileBookingBar from '@/components/MobileBookingBar';
 import { Image } from '@/components/ui/image';
 import { imageUrl } from '@/lib/images';
-import { FAREHARBOR_URL } from '@/lib/booking';
-import { trackEvent } from '@/lib/track';
-import { Phone } from 'lucide-react';
 
 // Static site — fleet data hardcoded, no DB calls
 const HERO_IMAGE_URL = imageUrl('bfc00a16b_generated_image.png');
@@ -74,9 +71,9 @@ export default function Home() {
               </div>
             </div>
 
-            <h1 className="self-center md:self-start max-w-2xl leading-tight text-center md:text-left no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] [font-family:'Sora',_sans-serif] font-bold">
-              <span className="block md:inline [font-family:'Helvetica_Bold',_sans-serif] font-bold text-3xl md:text-5xl">Your Cart. Your Island.</span>
-              <span className="block md:inline font-bold [font-family:'Helvetica_Bold',_sans-serif] text-4xl md:text-6xl text-[hsl(var(--brand))]">Your Adventure.</span>
+            <h1 className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left no-underline not-italic capitalize px-1 my-5 text-[hsl(var(--dune))] text-xl md:text-xl [font-family:'Sora',_sans-serif] font-bold">
+              <span className="block md:inline [font-family:'Helvetica_Bold',_sans-serif] font-bold text-3xl">Your Cart. Your Island.</span>
+              <span className="block md:inline font-bold [font-family:'Helvetica_Bold',_sans-serif] text-4xl text-[hsl(var(--brand))]">Your Adventure.</span>
             </h1>
 
             <p className="self-center md:self-start max-w-2xl leading-relaxed text-center md:text-left px-1 mt-1 text-[hsl(var(--solar))] text-lg md:text-xl [font-family:'Sora',_sans-serif] font-bold">
@@ -98,14 +95,20 @@ export default function Home() {
               )}
             </ul>
 
+            <div className="mt-4 flex gap-2 w-full max-w-md md:hidden">
+              <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
+                
+              </button>
+              <button onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })} className="w-1/2 rounded-2xl overflow-hidden shadow-lg hover:scale-105 active:scale-95 transition-all duration-200">
+                
+              </button>
+            </div>
+
             {/* Buttons */}
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 w-full max-w-md md:max-w-none md:justify-start">
-              <a href={FAREHARBOR_URL} target="_blank" rel="noreferrer" onClick={() => trackEvent('check_availability_click', { location: 'hero' })} className="rounded-lg bg-solar px-7 py-3.5 text-sm font-bold uppercase tracking-wide text-brand shadow-lg hover:brightness-110 hover:scale-105 active:scale-95 transition-all duration-200 text-center">
-                Book Now
-              </a>
-              <a href="tel:+13053371815" onClick={() => trackEvent('call_click', { location: 'hero' })} className="inline-flex items-center justify-center gap-2 rounded-lg bg-white/10 px-6 py-3.5 text-sm font-bold uppercase tracking-wide text-white border border-white/20 hover:bg-white/20 active:scale-95 transition-all duration-200">
-                <Phone className="w-4 h-4" /> Call
-              </a>
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 w-full justify-center md:justify-start">
+              
+
+              
             </div>
 
           </div>
