@@ -49,7 +49,7 @@ export default function Home() {
   const carts = STATIC_CARTS;
 
   return (
-    <div className="min-h-screen bg-dune">
+    <div className="min-h-screen bg-dune overflow-x-hidden">
       <Navbar />
 
       {/* Hero */}
